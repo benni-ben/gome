@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gome</title>
+    <style>
+        :root {
+            --middle-fade-random-color: ;
+        }
+
+        #header {
+            color: blue;
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        #horizontal-line {
+            height: 0.2rem;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--middle-fade-random-color), rgba(255, 255, 255, 0));
+            margin: 25px 0;
+        }
+
+        #infodiv {
+            text-align: center;
+            font-size: 1.6rem;
+            grid: repeat(1, 50px) / auto-flow; 
+            display: grid;
+            gap: 5rem;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Gome</h1>
+    <div id="infodiv">
+        <h4 id="time"></h4>
+        <h4 id="date"></h4>
+        <h4 id="gamecount"></h4>
+    </div>
+    <div id="gameContainer"></div>
+    <div id="horizontal-line"></div>
+
+</body>
+<script>
+    //constants
+    const gameContainer = document.getElementById('gameContainer');
+    const gameCountElement = document.getElementById('gamecount');
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    document.documentElement.style.setProperty('--middle-fade-random-color', getRandomColor());
+    function getAndSetTimeAndDate() {
+        const now = new Date();
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+        timeElement.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        dateElement.textContent = now.toLocaleDateString([], { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    setInterval(() => {
+        getAndSetTimeAndDate();
+    }, 2000);
+    function getGameCount() {
+        //check how many elements are in gameContainer
+        gameCountElement.textContent = gameContainer.children.length + " games available.";
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        getAndSetTimeAndDate();
+        getGameCount();
+    });
+</script>
+</html>
