@@ -37,8 +37,11 @@
             }
 
             .game-item {
-                border: 2px solid rgb(60, 60, 60);
-
+                border: 0px solid rgb(60, 60, 60);
+                transition: border 0.4s ease;
+            }
+            .game-item:hover {
+                border: 4px solid rgb(60, 60, 60);
             }
         }
 
@@ -49,18 +52,23 @@
             }
 
             .game-item {
-                border: 2px solid rgb(240, 240, 240);
+                border: 0px solid rgb(190, 190, 190);
+                transition: border 0.4s ease;
+            }
 
+            .game-item:hover {
+                border: 4px solid rgb(190, 190, 190);
             }
         }
 
+
         #horizontal-line {
             height: 0.2rem;
-            animation: 2s widen cubic-bezier(.36,.47,.39,1.12);
+            animation: 2s widen ease;
             border: none;
             margin-top: 20px;
-            background-image: linear-gradient(to right, transparent , var(--middle-fade-random-color), transparent);  
-                }
+            background-image: linear-gradient(to right, transparent, var(--middle-fade-random-color), transparent);
+        }
 
         #infodiv {
             text-align: center;
@@ -125,7 +133,6 @@
             font-size: 1.2rem;
             justify-content: center;
         }
-
 
         @keyframes widen {
             0% {
@@ -253,7 +260,7 @@
                 //update game count
                 getGameCount();
             })
-               .catch(error => console.error('Oops! There was an error loading games:', error));
+            .catch(error => console.error('Oops! There was an error loading games:', error));
     }
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
