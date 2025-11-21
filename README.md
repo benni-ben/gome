@@ -28,7 +28,9 @@ To add a game, you have to first create a folder inside of the `assets` folder. 
 After that, you must update the `descriptions.json` file. Make a new pair in the file, and then set the key to the game's **exact name**, and the value to it's description.
 
 An example of an object in the `descriptions.json` file is below:
-> "key": "value"
+
+`"key": "value"`
+
 You can use this example in the `descriptions.json` file, and then replace the key with the game name, and the value to it's description. 
 
 All of the pairs must be inside of the curly brackets.
