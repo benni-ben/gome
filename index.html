@@ -35,6 +35,11 @@
                 background-color: black;
                 color: white;
             }
+
+            .game-item {
+                border: 2px solid rgb(60, 60, 60);
+
+            }
         }
 
         @media (prefers-color-scheme: light) {
@@ -42,15 +47,20 @@
                 background-color: white;
                 color: black;
             }
+
+            .game-item {
+                border: 2px solid rgb(240, 240, 240);
+
+            }
         }
 
         #horizontal-line {
             height: 0.2rem;
-            animation: widen 2s ease-in;
+            animation: 2s widen cubic-bezier(.36,.47,.39,1.12);
             border: none;
             margin-top: 20px;
-            background-image: linear-gradient(to right, transparent, var(--middle-fade-random-color), transparent);
-        }
+            background-image: linear-gradient(to right, transparent , var(--middle-fade-random-color), transparent);  
+                }
 
         #infodiv {
             text-align: center;
@@ -94,7 +104,6 @@
             height: auto;
             max-height: 20rem;
             width: 8rem;
-            outline: 3px solid rgb(155, 155, 155);
             cursor: pointer;
         }
 
@@ -116,6 +125,7 @@
             font-size: 1.2rem;
             justify-content: center;
         }
+
 
         @keyframes widen {
             0% {
@@ -178,7 +188,7 @@
 
     function getGameCount() {
         gameCountElement.textContent = gameContainer.children.length + " games available.";
-    } 
+    }
     function getAverageColor(thumbnail) {
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
@@ -243,15 +253,12 @@
                 //update game count
                 getGameCount();
             })
-            .catch(error => console.error('Oops! There was an error loading games:', error));
+               .catch(error => console.error('Oops! There was an error loading games:', error));
     }
-
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
         gameLoader();
     });
-    let isDragging = false;
-    let offset = { x: 0, y: 0 };
 </script>
 
 </html>
