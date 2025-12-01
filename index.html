@@ -85,9 +85,9 @@
 
         :root {
             --middle-fade-random-color: ;
-            --head-grad-color-1: #1d1ace;
-            --head-grad-color-2: #16147a;
-            --head-grad-color-3: #1d1ace;
+            --head-grad-color-1: #000000;
+            --head-grad-color-2: #009cbf;
+            --head-grad-color-3: #1c19eb;
         }
 
         #header {
@@ -247,7 +247,74 @@
             };
         });
     }
-    //todo: make gradient colors based on occasion
+    function setGradientColors(color1, color2, color3) {
+        document.documentElement.style.setProperty('--head-grad-color-1', color1);
+        document.documentElement.style.setProperty('--head-grad-color-2', color2);
+        document.documentElement.style.setProperty('--head-grad-color-3', color3);
+    }
+    function getTimeAssociatedColors() {
+        let occasion = "none";
+        const now = new Date();
+        const month = now.getMonth() + 1;
+        const day = now.getDate();
+        if (month === 12 && day >= 5 && day <= 26) {
+            occasion = "christmas";
+        }
+        if (month === 10 && day >= 1 && day <= 31) {
+            occasion = "halloween";
+        }
+        if (month === 2 && day === 14) {
+            occasion = "valentines";
+        }
+        if (month === 7 && day === 4) {
+            occasion = "independence";
+        }
+        if (month === 1 && day === 1) {
+            occasion = "newyear";
+        }
+        if (month === 11 && day === 11) {
+            occasion = "veterans";
+        }
+        if (month === 3 && day === 17) {
+            occasion = "stpatricks";
+        }
+        if (month === 1 && day === 19) {
+            occasion = "mlkday";
+        }
+        if (month === 2 && day == 16) {
+            occasion = "presidents";
+        }
+        if (month === 5 && day == 25) {
+            occasion = "memorial";
+        }
+        if (month === 5 && day == 12) {
+            occasion = "mothers";
+        }
+        if (month === 6 && day == 16) {
+            occasion = "fathers";
+        }
+        if (month === 5 && day == 5) {
+            occasion = "cincodemayo";
+        }
+        if (month === 6 && day == 19) {
+            occasion = "juneteenth";
+        }
+        if (month === 9 && day == 7) {
+            occasion = "labor";
+        }
+        if (month === 10 && day == 12) {
+            occasion = "columbus";
+        }
+        if (month === 11 && day == 27) {
+            occasion = "thanksgiving";
+        }
+        if (month === 11 && day == 28) {
+            occasion = "blackfriday";
+        }
+        if (month === 11 && day == 4) {
+            occasion = "election";
+        }
+    }
     function gameLoader() {
         const gamePath = "/asset/";
         const descriptionsPath = "descriptions.json";
@@ -290,6 +357,7 @@
     }
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
+        getTimeAssociatedColors();
         gameLoader();
     });
 </script>

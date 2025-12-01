@@ -21,8 +21,6 @@ A JSON file is used for the game paths and descriptions. The file is named `desc
 
 The string is the game's name(must be the exact name used in the path), and the value is the description, it can be whatever you want it to be. Please note that every value must have a string, and every string must have a value.
 
-Design of the website was made from scratch, by me.
-
 ## Adding game
 
 To add a game, you have to first create a folder inside of the `assets` folder. This will be the game's name. Inside of that folder, you must have an image named `cover.png`. It must be in PNG format to work. That folder should also have an `index.html` file inside. 
