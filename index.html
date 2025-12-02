@@ -100,6 +100,7 @@
             -webkit-text-fill-color: transparent;
             background-size: 200% 100%;
             animation: gradientShift 5s ease infinite;
+            -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.2);
         }
 
         #gameContainer {
@@ -257,62 +258,39 @@
         const now = new Date();
         const month = now.getMonth() + 1;
         const day = now.getDate();
-        if (month === 12 && day >= 5 && day <= 26) {
-            occasion = "christmas";
-        }
-        if (month === 10 && day >= 1 && day <= 31) {
-            occasion = "halloween";
-        }
-        if (month === 2 && day === 14) {
-            occasion = "valentines";
-        }
-        if (month === 7 && day === 4) {
-            occasion = "independence";
-        }
-        if (month === 1 && day === 1) {
-            occasion = "newyear";
-        }
-        if (month === 11 && day === 11) {
-            occasion = "veterans";
-        }
-        if (month === 3 && day === 17) {
-            occasion = "stpatricks";
-        }
-        if (month === 1 && day === 19) {
-            occasion = "mlkday";
-        }
-        if (month === 2 && day == 16) {
-            occasion = "presidents";
-        }
-        if (month === 5 && day == 25) {
-            occasion = "memorial";
-        }
-        if (month === 5 && day == 12) {
-            occasion = "mothers";
-        }
-        if (month === 6 && day == 16) {
-            occasion = "fathers";
-        }
-        if (month === 5 && day == 5) {
-            occasion = "cincodemayo";
-        }
-        if (month === 6 && day == 19) {
-            occasion = "juneteenth";
-        }
-        if (month === 9 && day == 7) {
-            occasion = "labor";
-        }
-        if (month === 10 && day == 12) {
-            occasion = "columbus";
-        }
-        if (month === 11 && day == 27) {
-            occasion = "thanksgiving";
-        }
-        if (month === 11 && day == 28) {
-            occasion = "blackfriday";
-        }
-        if (month === 11 && day == 4) {
-            occasion = "election";
+        const occasionColors = {
+            "12-5-12-26": ["#006B3F", "#C8102E", "#F1D302"],  // christmas
+            "10-1-10-31": ["#FF6B35", "#004E89", "#1A1A1A"],  // halloween
+            "2-14": ["#E31B23", "#FFB6C1", "#FFFFFF"],        // valentines
+            "7-4": ["#B22234", "#FFFFFF", "#3C3B6B"],         // independence
+            "1-1": ["#FFD700", "#C0C0C0", "#000000"],         // newyear
+            "11-11": ["#663399", "#FFD700", "#FFFFFF"],       // veterans
+            "3-17": ["#009B77", "#FFFFFF", "#FFB81C"],        // stpatricks
+            "1-19": ["#000000", "#FFFFFF", "#CE1126"],        // mlkday
+            "2-16": ["#B22234", "#FFFFFF", "#3C3B6B"],        // presidents
+            "5-25": ["#000000", "#FFFFFF", "#FF0000"],        // memorial
+            "5-12": ["#FF69B4", "#FFB6C1", "#FFFFFF"],        // mothers
+            "6-16": ["#4169E1", "#1E90FF", "#87CEEB"],        // fathers
+            "5-5": ["#CE1126", "#FFFFFF", "#002B7F"],         // cincodemayo
+            "6-19": ["#3C3B6B", "#FFFFFF", "#B22234"],        // juneteenth
+            "9-7": ["#FF6B35", "#004E89", "#FFFFFF"],         // labor
+            "10-12": ["#B22234", "#FFFFFF", "#3C3B6B"],       // columbus
+            "11-27": ["#8B4513", "#D2B48C", "#FF8C00"],       // thanksgiving
+            "11-28": ["#FF0000", "#FFFFFF", "#000000"],       // blackfriday
+            "11-4": ["#003DA5", "#FFFFFF", "#FF0000"],         // election
+        };
+        const dateKey = `${month}-${day}`;
+        //split the month-days to check for ranges
+        const dateRangeKey = Object.keys(occasionColors).find(key => {
+            if (key.includes("-") && key.split("-").length === 4) {
+                const [m1, d1, m2, d2] = key.split("-").map(Number);
+                return month === m1 && day >= d1 && day <= d2;
+            }
+            return key === dateKey;
+        });
+        const colors = occasionColors[dateRangeKey];
+        if (colors) {
+            setGradientColors(colors[0], colors[1], colors[2]);
         }
     }
     function gameLoader() {
