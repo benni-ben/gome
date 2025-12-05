@@ -11,7 +11,7 @@ Features:
  - Game descriptions.
  - Easy game adding. 
  - Easy file structure.
- - AND MORE.
+ - AND MORE...
 
 ## Development
 

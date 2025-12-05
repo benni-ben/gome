@@ -36,12 +36,16 @@
                 color: white;
             }
 
-            .game-item {
+            #settingsIcon {
+                fill: white;
+            }
+
+            #game-item {
                 border: 0px solid rgb(100, 100, 100);
                 transition: border 0.4s ease;
             }
 
-            .game-item:hover {
+            #game-item:hover {
                 border: 4px solid rgb(60, 60, 60);
             }
         }
@@ -52,12 +56,16 @@
                 color: black;
             }
 
-            .game-item {
+            #settingsIcon {
+                fill: black;
+            }
+
+            #game-item {
                 border: 0px solid rgb(159, 159, 159);
                 transition: border 0.4s ease;
             }
 
-            .game-item:hover {
+            #game-item:hover {
                 border: 4px solid rgb(190, 190, 190);
             }
         }
@@ -92,7 +100,7 @@
 
         #header {
             text-align: center;
-            z-index: 1000;
+            z-index: 2;
             font-family: 'Fira Sans';
             font-size: 5rem;
             background: linear-gradient(90deg, var(--head-grad-color-1) 30%, var(--head-grad-color-2) 50%, var(--head-grad-color-3) 80%);
@@ -101,6 +109,26 @@
             background-size: 200% 100%;
             animation: gradientShift 5s ease infinite;
             -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        #header-2 {
+            text-align: center;
+            z-index: 1;
+            margin-top: -100px;
+            font-family: 'Fira Sans';
+            font-size: 5rem;
+            background: linear-gradient(90deg, var(--head-grad-color-1) 30%, var(--head-grad-color-2) 50%, var(--head-grad-color-3) 80%);
+            background-clip: text;
+            position: sticky;
+            transform: translate(0, -3rem);
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            animation: gradientShift 5s ease infinite;
+            -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.2);
+            filter: saturate(70%);
+            filter: brightness(500%);
+            filter: blur(10px);
         }
 
         #gameContainer {
@@ -112,27 +140,28 @@
             text-align: center;
         }
 
-        .game-item {
+        #game-item {
             background-color: rgba(0, 0, 0, 0.05);
             height: auto;
             max-height: 20rem;
             padding: 1rem;
             width: 8rem;
             cursor: pointer;
+            border: solid 0px gray;
         }
 
-        .game-thumbnail {
+        #game-thumbnail {
             width: 100%;
             height: auto;
         }
 
-        .game-title {
+        #game-title {
             font-family: 'Fira Sans';
             font-size: 1.6rem;
             text-align: center;
         }
 
-        .game-description {
+        #game-description {
             font-family: 'Fira Mono';
             font-style: italic;
             font-size: 1.2rem;
@@ -144,7 +173,120 @@
             animation: 2s widen ease;
             border: none;
             margin: 20px auto;
+            animation: 5s pulse infinite cubic-bezier(.11, .59, .8, .03);
             background-image: linear-gradient(to right, transparent, var(--middle-fade-random-color), transparent);
+        }
+
+        #settingsIcon {
+            cursor: crosshair;
+            display: inline-block;
+            margin: 4px;
+            width: 35px;
+            position: absolute;
+            pointer-events: auto;
+            cursor: pointer;
+        }
+
+        #settingsMenu {
+            position: fixed;
+            background-color: rgb(34, 34, 34);
+            width: 70%;
+            height: 60%;
+            top: 50%;
+            overflow: scroll;
+            left: 50%;
+            display: none;
+            transform: translate(-50%, -50%);
+            z-index: 40;
+            border: 5px solid #3a3a3a;
+            border-radius: 40px;
+        }
+        
+        #settingsMenuText {
+            color: white;
+            font-family: 'Fira Sans';
+            margin: 15px;
+        }
+        #menu-divider {
+            background: #3a3a3a;
+            height: 5px;
+            width: 100%;
+        }
+
+        #settingsToggle {
+            width: 40px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(.36,.47,.39,1.12);
+        }
+
+        #settingsToggle:hover {
+            transform: scale(1.5);
+        }
+
+        #settings-section-header {
+            font-family: 'Fira Sans';
+            font-size: 1.5rem;
+            margin: 10px;
+            color: rgb(255, 255, 255);
+        }
+
+        #setting-title {
+            font-family: 'Roboto';
+            font-size: 0.9rem;
+            margin: 2px;
+            color: rgb(255, 255, 255);
+            cursor: help;
+        }
+
+        #settingsSelect {
+            border: solid 0px #000000;
+            padding: 5px;
+            font-family: 'Fira Sans';
+
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        #settingsButton {
+            border: solid 0px #000000;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Fira Sans';
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        #settingsButton:hover {
+            background-color: #6f6f6f;
+            color: white;
+            border: solid 2px #a7a7a7;
+        }
+
+        #settingsMenuInfo {
+            color: #d1d1d1;
+            font-family: 'Fira Mono';
+            margin: 10px;
+            font-size: 1rem;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                width: 100%;
+            }
+
+            30% {
+                width: 70%;
+            }
+
         }
 
         @keyframes gradientShift {
@@ -174,7 +316,19 @@
 </head>
 
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" id="settingsIcon" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+        <path
+            d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+    </svg>
     <h1 id="header">Gome</h1>
+    <h1 id="header-2">Gome</h1>
+    <div id="settingsMenu">
+        <h1 id="settingsMenuText">Settings</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" id="close" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <h3 id="settingsMenuInfo">Hover over a setting for more information.</h3>
+        <div id="menu-divider"></div>
+        <div id="actualSettings"></div>
+    </div>
     <div id="infodiv">
         <h4 id="time"></h4>
         <h4 id="date"></h4>
@@ -185,10 +339,36 @@
 </body>
 
 <script>
+    const settingIcon = document.getElementById('settingsIcon');
+    const settings = {
+        animations_animationType: "Enabled",
+        animations_timeScale: 1,
+        animations_disableBarAnimation: "false",
+        danger_deleteLocalStorageSettings: "false",
+        debug_logUserActionsToConsole: "false",
+        debug_listenForErrors: "false",
+        debug_logNotifications: "false",
+        notifications_notificationsEnabled: "true",
+        notifications_notificationLoudAlarm: "false",
+        themeing_backgroundColorOverride: "none",
+    };
+
+    const settingDescriptions = {
+        animations_animationType: { description: "Animation type for all animations on the page. Determines whether the animations play or are paused.", type: "verticalMenu", options: ["Disabled", "Enabled"] },
+        animations_timeScale: { description: "Animation speed for all animations on the page.", type: "slider", min: 0.1, max: 10 },
+        animations_disableBarAnimation: { description: "Disables the horizontal bar animation(the one under the header).", type: "toggle" },
+        danger_deleteLocalStorageSettings: { description: "Deletes all of the localStorage settings that are stored. Resets all values back to the defaults.", type: "button" },
+        debug_logUserActionsToConsole: { description: "Logs all actions to console. Primarily used for testing if something is not behaving how it should be.", type: "toggle" },
+        debug_listenForErrors: { description: "Notifys you of all errors that occur using a notification.", type: "toggle" },
+        debug_logNotifications: { description: "Logs all of the notifications to the console.", type: "toggle" },
+        notifications_notificationsEnabled: { description: "Enables or diables global notifications.", type: "toggle" },
+        notifications_notificationLoudAlarm: { description: "Plays an 'extremely relaxing' alarm sound whenever you get a notification. As of right now, the volume will always be at maximum.'", type: "toggle" },
+        themeing_backgroundColorOverride: { description: "The page's background color.", type: "color" },
+    };
+
     const header = document.getElementById('header');
     const gameContainer = document.getElementById('gameContainer');
     const gameCountElement = document.getElementById('gamecount');
-
     function randomNumber(min, max) {
         if (min == max) {
             return min;
@@ -259,25 +439,26 @@
         const month = now.getMonth() + 1;
         const day = now.getDate();
         const occasionColors = {
+            // check and make sure these colors are correct and accurate
             "12-5-12-26": ["#006B3F", "#C8102E", "#F1D302"],  // christmas
             "10-1-10-31": ["#FF6B35", "#004E89", "#1A1A1A"],  // halloween
             "2-14": ["#E31B23", "#FFB6C1", "#FFFFFF"],        // valentines
             "7-4": ["#B22234", "#FFFFFF", "#3C3B6B"],         // independence
-            "1-1": ["#FFD700", "#C0C0C0", "#000000"],         // newyear
+            "1-1": ["#FFD700", "#C0C0C0", "#000000"],         // new year
             "11-11": ["#663399", "#FFD700", "#FFFFFF"],       // veterans
-            "3-17": ["#009B77", "#FFFFFF", "#FFB81C"],        // stpatricks
-            "1-19": ["#000000", "#FFFFFF", "#CE1126"],        // mlkday
-            "2-16": ["#B22234", "#FFFFFF", "#3C3B6B"],        // presidents
+            "3-17": ["#009B77", "#FFFFFF", "#FFB81C"],        // st patricks
+            "1-19": ["#000000", "#FFFFFF", "#CE1126"],        // martin luther king day
+            "2-16": ["#B22234", "#FFFFFF", "#3C3B6B"],        // presidents day
             "5-25": ["#000000", "#FFFFFF", "#FF0000"],        // memorial
             "5-12": ["#FF69B4", "#FFB6C1", "#FFFFFF"],        // mothers
             "6-16": ["#4169E1", "#1E90FF", "#87CEEB"],        // fathers
-            "5-5": ["#CE1126", "#FFFFFF", "#002B7F"],         // cincodemayo
+            "5-5": ["#CE1126", "#FFFFFF", "#002B7F"],         // cinco de mayo
             "6-19": ["#3C3B6B", "#FFFFFF", "#B22234"],        // juneteenth
             "9-7": ["#FF6B35", "#004E89", "#FFFFFF"],         // labor
             "10-12": ["#B22234", "#FFFFFF", "#3C3B6B"],       // columbus
             "11-27": ["#8B4513", "#D2B48C", "#FF8C00"],       // thanksgiving
             "11-28": ["#FF0000", "#FFFFFF", "#000000"],       // blackfriday
-            "11-4": ["#003DA5", "#FFFFFF", "#FF0000"],         // election
+            "11-4": ["#003DA5", "#FFFFFF", "#FF0000"],        // election
         };
         const dateKey = `${month}-${day}`;
         //split the month-days to check for ranges
@@ -294,7 +475,7 @@
         }
     }
     function gameLoader() {
-        const gamePath = "/asset/";
+        const gamePath = "/asset/game/";
         const descriptionsPath = "descriptions.json";
         fetch(descriptionsPath)
             .then(response => response.json())
@@ -318,10 +499,10 @@
                     gameElement.addEventListener('click', () => {
                         window.location.href = `${gamePath}${gameName}/`;
                     });
-                    description.className = 'game-description';
-                    title.className = 'game-title';
-                    thumbnail.className = 'game-thumbnail';
-                    gameElement.className = 'game-item';
+                    description.id = 'game-description';
+                    title.id = 'game-title';
+                    thumbnail.id = 'game-thumbnail';
+                    gameElement.id = 'game-item';
                     //we finally append the elements to the game container
                     gameElement.appendChild(thumbnail);
                     gameElement.appendChild(title);
@@ -333,10 +514,86 @@
             })
             .catch(error => console.error('Oops! There was an error loading games:', error));
     }
+    //settings functions
+    const defaultSettings = JSON.parse(JSON.stringify(settings));
+
+    function saveSettingsToLocalStorage() {
+        try {
+            localStorage.setItem('gome_settings', JSON.stringify(settings));
+        } catch (e) {
+            console.warn('Could not save settings to localStorage', e);
+        }
+    }
+
+    function loadSavedSettings() {
+        try {
+            const saved = localStorage.getItem('gome_settings');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                Object.keys(parsed).forEach(k => {
+                    if (settings.hasOwnProperty(k)) settings[k] = parsed[k];
+                });
+            }
+        } catch (e) {
+            console.warn('Could not load saved settings', e);
+        }
+        //apply loaded settings
+        Object.keys(settings).forEach(k => applySettingEffect(k, settings[k]));
+    }
+
+    function applySettingEffect(key, value) {
+        // apply immediate visual/effectful changes for some settings
+        switch (key) {
+            case 'themeing_backgroundColorOverride':
+                if (value && value !== 'none') {
+                    document.body.style.backgroundColor = value;
+                } else {
+                    document.body.style.backgroundColor = '';
+                }
+                break;
+            case 'animations_timeScale':
+                const scale = Number(value) || 1;
+                try {
+                    document.getAnimations().forEach(anim => {
+                        try { anim.playbackRate = scale; } catch (e) { }
+                    });
+                } catch (e) { }
+                break;
+            case 'animations_animationType':
+                const mode2 = String(value);
+                if (mode2 === 'Disabled') {
+                    try { document.getAnimations().forEach(a => { try { a.pause(); } catch (e) { } }); } catch (e) { }
+                    //only pause animations cus idk how to stop transitions 
+                } else {
+                    const ts = Number(settings.animations_timeScale) || 1;
+                    try { document.getAnimations().forEach(a => { try { a.play(); a.playbackRate = ts; } catch (e) { } }); } catch (e) { }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    function setSettingValue(key, value) {
+        settings[key] = value;
+        saveSettingsToLocalStorage();
+        applySettingEffect(key, value);
+    }
+    settingsIcon.addEventListener('click', () => {
+        const menu = document.getElementById("settingsMenu");
+        if (menu.style.display === "none" || menu.style.display === '') {
+            menu.style.display = "block";
+        } else {
+            menu.style.display = "none";
+        }
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
         getTimeAssociatedColors();
         gameLoader();
+        // load persisted settings then build the settings UI
+        loadSavedSettings();
+        buildSettingsMenu();
     });
 </script>
 
