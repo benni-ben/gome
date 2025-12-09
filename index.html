@@ -36,11 +36,13 @@
                 color: white;
             }
 
-            #icon, #github-icon {
+            #icon,
+            #github-icon {
                 fill: white;
             }
 
-            #icon:focus, #github-icon:focus {
+            #icon:focus,
+            #github-icon:focus {
                 fill: rgb(150, 150, 150);
             }
 
@@ -114,11 +116,13 @@
                 background-color: rgb(255, 255, 255);
             }
 
-            #icon, #github-icon {
+            #icon,
+            #github-icon {
                 fill: rgb(0, 0, 0);
             }
 
-            #icon:focus, #github-icon:focus {
+            #icon:focus,
+            #github-icon:focus {
                 fill: rgb(93, 93, 93);
             }
 
@@ -321,7 +325,8 @@
         #settingsMenuHeader {
             font-family: 'Fira Mono';
             margin: 10px;
-            font-size: 1rem;
+            padding: 10px;
+            font-size: 1.5rem;
         }
 
         #menuDivider {
@@ -334,16 +339,20 @@
             font-family: 'Fira Sans';
         }
 
-        #icon, #github-icon {
+        #icon,
+        #github-icon {
             width: 40px;
             height: 20px;
             position: relative;
             cursor: pointer;
             transform: rotate(0deg);
-            transition: all 0.5s cubic-bezier(.54,.1,.53,.97);
+            transition: all 0.5s cubic-bezier(.54, .1, .53, .97);
         }
 
-        #icon:focus, #github-icon:focus, #icon.open, #github-icon.open {
+        #icon:focus,
+        #github-icon:focus,
+        #icon.open,
+        #github-icon.open {
             transform: rotate(90deg);
         }
 
@@ -423,7 +432,7 @@
             margin-left: auto;
             margin-right: auto;
             font-family: 'Fira Mono';
-            transition: all 0.5s cubic-bezier(.36,.47,.39,1.12);
+            transition: all 0.5s cubic-bezier(.36, .47, .39, 1.12);
         }
 
         #searchBar:focus {
@@ -449,11 +458,10 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
             opacity: 0;
             pointer-events: none;
-            transition: transform 0.3s cubic-bezier(.11,.59,.8,.03), opacity 0.3s cubic-bezier(.36,.47,.39,1.12), border 0.3s cubic-bezier(.36,.47,.39,1.12);
+            transition: transform 0.3s ease-in-out, opacity 0.3s cubic-bezier(.36, .47, .39, 1.12), border 0.3s cubic-bezier(.36, .47, .39, 1.12);
             z-index: 1000;
             max-width: 90%;
             display: flex;
-            
             align-items: flex-start;
             gap: 12px;
             font-family: "Fira Mono";
@@ -481,7 +489,7 @@
             gap: 4px;
             min-width: 0;
             flex: 1 1 auto;
-                }
+        }
 
         #notification .notif-header {
             font-family: "Roboto";
@@ -508,6 +516,10 @@
             padding: 4px;
             border-radius: 6px;
             align-self: flex-start;
+        }
+
+        #close {
+            padding: 10px;
         }
 
         /* Compact on small screens */
@@ -676,7 +688,7 @@
                 const iconPath = (typeof icon === 'string' && icon.indexOf('/') === -1) ? `/asset/ui/${icon}` : icon;
 
                 //populate content
-                container.innerHTML = `\n                    <img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n                    <div class="notif-body">\n                        <div class="notif-header">${escapeHtml(header)}</div>\n                        <div class="notif-text">${escapeHtml(text)}</div>\n                    </div>\n                    <button class="notif-close" aria-label="Close notification">&times;</button>\n                `;
+                container.innerHTML = `\n<img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n<div class="notif-body">\n<div class="notif-header">${escapeHtml(header)}</div>\n<div class="notif-text">${escapeHtml(text)}</div>\n</div>\n<button class="notif-close" aria-label="Close notification">&times;</button>\n`;
 
                 const closeBtn = container.querySelector('.notif-close');
                 if (closeBtn) closeBtn.addEventListener('click', hideNotification, { once: true });
@@ -793,7 +805,7 @@
                 let prev = null;
                 try { prev = JSON.parse(localStorage.getItem(storageKey)); } catch (e) { prev = null; }
                 if (prev && typeof prev.year === 'number' && prev.year < currentYear) {
-                    try { localStorage.removeItem(storageKey); } catch (e) {}
+                    try { localStorage.removeItem(storageKey); } catch (e) { }
                     prev = null;
                 }
                 const alreadyNotifiedThisYear = prev && prev.key === dateRangeKey && prev.year === currentYear;
@@ -933,11 +945,8 @@
                 const mode2 = String(value);
                 if (mode2 === 'Disabled') {
                     document.getAnimations().forEach(anim => {
-                        try { anim.playbackRate = 0; } catch (e) { }
+                        anim.style.transition = "none";
                     });
-                } else {
-                    const ts = Number(settings.animations_timeScale) || 1;
-                    try { document.getAnimations().forEach(a => { try { a.play(); a.playbackRate = ts; } catch (e) { } }); } catch (e) { }
                 }
                 break;
             default:
