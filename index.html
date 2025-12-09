@@ -437,6 +437,87 @@
             outline: none;
         }
 
+        #notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-150%); /* hidden */
+            background-color: rgba(147,86,86,0.95);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 300ms cubic-bezier(.2,.9,.25,1), opacity 300ms ease;
+            z-index: 1000;
+            max-width: 90%;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-family: 'Fira Mono';
+        }
+
+        #notification.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #notification .notif-icon {
+            width: 36px;
+            height: 36px;
+            flex: 0 0 auto;
+            margin-top: 2px;
+        }
+
+        #notification .notif-body {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 0; /* allow truncation */
+        }
+
+        #notification .notif-header {
+            font-weight: 700;
+            font-family: 'Fira Sans';
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        #notification .notif-text {
+            font-size: 0.9rem;
+            opacity: 0.95;
+            white-space: normal;
+            line-height: 1.2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #notification .notif-close {
+            margin-left: 12px;
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.95);
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 6px;
+            align-self: flex-start;
+            opacity: 0.9;
+        }
+
+        #notification .notif-close:hover { background: rgba(255,255,255,0.06); }
+
+        /* Compact on small screens */
+        @media (max-width: 420px) {
+            #notification { padding: 10px; gap: 8px; }
+            #notification .notif-icon { width: 28px; height: 28px; }
+            #notification .notif-header { font-size: 0.95rem }
+            #notification .notif-text { font-size: 0.85rem }
+        }
+
         @keyframes pulse {
 
             0%,
@@ -515,6 +596,7 @@
     </div>
     <div id="horizontalLine"></div>
     <div id="gameContainer"></div>
+    <div id="notification" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 <script>
     const header = document.getElementById('header');
@@ -550,6 +632,55 @@
     setInterval(() => {
         getAndSetTimeAndDate();
     }, 2000);
+
+    (function () {
+        const container = document.getElementById('notification');
+        let hideTimer = null;
+
+        function escapeHtml(str) {
+            if (typeof str !== 'string') return '';
+            return str.replace(/[&<>"']/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[s]);
+        }
+
+        function hideNotification() {
+            if (!container.classList.contains('show')) return;
+            container.classList.remove('show');
+            // After transition remove content so it can be garbage collected and to restore pointer-events when hidden
+            const onEnd = () => {
+                container.innerHTML = '';
+                container.removeEventListener('transitionend', onEnd);
+            };
+            container.addEventListener('transitionend', onEnd);
+            if (hideTimer) {
+                clearTimeout(hideTimer);
+                hideTimer = null;
+            }
+        }
+
+        window.notify = function notify(text = '', header = '', icon = 'info.svg') {
+            try {
+                if (!container) return console.warn('Notification container not found');
+                const iconPath = (typeof icon === 'string' && icon.indexOf('/') === -1) ? `/asset/ui/${icon}` : icon;
+
+                //populate content
+                container.innerHTML = `\n                    <img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n                    <div class="notif-body">\n                        <div class="notif-header">${escapeHtml(header)}</div>\n                        <div class="notif-text">${escapeHtml(text)}</div>\n                    </div>\n                    <button class="notif-close" aria-label="Close notification">&times;</button>\n                `;
+
+                const closeBtn = container.querySelector('.notif-close');
+                if (closeBtn) closeBtn.addEventListener('click', hideNotification, { once: true });
+
+                //show
+                requestAnimationFrame(() => container.classList.add('show'));
+
+                //default auto-hide after 6s
+                if (hideTimer) clearTimeout(hideTimer);
+                hideTimer = setTimeout(hideNotification, 6000);
+
+                return hideNotification;
+            } catch (e) {
+                console.error('notify error', e);
+            }
+        };
+    })();
 
     function getGameCount() {
         gameCountElement.textContent = gameContainer.children.length + " games available.";
