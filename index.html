@@ -88,15 +88,16 @@
                 color: rgb(255, 255, 255);
             }
 
+            #settingsMenuMain,
+            #feedbackMenuMain {
+                background-color: rgb(15, 15, 15, 0.3);
+                border: rgba(61, 61, 61, 0.8) solid 6px;
+            }
+
             #menuDivider {
                 background: #3a3a3a;
                 height: 5px;
                 width: 100%;
-            }
-
-            #settingsMenuMain {
-                background-color: rgb(34, 34, 34);
-                border: rgb(60, 60, 60) solid 5px;
             }
 
             #menuDivider {
@@ -130,7 +131,12 @@
             #github-icon:focus {
                 fill: rgb(93, 93, 93);
             }
+            #settingsMenuMain,
+            #feedbackMenuMain {
+                background-color: rgba(255, 255, 255, 0.4);
+                border: rgba(225, 225, 225, 0.1) solid 6px;
 
+            }
             .settingControl select {
                 background: #dddddd;
 
@@ -169,7 +175,7 @@
             }
 
             #settingsMenuMain {
-                background-color: rgb(250, 250, 250);
+                background-color: rgb(250, 250, 250, 0.3);
                 border: rgb(200, 200, 200) solid 5px;
 
             }
@@ -274,7 +280,7 @@
 
         #button,
         #submitFeedback {
-            background-color: #d14848;
+            background-color: #48d1a8;
             font-family: 'Fira Sans';
             font-size: 1.2rem;
             transition: all 0.5s ease;
@@ -283,7 +289,7 @@
 
         #button:focus,
         #submitFeedback:focus {
-            background-color: #780f0f;
+            background-color: #119e47;
         }
 
         #horizontalLine {
@@ -306,11 +312,13 @@
             opacity: 0;
             display: block;
             transform: translate(-50%, -52%) scale(.5);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(.36, .47, .39, 1.12);
             z-index: 40;
             border-radius: 40px;
             pointer-events: none;
-            box-shadow: 0 9px 20px rgb(255, 255, 255, 0.5);
+            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.6);
+            --webkit-backdrop-filter: blur(12px) brightness(2);
+            backdrop-filter: blur(12px) brightness(2);
         }
 
         #settingsMenuMain.open,
@@ -525,6 +533,12 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            transition: all 0.3s cubic-bezier(.54, .1, .53, .97);
+        }
+
+        #feedbackText:focus {
+            width: 93%;
+            font-size: 1.07rem;
         }
 
         #notification .notif-header {
@@ -1110,12 +1124,18 @@
         loadSavedSettings();
         buildSettingsUI();
 
-        // settings open/close behavior
+        // settings open/close behavior AND feedback menu handling
         const settingsBtn = document.getElementById('icon');
         const settingsMenu = document.getElementById('settingsMenuMain');
         const closeBtn = document.getElementById('close');
         const overlay = document.getElementById('settingsOverlay');
         const github = document.getElementsByClassName('github')[0];
+        const feedbackBtn = document.querySelector('.feedback');
+        const feedbackMenu = document.getElementById('feedbackMenuMain');
+        const feedbackCloseBtn = document.getElementById('feedbackClose');
+        const submitFeedbackBtn = document.getElementById('submitFeedback');
+        const feedbackText = document.getElementById('feedbackText');
+
 
         function openSettings() {
             settingsMenu.classList.add('open');
@@ -1159,7 +1179,6 @@
         //overlay click closes it
         if (overlay) overlay.addEventListener('click', () => {
             if (settingsMenu.classList.contains('open')) closeSettings();
-            const feedbackMenu = document.getElementById('feedbackMenuMain');
             if (feedbackMenu && feedbackMenu.classList.contains('open')) closeFeedback();
         });
 
@@ -1167,17 +1186,9 @@
         document.addEventListener('keydown', (ev) => {
             if (ev.key === 'Escape' || ev.code === 'Escape') {
                 if (settingsMenu.classList.contains('open')) closeSettings();
-                const feedbackMenu = document.getElementById('feedbackMenuMain');
                 if (feedbackMenu && feedbackMenu.classList.contains('open')) closeFeedback();
             }
         });
-
-        //feedback menu handling
-        const feedbackBtn = document.querySelector('.feedback');
-        const feedbackMenu = document.getElementById('feedbackMenuMain');
-        const feedbackCloseBtn = document.getElementById('feedbackClose');
-        const submitFeedbackBtn = document.getElementById('submitFeedback');
-        const feedbackText = document.getElementById('feedbackText');
 
         function openFeedback() {
             if (settingsMenu.classList.contains('open')) closeSettings();
