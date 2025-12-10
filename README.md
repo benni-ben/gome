@@ -12,6 +12,8 @@ Features:
  - Game descriptions.
  - Easy game adding. 
  - Easy file structure.
+ - Notification system. 
+ - Holiday reminders(in case you forget that a holiday is a certain day).
  - AND MORE...
 
 ## Development

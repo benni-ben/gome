@@ -204,7 +204,7 @@
             -webkit-text-fill-color: transparent;
             background-size: 200% 100%;
             animation: gradientShift 5s ease infinite;
-            -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.2);
+            -webkit-text-stroke: 1.3px rgba(0, 0, 0, 0.15);
             position: relative;
         }
 
@@ -657,7 +657,6 @@
     setInterval(() => {
         getAndSetTimeAndDate();
     }, 2000);
-
     (function () {
         const container = document.getElementById('notification');
         let hideTimer = null;
@@ -668,7 +667,7 @@
         }
 
         function hideNotification() {
-            if (!container.classList.contains('show')) return;
+            if (!container || !container.classList.contains('show')) return;
             container.classList.remove('show');
             // After transition remove content so it can be garbage collected and to restore pointer-events when hidden
             const onEnd = () => {
@@ -684,6 +683,8 @@
 
         window.notify = function notify(text = '', header = '', icon = 'info.svg') {
             try {
+                const notificationsEnabled = (typeof settings !== 'undefined') ? String(settings.notifications_notificationsEnabled) === 'true' : true;
+                if (!notificationsEnabled) return;
                 if (!container) return console.warn('Notification container not found');
                 const iconPath = (typeof icon === 'string' && icon.indexOf('/') === -1) ? `/asset/ui/${icon}` : icon;
 
@@ -818,18 +819,9 @@
                     try {
                         localStorage.setItem(storageKey, JSON.stringify({ key: dateRangeKey, year: currentYear }));
                     } catch (e) {
-                        //ignore the localStorage failures
                     }
                 }
             } catch (e) {
-                try {
-                    if (typeof settings !== 'undefined' && String(settings.debug_listenForErrors) === 'true') {
-                        console.error('Occasion notification error', e);
-                    } else if (typeof settings !== 'undefined' && String(settings.debug_logNotifications) === 'true') {
-                        console.warn('Occasion notification failed (non-critical)', e && e.message ? e.message : e);
-                    }
-                } catch (logErr) {
-                }
             }
         }
     }
@@ -878,10 +870,8 @@
     const settings = {
         animations_animationStatus: "Enabled",
         animations_timeScale: 1,
-        danger_deleteLocalStorageSettings: "false",
         debug_logUserActionsToConsole: "false",
-        debug_listenForErrors: "false",
-        debug_logNotifications: "false",
+        debug_verboseLogging: "false",
         notifications_notificationsEnabled: "true",
         notifications_notificationLoudAlarm: "false",
         themeing_backgroundColorOverride: "none",
@@ -890,11 +880,10 @@
     const settingDescriptions = {
         animations_animationStatus: { description: "Whether the animations are disabled or enabled. May improve performance on potato devices.", type: "toggle" },
         animations_timeScale: { description: "Animation speed for all animations on the page.", type: "slider", min: 0.1, max: 10 },
-        danger_deleteLocalStorageSettings: { description: "Deletes all of the localStorage settings that are stored. Resets all values back to the defaults.", type: "button" },
-        debug_listenForErrors: { description: "Notifys you of all errors that occur using a notification.", type: "toggle" },
-        debug_logNotifications: { description: "Logs all of the notifications to the console.", type: "toggle" },
+        danger_resetSettings: { description: "Deletes and resets your current settings back to the defaults.", type: "button" },
+        debug_verboseLogging: { description: "Enables extra verbose logging for debugging purposes.", type: "toggle" },
         notifications_notificationsEnabled: { description: "Enables or diables global notifications.", type: "toggle" },
-        notifications_notificationLoudAlarm: { description: "Plays an 'extremely relaxing' alarm sound whenever you get a notification. As of right now, the volume will always be at maximum.'", type: "toggle" },
+        notifications_notificationLoudAlarm: { description: "Plays an 'extremely relaxing' alarm sound whenever you get a notification. As of right now, the volume will always be at maximum.", type: "toggle" },
         themeing_backgroundColorOverride: { description: "The page's background color.", type: "color" },
     };
 
@@ -1025,19 +1014,18 @@
                 right.appendChild(color);
             } else if (desc.type === 'button') {
                 const btn = document.createElement('button');
-                btn.textContent = left.textContent.includes('Delete') || left.textContent.toLowerCase().includes('delete') ? 'Delete' : 'Do';
+                btn.textContent = "Delete";
                 btn.id = 'button'
                 btn.addEventListener('click', () => {
-                    if (key === 'danger_deleteLocalStorageSettings') {
-                        if (!confirm('This will reset ALL of your settings in to their defaults. Are you sure you want to continue?')) return;
-                        try { localStorage.removeItem(storageDBname); } catch (e) { }
-                        //reset in-memory copy
-                        Object.keys(defaultSettings).forEach(k => settings[k] = defaultSettings[k]);
-                        saveSettingsToLocalStorage();
-                        //reapply and rebuild UI
-                        Object.keys(settings).forEach(k => applySettingEffect(k, settings[k]));
-                        buildSettingsUI();
-                    }
+                    if (!confirm('This will reset ALL of your settings in to their defaults. Are you sure you want to continue?')) return;
+                    try { localStorage.removeItem(storageDBname); } catch (e) { }
+                    //reset in-memory copy
+                    Object.keys(defaultSettings).forEach(k => settings[k] = defaultSettings[k]);
+                    saveSettingsToLocalStorage();
+                    //reapply and rebuild UI
+                    Object.keys(settings).forEach(k => applySettingEffect(k, settings[k]));
+                    buildSettingsUI();
+                    notify("");
                 });
                 right.appendChild(btn);
             } else {
