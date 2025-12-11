@@ -131,12 +131,14 @@
             #github-icon:focus {
                 fill: rgb(93, 93, 93);
             }
+
             #settingsMenuMain,
             #feedbackMenuMain {
                 background-color: rgba(255, 255, 255, 0.4);
                 border: rgba(225, 225, 225, 0.1) solid 6px;
 
             }
+
             .settingControl select {
                 background: #dddddd;
 
@@ -297,7 +299,6 @@
             animation: 2s widen ease;
             border: none;
             margin: 20px auto;
-            animation: 5s pulse infinite cubic-bezier(.11, .59, .8, .03);
             background-image: linear-gradient(to right, transparent, var(--middle-fade-random-color), transparent);
         }
 
@@ -601,19 +602,6 @@
             }
         }
 
-        @keyframes pulse {
-
-            0%,
-            100% {
-                width: 100%;
-            }
-
-            30% {
-                width: 70%;
-            }
-
-        }
-
         @keyframes gradientShift {
             0% {
                 background-position: 0%;
@@ -700,6 +688,7 @@
 
     </div>
     <div id="horizontalLine"></div>
+    <div id="newestGomes"></div>
     <div id="gameContainer"></div>
     <div id="notification" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
@@ -935,11 +924,25 @@
                     thumbnail.id = 'gameThumbnail';
                     gameElement.id = 'gameItem';
                     //we finally append the elements to the game container
+                    
                     gameElement.appendChild(thumbnail);
                     gameElement.appendChild(title);
                     gameElement.appendChild(description);
-                    gameContainer.appendChild(gameElement);
-                });
+                    // newestcontainer = document.getElementById('newestGomes');
+                    // newestGomesJSONPath = "newestgomes.json";
+                    // fetch(newestGomesJSONPath)
+                    //     .then(response => response.json())
+                    //     .then(newestGomes => {
+                    //         const isNewest = newestGomes.includes(gameName);
+                    //         if (isNewest) {
+                    //             newestcontainer.appendChild(gameElement);
+
+                    //         }
+                    //     })
+                    //     .catch(error => console.error('Error loading newestgomes file, is it set up correctly?', error));
+                    gameContainer.appendChild(gameElement);});
+                
+                
                 //update game count
                 getGameCount();
             })
@@ -990,6 +993,95 @@
         }
         //apply loaded settings
         Object.keys(settings).forEach(k => applySettingEffect(k, settings[k]));
+    }
+
+    function aprilFools() {
+        const now = new Date();
+        // April is month 3 (0-indexed months). If it's April 1st enable the prank behavior.
+        const isAprilFools = (now.getMonth() === 3 && now.getDate() === 1);
+        window._isAprilFools = isAprilFools;
+        window._aprilDelayMs = 8000; // 8 seconds
+        // flag to avoid re-entering the delay handler when we programmatically trigger actions
+        window._aprilSkip = false;
+
+        if (!isAprilFools) return;
+
+        const sendHoldNotification = () => {
+            try {
+                if (window.notify) window.notify('hold on twin', 'Hold on', 'info.svg');
+            } catch (e) { }
+        };
+
+        // Intercept clicks on interactive elements (buttons, anchors, inputs with click actions)
+        document.addEventListener('click', (ev) => {
+            try {
+                if (!window._isAprilFools || window._aprilSkip) return;
+                const t = ev.target;
+                if (!t) return;
+                const interactive = t.closest && t.closest('button, a, [role="button"], input[type="button"], input[type="submit"]');
+                if (!interactive) return;
+                // allow opting out of the prank via attribute
+                if (interactive.hasAttribute && interactive.hasAttribute('data-april-bypass')) return;
+
+                ev.preventDefault();
+                ev.stopImmediatePropagation();
+
+                sendHoldNotification();
+
+                setTimeout(() => {
+                    try {
+                        window._aprilSkip = true;
+                        // If it's an anchor with href, navigate there
+                        if (interactive.tagName && interactive.tagName.toLowerCase() === 'a' && interactive.href) {
+                            window.location.href = interactive.href;
+                        } else if (interactive.matches && interactive.matches('input[type="submit"], button[type="submit"]')) {
+                            const form = interactive.form || interactive.closest('form');
+                            if (form) form.submit();
+                        } else {
+                            // trigger the native click for other elements
+                            try { interactive.click(); } catch (e) { }
+                        }
+                    } catch (e) { }
+                    // small delay to let triggered handlers run before re-enabling
+                    setTimeout(() => { window._aprilSkip = false; }, 50);
+                }, window._aprilDelayMs);
+            } catch (e) { }
+        }, true);
+
+        // Intercept form submit events (in case forms are submitted via Enter or JS)
+        document.addEventListener('submit', (ev) => {
+            try {
+                if (!window._isAprilFools || window._aprilSkip) return;
+                ev.preventDefault();
+                ev.stopImmediatePropagation();
+                const form = ev.target;
+                sendHoldNotification();
+                setTimeout(() => {
+                    try { window._aprilSkip = true; form.submit(); } catch (e) { }
+                    setTimeout(() => { window._aprilSkip = false; }, 50);
+                }, window._aprilDelayMs);
+            } catch (e) { }
+        }, true);
+
+        // Intercept keyboard activation (Enter/Space) when focusing interactive items
+        document.addEventListener('keydown', (ev) => {
+            try {
+                if (!window._isAprilFools || window._aprilSkip) return;
+                if (ev.key !== 'Enter' && ev.key !== ' ') return;
+                const active = document.activeElement;
+                if (!active) return;
+                const interactive = active.closest && active.closest('button, a, [role="button"], input[type="button"], input[type="submit"]') || (/button|a|input/i.test(active.tagName) && active);
+                if (!interactive) return;
+                if (interactive.hasAttribute && interactive.hasAttribute('data-april-bypass')) return;
+                ev.preventDefault();
+                ev.stopImmediatePropagation();
+                sendHoldNotification();
+                setTimeout(() => {
+                    try { window._aprilSkip = true; interactive.click(); } catch (e) { }
+                    setTimeout(() => { window._aprilSkip = false; }, 50);
+                }, window._aprilDelayMs);
+            } catch (e) { }
+        }, true);
     }
 
     function applySettingEffect(key, value) {
@@ -1120,6 +1212,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
         getTimeAssociatedColors();
+        aprilFools();
         gameLoader();
         loadSavedSettings();
         buildSettingsUI();
