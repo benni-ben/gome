@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A quote generator that creates garbled quotes from existing quotes.">
+        <meta name="author" content="ben">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <title>Garbled Quote Generator</title>
+        <link href="materialize/css/materialize.css" rel="stylesheet">
+        <link rel="stylesheet" href="materialize/css/materialize.css">
+    </head>
+    <style>
+    /* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("materialize/FontFace.woff2") format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}</style>
+    <body>
+        <div style="text-align: center;">
+            <div style="margin-top: 30px; margin-bottom: 30px;">
+                <a class="waves-effect waves-light btn" id="button">new quote</a>
+            </div>
+        </div>
+    <div class="cont">
+    <h2 id="quotebox" style="font-style:italic; font-size: 5rem; position: static; width: 100%; padding: 4%; margin: auto; text-align: center; color: rgb(0, 0, 0); text-shadow: 1px 1px 10px #00000092;">Quote</h2>
+    <h3 id="authorBox" style="font-style:bold; font-size: 2.4rem; position: static; width: 100%; text-align: center; color: rgb(50, 50, 50); text-shadow: 1px 1px 10px #16161692;margin-top: 30px;">Quote</h3>
+    <h3 id="dateBox" style="font-style:bold; font-size: 2.4rem; position: static; width: 100%; text-align: center; color: rgb(50, 50, 50); text-shadow: 1px 1px 10px #16161692;margin-top: 30px;">Date</h3>
+    </div>
+    <script>
+    let quoteBox = document.getElementById('quotebox');
+    let quoteButton = document.getElementById('button');
+    let quoteAuthor = document.getElementById('authorBox');
+    let randomQuote = '';
+        function randomNumber(min, max) {
+            if (min == max) {
+                return min;
+            }
+            else {
+                return (Math.floor(Math.random() * (max - min + 1)) + min);
+            }
+
+        }
+        async function getQuote() {
+            try {
+            const res = await fetch('quotesdb.json');
+            if (!res.ok) throw new Error('The network response was not ok.') && console.log("Fetching quotes database has failed. Please make sure that the quotesdb.json file is accessible and present in the directory.");
+            const data = await res.json();
+
+            const quotes = Array.isArray(data) ? data : (Array.isArray(data.quotes) ? data.quotes : []);
+            if (!quotes.length) throw new Error('JSON does not contain any quotes. Please add quotes before using.');
+            const index = randomNumber(0, quotes.length - 1);
+
+            // store fetched quote in a global variable and log it
+            randomQuote = quotes[index].text ?? String(quotes[index]);
+            } catch (err) {
+            console.error(err);
+            console.log("Could not load quote.");
+            randomQuote = '';
+            console.log(randomQuote);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            getQuote().then(() => {
+                quoteBox.textContent = garbleQuote(randomQuote);
+                randomAuthor();
+            });
+        });
+        function garbleQuote(quote) {
+            if (!quote || typeof quote !== 'string') return "No quote available. Please click 'NEW QUOTE' to fetch a quote.";
+            quote = quote.trim();
+            const re = /([^\w'’\-]*)([\w'’\-]+)([^\w'’\-]*)/g;
+            let match;
+            const tokens = [];
+            while ((match = re.exec(quote)) !== null) {
+                tokens.push({
+                    leading: match[1] || '',
+                    core: match[2],
+                    trailing: match[3] || ''
+                });
+            }
+            if (!tokens.length) return quote;
+
+            // shuffle tokens so the words stay intact
+            for (let i = tokens.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [tokens[i], tokens[j]] = [tokens[j], tokens[i]];
+            }
+            // strip terminal sentence punctuation from all trailing parts
+            tokens.forEach(t => {
+                t.trailing = t.trailing.replace(/[.?!]+$/g, '');
+            });
+
+            // ensure last token ends with a single period, and there should be no other punctuation in the quote.
+            
+            const last = tokens[tokens.length - 1];
+            const closingMatch = last.trailing.match(/([)\]'"”’]+)$/);
+            let closing = '';
+            if (closingMatch) {
+                closing = closingMatch[1];
+                last.trailing = last.trailing.slice(0, last.trailing.length - closing.length);
+            }
+            last.trailing = last.trailing + '.' + closing;
+
+            // keep acronyms/all-caps, keep 'I', lower-case others
+            tokens.forEach(t => {
+                const core = t.core;
+                if (/^[A-Z0-9]{2,}$/.test(core)) {
+                    // likely an acronym, keep as is
+                    t.core = core;
+                } else if (core.toLowerCase() === 'i') {
+                    t.core = 'I';
+                } else {
+                    t.core = core.toLowerCase();
+                }
+            });
+
+            // capitalize first word of the sentence (after any leading punctuation)
+            if (tokens.length) {
+                const first = tokens[0];
+                first.core = first.core.charAt(0).toUpperCase() + first.core.slice(1);
+            }
+
+            // join tokens with single spaces and remove any space before punctuation
+            let result = tokens.map(t => t.leading + t.core + t.trailing).join(' ');
+            result = result.replace(/\s+([,;:.!?])/g, '$1');
+            // delete any 'the' at the end of the result
+            result = result.replace(/\s+the$/i, '');
+
+            // we clear the duplicate words, except for the words in the filterMask
+            const filterMask = [
+                'I',
+                'you',
+                'he',
+                'she',
+                'it',
+                'we',
+                'they',
+                'me',
+                'him',
+                'her',
+                'us',
+                'them',
+                'my',
+                'your',
+                'his',
+                'her',
+                'its',
+                'our',
+                'their',
+                'mine',
+                'yours',
+                'hers',
+                'ours',
+                'theirs'
+            ];
+            const seen = new Set();
+            const filtered = [];
+            result.split(' ').forEach(word => {
+                if (!seen.has(word) || filterMask.includes(word)) {
+                    filtered.push(word);
+                    seen.add(word);
+                }
+            });
+            result = filtered.join(' ');
+
+            // no leading/trailing whitespace
+            result = result.trim();
+            // make sure that any words from the filterMask2 are not at the end of the result
+            const filterMask2 = [
+                'a',
+                'an',
+                'the',
+                'and',
+                'but',
+                'or',
+                'for',
+                'nor',
+                'so',
+                'yet',
+                'at',
+                'by',
+                'in',
+                'of',
+                'on',
+                'to',
+                'up',
+                'as',
+                'your',
+                'then',
+                'we',
+            ];
+            const lastWordRaw = result.split(' ').pop() || '';
+            const lastWord = lastWordRaw.replace(/[.?!]+$/,'').toLowerCase();
+            if (filterMask2.includes(lastWord)) {
+                result = result.slice(0, result.lastIndexOf(' '));
+            }
+            // remove all punctuation
+            result = result.replaceAll(/[.?!]+/g, '');
+            result = result.replaceAll(/[,;:]+/g, '');
+            result = result.endsWith('.') ? result : result + '.';
+            return result;
+        }
+        async function randomAuthor() {
+            try {
+                const [quotesRes, jobsRes] = await Promise.all([
+                    fetch('quotesdb.json'),
+                    fetch('jobsdb.json')
+                ]);
+                if (!quotesRes.ok) throw new Error('Failed to fetch quotes database. Be sure that the quotesdb.json file is present and accessible.');
+                if (!jobsRes.ok) throw new Error('Failed to fetch jobs database. Be sure that the jobsdb.json file is present and accessible.');
+
+                const qdata = await quotesRes.json();
+                const jdata = await jobsRes.json();
+
+                const quotes = Array.isArray(qdata) ? qdata : (Array.isArray(qdata.quotes) ? qdata.quotes : []);
+                const jobs = Array.isArray(jdata) ? jdata : (Array.isArray(jdata.jobs) ? jdata.jobs : []);
+
+                // pick random author
+                let author = 'Unknown';
+                if (quotes.length) {
+                    const qi = randomNumber(0, quotes.length - 1);
+                    author = quotes[qi].author ?? 'Unknown';
+                }
+
+                // pick random job
+                let job = 'Professional';
+                if (jobs.length) {
+                    const ji = randomNumber(0, jobs.length - 1);
+                    const entry = jobs[ji];
+                    if (typeof entry === 'string') {
+                        job = entry;
+                    } else {
+                        job = entry.job ?? entry.title ?? 'Professional';
+                    }
+                }
+                quoteAuthor.textContent = `${author}, ${job}`;
+            } catch (error) {
+                console.error('Error fetching author/job:', error);
+                quoteAuthor.textContent = 'Quote';
+            }
+        }
+        function randomDate() {
+            document.getElementById("dateBox").textContent = "From " + randomNumber(1200, 2025);
+        }
+        quoteButton.addEventListener("click", () => {
+            getQuote().then(() => {
+                quoteBox.textContent = garbleQuote(randomQuote);
+                randomAuthor();
+                randomDate();
+            });
+        });
+        </script>
+        <script src="materialize/js/materialize.js"></script>
+        </body>
+    </html>
