@@ -210,6 +210,7 @@
             --head-grad-color-1: #000000;
             --head-grad-color-2: #009cbf;
             --head-grad-color-3: #1c19eb;
+            --interfaceblur: 5px;
         }
 
         #header {
@@ -322,7 +323,7 @@
             pointer-events: none;
             box-shadow: 0 5px 10px rgba(255, 0, 0, 0.6);
             --webkit-backdrop-filter: blur(12px) brightness(2);
-            backdrop-filter: blur(12px) brightness(2);
+            backdrop-filter: blur((var(--interfaceblur))) brightness(2);
         }
 
         #settingsMenuMain.open,
@@ -664,7 +665,6 @@
             <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
         </svg>
-
         <h3 id="settingsMenuInfo">Hover over a setting for more information.</h3>
         <div id="menuDivider"></div>
         <div id="actualSettings">
@@ -1144,13 +1144,6 @@
         const submitFeedbackBtn = document.getElementById('submitFeedback');
         const feedbackText = document.getElementById('feedbackText');
 
-        function changeBlur() {
-            if (settingsMenu.classList.contains('open') || (feedbackMenu && feedbackMenu.classList.contains('open'))) {
-                document.body.style.filter = 'blur(5px)';
-            } else {
-                document.body.style.filter = '';
-            }
-        }
         function openSettings() {
             settingsMenu.classList.add('open');
             overlay.classList.add('open');
@@ -1246,7 +1239,6 @@
                 }
             });
         }
-
         infoIcon = document.getElementsByClassName("infoicon")[0];
         infoIcon.addEventListener("click", function () {
             notify("Gome is a web-based game launcher created by benni-ben. Custom modded gomes are coming, so please stay tuned. If you want to suggest a gome for me to mod, add it in feedback, although there is no guerentee that I will be able to.", "About Gome", "info.svg");
