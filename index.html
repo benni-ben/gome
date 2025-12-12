@@ -279,7 +279,7 @@
         #gameDescription {
             font-family: 'Fira Mono';
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 0.85rem;
             justify-content: center;
         }
 
@@ -927,7 +927,7 @@
                     thumbnail.id = 'gameThumbnail';
                     gameElement.id = 'gameItem';
                     //we finally append the elements to the game container
-                    
+
                     gameElement.appendChild(thumbnail);
                     gameElement.appendChild(title);
                     gameElement.appendChild(description);
@@ -943,9 +943,10 @@
                     //         }
                     //     })
                     //     .catch(error => console.error('Error loading newestgomes file, is it set up correctly?', error));
-                    gameContainer.appendChild(gameElement);});
-                
-                
+                    gameContainer.appendChild(gameElement);
+                });
+
+
                 //update game count
                 getGameCount();
             })
