@@ -962,6 +962,7 @@
         notifications_notificationsEnabled: "true",
         notifications_notificationLoudAlarm: "false",
         themeing_backgroundColorOverride: "none",
+        themeing_InterfaceBackgroundBlurValue: "5px",
     };
     const defaultSettings = JSON.parse(JSON.stringify(settings));
     const settingDescriptions = {
@@ -972,6 +973,7 @@
         notifications_notificationsEnabled: { description: "Enables or diables global notifications.", type: "toggle" },
         notifications_notificationLoudAlarm: { description: "Plays an 'extremely relaxing' alarm sound whenever you get a notification. As of right now, the volume will always be at maximum.", type: "toggle" },
         themeing_backgroundColorOverride: { description: "The page's background color.", type: "color" },
+        themeing_InterfaceBackgroundBlurValue: { description: "The intensity of the background blur for UI elements.", type: "slider", min: 0, max: 20 },
     };
 
 
@@ -999,97 +1001,7 @@
         Object.keys(settings).forEach(k => applySettingEffect(k, settings[k]));
     }
 
-    function aprilFools() {
-        const now = new Date();
-        // April is month 3 (0-indexed months). If it's April 1st enable the prank behavior.
-        const isAprilFools = (now.getMonth() === 3 && now.getDate() === 1);
-        window._isAprilFools = isAprilFools;
-        window._aprilDelayMs = 8000; // 8 seconds
-        // flag to avoid re-entering the delay handler when we programmatically trigger actions
-        window._aprilSkip = false;
-
-        if (!isAprilFools) return;
-
-        const sendHoldNotification = () => {
-            try {
-                if (window.notify) window.notify('hold on twin', 'Hold on', 'info.svg');
-            } catch (e) { }
-        };
-
-        // Intercept clicks on interactive elements (buttons, anchors, inputs with click actions)
-        document.addEventListener('click', (ev) => {
-            try {
-                if (!window._isAprilFools || window._aprilSkip) return;
-                const t = ev.target;
-                if (!t) return;
-                const interactive = t.closest && t.closest('button, a, [role="button"], input[type="button"], input[type="submit"]');
-                if (!interactive) return;
-                // allow opting out of the prank via attribute
-                if (interactive.hasAttribute && interactive.hasAttribute('data-april-bypass')) return;
-
-                ev.preventDefault();
-                ev.stopImmediatePropagation();
-
-                sendHoldNotification();
-
-                setTimeout(() => {
-                    try {
-                        window._aprilSkip = true;
-                        // If it's an anchor with href, navigate there
-                        if (interactive.tagName && interactive.tagName.toLowerCase() === 'a' && interactive.href) {
-                            window.location.href = interactive.href;
-                        } else if (interactive.matches && interactive.matches('input[type="submit"], button[type="submit"]')) {
-                            const form = interactive.form || interactive.closest('form');
-                            if (form) form.submit();
-                        } else {
-                            // trigger the native click for other elements
-                            try { interactive.click(); } catch (e) { }
-                        }
-                    } catch (e) { }
-                    // small delay to let triggered handlers run before re-enabling
-                    setTimeout(() => { window._aprilSkip = false; }, 50);
-                }, window._aprilDelayMs);
-            } catch (e) { }
-        }, true);
-
-        // Intercept form submit events (in case forms are submitted via Enter or JS)
-        document.addEventListener('submit', (ev) => {
-            try {
-                if (!window._isAprilFools || window._aprilSkip) return;
-                ev.preventDefault();
-                ev.stopImmediatePropagation();
-                const form = ev.target;
-                sendHoldNotification();
-                setTimeout(() => {
-                    try { window._aprilSkip = true; form.submit(); } catch (e) { }
-                    setTimeout(() => { window._aprilSkip = false; }, 50);
-                }, window._aprilDelayMs);
-            } catch (e) { }
-        }, true);
-
-        // Intercept keyboard activation (Enter/Space) when focusing interactive items
-        document.addEventListener('keydown', (ev) => {
-            try {
-                if (!window._isAprilFools || window._aprilSkip) return;
-                if (ev.key !== 'Enter' && ev.key !== ' ') return;
-                const active = document.activeElement;
-                if (!active) return;
-                const interactive = active.closest && active.closest('button, a, [role="button"], input[type="button"], input[type="submit"]') || (/button|a|input/i.test(active.tagName) && active);
-                if (!interactive) return;
-                if (interactive.hasAttribute && interactive.hasAttribute('data-april-bypass')) return;
-                ev.preventDefault();
-                ev.stopImmediatePropagation();
-                sendHoldNotification();
-                setTimeout(() => {
-                    try { window._aprilSkip = true; interactive.click(); } catch (e) { }
-                    setTimeout(() => { window._aprilSkip = false; }, 50);
-                }, window._aprilDelayMs);
-            } catch (e) { }
-        }, true);
-    }
-
     function applySettingEffect(key, value) {
-        // apply immediate visual/effectful changes for some settings
         switch (key) {
             case 'themeing_backgroundColorOverride':
                 if (value && value !== 'none') {
@@ -1216,7 +1128,6 @@
     document.addEventListener('DOMContentLoaded', () => {
         getAndSetTimeAndDate();
         getTimeAssociatedColors();
-        aprilFools();
         gameLoader();
         loadSavedSettings();
         buildSettingsUI();
@@ -1233,7 +1144,13 @@
         const submitFeedbackBtn = document.getElementById('submitFeedback');
         const feedbackText = document.getElementById('feedbackText');
 
-
+        function changeBlur() {
+            if (settingsMenu.classList.contains('open') || (feedbackMenu && feedbackMenu.classList.contains('open'))) {
+                document.body.style.filter = 'blur(5px)';
+            } else {
+                document.body.style.filter = '';
+            }
+        }
         function openSettings() {
             settingsMenu.classList.add('open');
             overlay.classList.add('open');
