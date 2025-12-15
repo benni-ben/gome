@@ -752,29 +752,25 @@
             }
         }
 
-        window.notify = function notify(text = '', header = '', icon = 'info.svg') {
+        window.notify = function notify(text = '', header = '', icon = 'info.svg', time = "6000") {
             try {
                 const notificationsEnabled = (typeof settings !== 'undefined') ? String(settings.notifications_notificationsEnabled) === 'true' : true;
                 if (!notificationsEnabled) return;
                 if (!container) return console.warn('Notification container not found');
                 const iconPath = (typeof icon === 'string' && icon.indexOf('/') === -1) ? `/asset/ui/${icon}` : icon;
-
-                //populate content
                 container.innerHTML = `\n<img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n<div class="notif-body">\n<div class="notif-header">${escapeHtml(header)}</div>\n<div class="notif-text">${escapeHtml(text)}</div>\n</div>\n<button class="notif-close" aria-label="Close notification">&times;</button>\n`;
-
                 const closeBtn = container.querySelector('.notif-close');
                 if (closeBtn) closeBtn.addEventListener('click', hideNotification, { once: true });
-
                 //show
                 requestAnimationFrame(() => container.classList.add('show'));
-
                 //default auto-hide after 6s
                 if (hideTimer) clearTimeout(hideTimer);
-                hideTimer = setTimeout(hideNotification, 6000);
-
+                hideTimer = setTimeout(hideNotification, time);
+                //for debug purposes incase i fuck something up
+                console.log('Notification shown: with body text "' + text + '", header text "' + header + '", icon name "' + icon + '", and a time of ' + time + "milliseconds." )
                 return hideNotification;
             } catch (e) {
-                console.error('notify error', e);
+                console.error('Notification error: ', e);
             }
         };
     })();
