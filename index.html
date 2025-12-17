@@ -1227,7 +1227,7 @@
             });
         }
         async function sendFeedback(message) {
-            const response = await fetch("/netlify-functions/discord-webhook", {
+            const response = await fetch("/netlify-functions/discord-webhook.js", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ feedback: message })

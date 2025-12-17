@@ -1,5 +1,5 @@
 exports.handler = async (event) => {
-    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    const webhookUrl = "https://discord.com/api/webhooks/1450866106779697284/H5OjFE1bb9xi18mXxRDwASBvi0D3sjxNpuxSfnqa42IuMil8PdpfspoaCx1Yr2kQnjI6";
     const { feedback } = JSON.parse(event.body);
     try {
         const response = await fetch(webhookUrl, {
