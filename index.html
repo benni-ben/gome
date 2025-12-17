@@ -1226,19 +1226,29 @@
                 }
             });
         }
+        async function sendFeedback(message) {
+            const response = await fetch("/netlify-functions/discord-webhook", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ feedback: message })
+            });
 
+            return response.ok;
+        }
         if (submitFeedbackBtn) {
             submitFeedbackBtn.addEventListener('click', () => {
-                const message = feedbackText.value.trim();
+                message = feedbackText.value.trim();
                 if (message) {
-                    notify('Thank you for your feedback!', 'Feedback Sent', 'specialday.svg');
+                    notify('Thank you for your feedback!', 'Feedback Sent', 'specialday.svg', '8000');
                     feedbackText.value = '';
                     closeFeedback();
+                    sendFeedback(message);
                 } else {
-                    notify('Please enter some feedback', 'Empty Feedback', 'error.svg');
+                    notify('Please enter some feedback', 'Empty Feedback', 'error.svg', '7000');
                 }
             });
         }
+
         infoIcon = document.getElementsByClassName("infoicon")[0];
         infoIcon.addEventListener("click", function () {
             notify("Gome is a web-based game launcher created by benni-ben. Custom modded gomes are coming, so please stay tuned. If you want to suggest a gome for me to mod, add it in feedback, although there is no guerentee that I will be able to.", "About Gome", "info.svg");
