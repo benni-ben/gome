@@ -1227,7 +1227,7 @@
             });
         }
         async function sendFeedback(message) {
-            const response = await fetch("/netlify-functions/discord-webhook.js", {
+            const response = await fetch("/api/discord-webhook", {  // Changed path
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ feedback: message })
@@ -1235,20 +1235,25 @@
 
             return response.ok;
         }
+
         if (submitFeedbackBtn) {
-            submitFeedbackBtn.addEventListener('click', () => {
-                message = feedbackText.value.trim();
+            submitFeedbackBtn.addEventListener('click', async () => { // Make it async
+                const message = feedbackText.value.trim();
                 if (message) {
-                    notify('Thank you for your feedback!', 'Feedback Sent', 'specialday.svg', '8000');
-                    feedbackText.value = '';
+                    notify("Thank you for your feedback!", "Feedback Sent", "specialday.svg", "8000");
+                    feedbackText.value = "";
                     closeFeedback();
-                    sendFeedback(message);
+
+                    // Wait for the feedback to be sent
+                    const success = await sendFeedback(message);
+                    if (!success) {
+                        console.error("Failed to send feedback");
+                    }
                 } else {
-                    notify('Please enter some feedback', 'Empty Feedback', 'error.svg', '7000');
+                    notify("Please enter some feedback.", "Empty Feedback", "error.svg", "7000");
                 }
             });
         }
-
         infoIcon = document.getElementsByClassName("infoicon")[0];
         infoIcon.addEventListener("click", function () {
             notify("Gome is a web-based game launcher created by benni-ben. Custom modded gomes are coming, so please stay tuned. If you want to suggest a gome for me to mod, add it in feedback, although there is no guerentee that I will be able to.", "About Gome", "info.svg");
