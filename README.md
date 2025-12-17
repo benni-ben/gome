@@ -50,6 +50,10 @@ You can use this example in the `descriptions.json` file, and then replace the k
 
 All of the pairs must be inside of the curly brackets.
 
+## Feedback
+
+For connecting the feedback, Netlify functions is used, and connected to a Discord webhook. The function 
+
 ## Development tools used
 
 A wide variety of other tools(some closed source, but I will add them here anyway because they helped me) that were used during development are in this section.
