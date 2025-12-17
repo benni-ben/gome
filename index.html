@@ -705,7 +705,7 @@
         function hideNotification() {
             if (!container || !container.classList.contains('show')) return;
             container.classList.remove('show');
-            //fter transition remove content so it can be garbage collected and to restore pointer-events when hidden
+            //after transition remove content so it can be garbage collected and to restore pointer-events when hidden
             const onEnd = () => {
                 container.innerHTML = '';
                 container.removeEventListener('transitionend', onEnd);
