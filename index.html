@@ -1227,7 +1227,7 @@
             });
         }
         async function sendFeedback(message) {
-            const response = await fetch("/api/discord-webhook", {  // Changed path
+            const response = await fetch("https://gomestable.netlify.app/.netlify/functions/discord-webhook", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ feedback: message })
@@ -1237,14 +1237,12 @@
         }
 
         if (submitFeedbackBtn) {
-            submitFeedbackBtn.addEventListener('click', async () => { // Make it async
+            submitFeedbackBtn.addEventListener('click', async () => {
                 const message = feedbackText.value.trim();
                 if (message) {
                     notify("Thank you for your feedback!", "Feedback Sent", "specialday.svg", "8000");
                     feedbackText.value = "";
                     closeFeedback();
-
-                    // Wait for the feedback to be sent
                     const success = await sendFeedback(message);
                     if (!success) {
                         console.error("Failed to send feedback");
