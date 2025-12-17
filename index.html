@@ -371,6 +371,10 @@
             width: 40px;
         }
 
+        #github-icon:hover {
+            fill: rgb(180, 180, 180);
+        }
+
         #icon:focus,
         #github-icon:focus,
         #icon.open,
@@ -394,22 +398,22 @@
         }
 
         .settingControl input[type=checkbox] {
-            height: 18px;
+            height: 32px;
             transition: all 0.2s ease;
-            width: 18px;
+            width: 32px;
         }
 
         .settingControl input[type=checkbox]:hover {
-            height: 24px;
-            width: 24px;
+            height: 40px;
+            width: 40px;
         }
 
         .settingControl input[type=color] {
             background: none;
             border: none;
-            height: 28px;
+            height: 32px;
             padding: 0;
-            width: 36px;
+            width: 32px;
         }
 
         #settingsMenuInfo {
@@ -691,8 +695,8 @@
     const header = document.getElementById('header');
     const gameContainer = document.getElementById('gameContainer');
     const gameCountElement = document.getElementById('gameCount');
-    const currentVersion = "1.4.8";
-    const changes = "Fixed stickman hook opening other shit websites when play button is clicked(probably because I downloaded it from a random github repo), and added the thumbnail for eaglercraft(minecraft).";
+    const currentVersion = "1.4.9";
+    const changes = "Added hextris to the website, and changed a small design parameter.";
     (function () {
         const container = document.getElementById('notification');
         let hideTimer = null;
