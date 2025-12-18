@@ -52,7 +52,8 @@ All of the pairs must be inside of the curly brackets.
 
 ## Feedback
 
-For connecting the feedback, Netlify functions is used, and connected to a Discord webhook. The function 
+For connecting the feedback, **Netlify functions is used**, and is connected to a Discord webhook. The function on Netlify will send a `POST` request to Discord's webhook API, and return the status. For now, the avatar icon is just a picture of some potatoes. 🥔🥔🥔🥔 
+
 
 ## Development tools used
 
