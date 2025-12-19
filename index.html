@@ -626,7 +626,6 @@
         }
     </style>
 </head>
-
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"
         role="button">
@@ -684,10 +683,8 @@
         <h4 id="time"></h4>
         <h4 id="date"></h4>
         <h4 id="gameCount"></h4>
-
     </div>
     <div id="horizontalLine"></div>
-    <div id="newestGomes"></div>
     <div id="gameContainer"></div>
     <div id="notification" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
@@ -695,8 +692,8 @@
     const header = document.getElementById('header');
     const gameContainer = document.getElementById('gameContainer');
     const gameCountElement = document.getElementById('gameCount');
-    const currentVersion = "1.4.9";
-    const changes = "Added hextris to the website, and changed a small design parameter.";
+    const currentVersion = "1.5.0";
+    const changes = "Basketball Random is now modded! I changed a lot of textures, send feedback if you think I should change anything else about the game(or any other game). Feedback is also fixed now, it was not working before.";
     (function () {
         const container = document.getElementById('notification');
         let hideTimer = null;
@@ -932,18 +929,6 @@
                     gameElement.appendChild(thumbnail);
                     gameElement.appendChild(title);
                     gameElement.appendChild(description);
-                    // newestcontainer = document.getElementById('newestGomes');
-                    // newestGomesJSONPath = "newestgomes.json";
-                    // fetch(newestGomesJSONPath)
-                    //     .then(response => response.json())
-                    //     .then(newestGomes => {
-                    //         const isNewest = newestGomes.includes(gameName);
-                    //         if (isNewest) {
-                    //             newestcontainer.appendChild(gameElement);
-
-                    //         }
-                    //     })
-                    //     .catch(error => console.error('Error loading newestgomes file, is it set up correctly?', error));
                     gameContainer.appendChild(gameElement);
                 });
 
