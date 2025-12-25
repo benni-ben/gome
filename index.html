@@ -472,10 +472,9 @@
 
         #notification {
             /* hidden */
-            background-color: rgb(114, 114, 114);
+            background-color: rgb(100, 100, 100);
             align-items: flex-start;
             border: 1px solid rgba(0, 0, 0, 0);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
             color: white;
             display: flex;
             font-family: "Fira Mono";
@@ -488,8 +487,9 @@
             position: fixed;
             top: 20px;
             transform: translateX(-50%)translateY(-150%);
-            transition: transform 0.4s cubic-bezier(.36, .47, .39, 1.12), opacity 0.5s cubic-bezier(.36, .47, .39, 1.12), border 1s cubic-bezier(.36, .47, .39, 1.12);
+            transition: transform 0.4s cubic-bezier(.36, .47, .39, 1.12), opacity 0.5s cubic-bezier(.36, .47, .39, 1.12), border 0.7s cubic-bezier(.36, .47, .39, 1.12);
             z-index: 1000;
+            animation: notifyPulse 3s infinite;
         }
 
         #notification.show {
@@ -624,6 +624,14 @@
                 width: 100%;
             }
         }
+        @keyframes notifyPulse {
+            0%,100% {
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+            }
+            50% {
+                box-shadow: 0 10px 20px rgb(130, 130, 130);
+            }
+        }
     </style>
 </head>
 
@@ -694,8 +702,8 @@
     const header = document.getElementById('header');
     const gameContainer = document.getElementById('gameContainer');
     const gameCountElement = document.getElementById('gameCount');
-    const currentVersion = "1.5.1";
-    const changes = "Added Habibi Highways(thanks nora).";
+    const currentVersion = "1.5.2";
+    const changes = "Added Fear Assesment(I reccomend playing it if you like horror games), added notification pulse animation in case you do not pay attention to the notification";
     (function () {
         const container = document.getElementById('notification');
         let hideTimer = null;
