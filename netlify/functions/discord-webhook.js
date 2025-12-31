@@ -1,4 +1,4 @@
-// netlify/functions/discord-webhook.js
+// backend for webhook on discord
 exports.handler = async (event) => {
     const webhookUrl = "https://discord.com/api/webhooks/1450866106779697284/H5OjFE1bb9xi18mXxRDwASBvi0D3sjxNpuxSfnqa42IuMil8PdpfspoaCx1Yr2kQnjI6";
     const { feedback } = JSON.parse(event.body);
