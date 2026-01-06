@@ -1132,6 +1132,8 @@
         });
     }
     document.addEventListener('DOMContentLoaded', () => {
+        versionElement = document.getElementById("version");
+        versionElement.textContent = "Version: " + currentVersion;
         getAndSetTimeAndDate();
         getTimeAssociatedColors();
         gameLoader();
