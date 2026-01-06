@@ -988,6 +988,7 @@
             localStorage.setItem(storageDBname, JSON.stringify(settings));
         } catch (e) {
             console.warn('Could not save settings to localStorage', e);
+            notify("Could not save settings to local storage. When you reload, settings may be reverted back to their original values.", "error.svg", "6000")
         }
     }
 
