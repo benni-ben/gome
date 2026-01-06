@@ -628,6 +628,7 @@
         }
 
         @keyframes notifyPulse {
+
             0%,
             100% {
                 box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
@@ -704,6 +705,7 @@
         <h4 id="time" title="The current time according to your device."></h4>
         <h4 id="date" title="The current date according to your device."></h4>
         <h4 id="gameCount" title="The number of games that are currently avaliable on the website."></h4>
+        <h4 id="version" title="The current version you are running on. May change if you reload."></h4>
     </div>
     <div id="horizontalLine"></div>
     <div id="gameContainer"></div>
@@ -863,7 +865,7 @@
             "10-31": "Halloween",
             "2-14": "Valentine's Day",
             "7-4": "Independence Day",
-            "1-1": "New Year",
+            "1-1": "New Years Day",
             "11-11": "Veterans Day",
             "3-17": "St. Patrick's Day",
             "1-19": "Martin Luther King Jr. Day",
@@ -879,6 +881,7 @@
             "11-28": "Black Friday",
             "11-4": "Election Day",
         };
+
         //split the month-days to check for ranges
         const dateRangeKey = Object.keys(occasionColors).find(key => {
             if (key.includes("-") && key.split("-").length === 4) {
@@ -916,6 +919,7 @@
             }
         }
     }
+    //send notification using the notification function(ex. Happy New Years)
     function gameLoader() {
         const gamePath = "/asset/game/";
         const descriptionsPath = "descriptions.json";
@@ -946,7 +950,6 @@
                     thumbnail.id = 'gameThumbnail';
                     gameElement.id = 'gameItem';
                     //we finally append the elements to the game container
-
                     gameElement.appendChild(thumbnail);
                     gameElement.appendChild(title);
                     gameElement.appendChild(description);
@@ -965,7 +968,6 @@
         animations_animationStatus: "Enabled",
         animations_timeScale: 1,
         debug_logUserActionsToConsole: "false",
-        debug_verboseLogging: "false",
         notifications_notificationsEnabled: "true",
         notifications_notificationLoudAlarm: "false",
         themeing_backgroundColorOverride: "none",
@@ -975,7 +977,6 @@
         animations_animationStatus: { description: "Whether the animations are disabled or enabled. May improve performance on potato devices.", type: "toggle" },
         animations_timeScale: { description: "Animation speed for all animations on the page.", type: "slider", min: 0.1, max: 10 },
         danger_resetSettings: { description: "Deletes and resets your current settings back to the defaults.", type: "button" },
-        debug_verboseLogging: { description: "Enables extra verbose logging for debugging purposes.", type: "toggle" },
         notifications_notificationsEnabled: { description: "Enables or diables global notifications.", type: "toggle" },
         notifications_notificationLoudAlarm: { description: "Plays an 'extremely relaxing' alarm sound whenever you get a notification. As of right now, the volume will always be at maximum.", type: "toggle" },
         themeing_backgroundColorOverride: { description: "The page's background color.", type: "color" },
@@ -1293,7 +1294,6 @@
                 });
                 gameCountElement.textContent = visible + ' games available.';
             });
-
             searchBar.addEventListener('keydown', (ev) => {
                 if (ev.key === 'Escape') {
                     searchBar.value = '';
