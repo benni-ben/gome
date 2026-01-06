@@ -271,9 +271,10 @@
 
         #gameDescription {
             font-family: 'Fira Mono';
-            font-size: 0.85rem;
+            font-size: 0.76rem;
             font-style: italic;
             justify-content: center;
+            overflow: scroll;
         }
 
         #button,
@@ -925,6 +926,7 @@
                 Object.keys(descriptions).forEach(gameName => {
                     const gameDescription = descriptions[gameName];
                     const gameElement = document.createElement('div');
+                    gameElement.title = descriptions[gameName];
                     const thumbnail = document.createElement('img');
                     thumbnail.src = `${gamePath}${gameName}/cover.png`;
                     thumbnail.alt = gameName;
