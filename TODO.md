@@ -8,6 +8,8 @@ This contains stuff to do.
 
  - Rework the open/close functionality into a single efficient function to open and close the menu
 
+ - Seperate JS code into different files(because embedded JS code is getting hard to manage)
+
  - ~~Make the code better~~
 
  - ~~Redo the settings(original code was removed due to complexity and practicality)~~
