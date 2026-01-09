@@ -2,9 +2,11 @@
 
 This contains stuff to do.
 
- - No profanity mode(go through all elements on page and remove common curse words)
+ - No profanity setting(go through all elements on page and remove common curse words)
 
  - Add statistics(used game site for _ days, most viewed game, total time spent on website, most active days, etc.)
+
+ - Rework the open/close functionality into a single efficient function to open and close the menu
 
  - ~~Make the code better~~
 
