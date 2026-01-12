@@ -1,35 +1,76 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7L02W3ZMS5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Abandoned</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
 
-        gtag('config', 'G-7L02W3ZMS5');
-    </script>
-    <script async="" crossorigin="anonymous"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5648726754785335"></script>
-    <meta charset="utf-8" />
-    <title>Awesome Tanks 2</title>
-    <meta content="true" name="HandheldFriendly" />
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"
-        name="viewport" />
-    <link href="styles/main.css" rel="stylesheet" />
-    <link href="styles/fonts.css" rel="stylesheet" />
-    <meta content="Awesome Tanks" name="apple-mobile-web-app-title" />
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    #flash-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+    }
+
+    ruffle-player {
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: block;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/somer-sheff-73/xv@main/ruffle.js"></script>
 </head>
-
 <body>
-    <p style="font-family: 'Gunplay'; position: absolute; pointer-events: none; opacity: 0">Font loader</p>
-    <script src="awesome_tanks_2.js"></script>
+  <div id="flash-container"></div>
 
+  <script>
+    const container = document.getElementById("flash-container");
+
+    function resizeGame() {
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+      const aspectRatio = 4 / 3;
+
+      let width = Math.floor(windowWidth);
+      let height = Math.floor(windowWidth / aspectRatio);
+
+      if (height > windowHeight) {
+        height = Math.floor(windowHeight);
+        width = Math.floor(height * aspectRatio);
+      }
+
+      container.style.width = `${width}px`;
+      container.style.height = `${height}px`;
+    }
+
+    window.addEventListener("resize", resizeGame);
+    window.addEventListener("DOMContentLoaded", () => {
+      resizeGame();
+
+      const ruffle = window.RufflePlayer?.newest() || window.RufflePlayer?.createPlayer();
+      if (ruffle && container) {
+        const player = ruffle.createPlayer();
+        player.style.width = "100%";
+        player.style.height = "100%";
+        player.style.background = "black";
+        container.appendChild(player);
+        player.load("https://cdn.jsdelivr.net/gh/bubbls/UGS-file-encryption@754a57837e92bb4552e8247c6a401bd4ce8e4ee7/599993_dingo.swf");
+      } else {
+        container.textContent = "Ruffle failed to load.";
+      }
+    });
+  </script>
 </body>
-
 </html>
