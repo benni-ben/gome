@@ -16,8 +16,6 @@ Features:
  - Holiday reminders(in case you forget that a holiday is on a certain day).
  - AND MORE...
 
-Due to GitHub flagging my account, the games have been deleted to avoid issues. If you want to add your own games, please follow the instructions in the readme.
-
 ## Development
 
 This is made with CSS, HTML, and pure JavaScript. For the fonts, file-embedded base64 encoded fonts are used.
