@@ -8,7 +8,7 @@ Features:
  - UI animations.
  - No external dependencies/libraries. 
  - Game thumbnails. 
- - Runs offline.
+ - Runs offline(with local web server).
  - Game descriptions.
  - Easy game adding. 
  - Easy file structure.
@@ -59,7 +59,7 @@ For connecting the feedback, **Netlify functions is used**, and is connected to 
 
 ## Development tools used
 
-A wide variety of other tools(some closed source, but I will add them here anyway because they helped me) that were used during development are in this section.
+A wide variety of other tools(some closed source, but I will add them here anyway because they helped me) that were used during development are in this section(I am not being paid to promote any of these, they are just tools that I found helpful).
 
  - As of the 20th commit, [Coolors](https://coolors.co/palettes/) was used to get some of the colors for the header gradients.
 

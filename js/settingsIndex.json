@@ -1,0 +1,23 @@
+{
+    "Animations": {
+        "description": "Toggles the UI animations. This may help with performance on older, or less powerful devices.",
+        "default": true,
+        "category": "Animations",
+        "inputType": "switch",
+        "associatedFunction": "pageAnimations()"
+    },
+    "Notifications": {
+        "description": "Enables notification showing. If this is off, you will get <b>no</b> notifications.",
+        "default": true,
+        "category": "Interface",
+        "inputType": "switch",
+        "associatedFunction": "notifications()"
+    },
+    "Webpage Title": {
+        "description": "Changes the webpage's title.",
+        "default": "Gome",
+        "category": "Interface",
+        "inputType": "text",
+        "associatedFunction": "changeWebpageTitle()"
+    }
+}

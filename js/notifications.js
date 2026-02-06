@@ -23,6 +23,7 @@
     }
 
     window.notify = function notify(text = '', header = '', icon = 'info.svg', time = "6000") {
+        if (notifications === false) return;
         try {
             const notificationsEnabled = (typeof settings !== 'undefined') ? String(settings.notifications_notificationsEnabled) === 'true' : true;
             if (!notificationsEnabled) return;
@@ -37,7 +38,7 @@
             if (hideTimer) clearTimeout(hideTimer);
             hideTimer = setTimeout(hideNotification, time);
             //for debug purposes incase i fuck something up
-            if (window.location.href.indexOf("dev") > -1) {
+            if (developer == true) {
                 console.log('Notification shown: with body text "' + text + '", header text "' + header + '", icon name "' + icon + '", and a time of ' + time + " milliseconds.")
             }
             return hideNotification;

@@ -22,3 +22,11 @@ function storeLastVersionAcessed() {
         localStorage.setItem("lastVersionAccessed", currentVersion);
     }
 }
+async function sendFeedback(message) {
+    const response = await fetch("https://gomestable.netlify.app/.netlify/functions/discord-webhook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ feedback: message })
+    });
+    return response.ok;
+}
