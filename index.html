@@ -106,17 +106,8 @@
         versionElement.textContent = "Version: " + currentVersion;
         loadSettings();
         getAndSetTimeAndDate();
-        getTimeAssociatedColors();
         gameLoader();
-        buildSettingsUI();
-        storeLastVersionAcessed();
-        initializeSettingsMenu();
-        initializeFeedbackMenu(overlay);
-        initializeOverlayBehavior();
-        initializeKeyboardShortcuts();
-        initializeInfoIcon();
-        initializeSearch();
-        initializeGitHubLink();
+        createSettings();
         //FIX THIS SHIT
         overlay.addEventListener("click", (e) => {
             closeFeedbackMenu();

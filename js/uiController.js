@@ -103,6 +103,3 @@ async function createSettings() {
     }
     if (typeof loadSettings === "function") loadSettings();
 }
-function buildSettingsUI() {
-    createSettings();
-}
