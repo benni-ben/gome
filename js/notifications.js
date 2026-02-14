@@ -1,3 +1,4 @@
+
 (function () {
     const container = document.getElementById('notification');
     let hideTimer = null;
@@ -21,7 +22,18 @@
             hideTimer = null;
         }
     }
-
+    /**
+     * Displays a notification with customizable text, header, icon, and duration.
+     * The notification will only display if notifications are enabled in settings.
+     * HTML content is automatically escaped to prevent XSS vulnerabilities.
+     * The notification auto-hides after the specified duration (default 6000ms).
+     * @param {string} [text=''] - The main body text of the notification
+     * @param {string} [header=''] - The header/title text of the notification
+     * @param {string} [icon='info.svg'] - The icon filename (relative to /asset/ui/) or full icon path
+     * @param {string|number} [time='6000'] - Duration in milliseconds before auto-hiding the notification
+     * @returns {Function} The hideNotification function that can be called to manually hide the notification
+     */
+    /** @type {(text?: string, header?: string, icon?: string, time?: string|number) => Function} */
     window.notify = function notify(text = '', header = '', icon = 'info.svg', time = "6000") {
         if (notifications === false) return;
         try {

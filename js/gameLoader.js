@@ -3,7 +3,6 @@ function getGameCount() {
     const gameContainer = document.getElementById("gameContainer");
     gameCountElement.textContent = gameContainer.children.length + " games available.";
 }
-
 function getAverageColor(thumbnail) {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
@@ -25,7 +24,7 @@ function getAverageColor(thumbnail) {
             r = Math.floor(r / pixelCount);
             g = Math.floor(g / pixelCount);
             b = Math.floor(b / pixelCount);
-            resolve(`rgba(${r}, ${g}, ${b}, 0.8)`);
+            resolve(`rgba(${r}, ${g}, ${b})`);
         };
     });
 }
