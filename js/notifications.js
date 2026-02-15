@@ -1,49 +1,53 @@
 
 (function () {
-    const container = document.getElementById('notification');
+    const container = document.getElementById("notification");
     let hideTimer = null;
+    let isNotificationShowing = false;
+    let notificationQueue = [];
 
     function escapeHtml(str) {
-        if (typeof str !== 'string') return '';
-        return str.replace(/[&<>"']/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[s]);
+        if (typeof str !== "string") return '';
+        return str.replace(/[&<>"']/g, (s) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[s]);
     }
 
     function hideNotification() {
-        if (!container || !container.classList.contains('show')) return;
-        container.classList.remove('show');
+        if (!container || !container.classList.contains("show")) return;
+        container.classList.remove("show");
         //after transition remove content so it can be garbage collected and to restore pointer-events when hidden
         const onEnd = () => {
-            container.innerHTML = '';
-            container.removeEventListener('transitionend', onEnd);
+            container.innerHTML = "";
+            container.removeEventListener("transitionend", onEnd);
+            isNotificationShowing = false;
+            //process queue if there are pending notifications
+            if (notificationQueue.length > 0) {
+                const nextNotification = notificationQueue.shift();
+                window.notify(...nextNotification);
+            }
         };
-        container.addEventListener('transitionend', onEnd);
+        container.addEventListener("transitionend", onEnd);
         if (hideTimer) {
             clearTimeout(hideTimer);
             hideTimer = null;
         }
     }
-    /**
-     * Displays a notification with customizable text, header, icon, and duration.
-     * The notification will only display if notifications are enabled in settings.
-     * HTML content is automatically escaped to prevent XSS vulnerabilities.
-     * The notification auto-hides after the specified duration (default 6000ms).
-     * @param {string} [text=''] - The main body text of the notification
-     * @param {string} [header=''] - The header/title text of the notification
-     * @param {string} [icon='info.svg'] - The icon filename (relative to /asset/ui/) or full icon path
-     * @param {string|number} [time='6000'] - Duration in milliseconds before auto-hiding the notification
-     * @returns {Function} The hideNotification function that can be called to manually hide the notification
-     */
-    /** @type {(text?: string, header?: string, icon?: string, time?: string|number) => Function} */
-    window.notify = function notify(text = '', header = '', icon = 'info.svg', time = "6000") {
+    window.notify = function notify(text = "", header = "", icon = "info.svg", time = "6000") {
         if (notifications === false) return;
         try {
-            const notificationsEnabled = (typeof settings !== 'undefined') ? String(settings.notifications_notificationsEnabled) === 'true' : true;
+            //if a notification is already showing, queue this one
+            if (isNotificationShowing) {
+                notificationQueue.push([text, header, icon, time]);
+                return;
+            }
+
+            const notificationsEnabled = (typeof settings !== "undefined") ? String(settings.notifications_notificationsEnabled) === 'true' : true;
             if (!notificationsEnabled) return;
-            if (!container) return console.warn('Notification container not found');
+            if (!container) return console.warn("Notification container not found");
+
+            isNotificationShowing = true;
             const iconPath = (typeof icon === 'string' && icon.indexOf('/') === -1) ? `/asset/ui/${icon}` : icon;
             container.innerHTML = `\n<img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n<div class="notif-body">\n<div class="notif-header">${escapeHtml(header)}</div>\n<div class="notif-text">${escapeHtml(text)}</div>\n</div>\n<button class="notif-close" aria-label="Close notification">&times;</button>\n`;
             const closeBtn = container.querySelector('.notif-close');
-            if (closeBtn) closeBtn.addEventListener('click', hideNotification, { once: true });
+            if (closeBtn) closeBtn.addEventListener("click", hideNotification, { once: true });
             //show
             requestAnimationFrame(() => container.classList.add('show'));
             //default auto-hide after 6s
@@ -55,7 +59,7 @@
             }
             return hideNotification;
         } catch (e) {
-            console.error('Notification error: ', e);
+            console.error("Notification error: ", e);
         }
     };
 })();

@@ -31,3 +31,20 @@ async function sendFeedback(message){
     });
     return response.ok;
 }
+function localStorageSave(key,value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
+function localStorageLoad(key,jsonParse) {
+    const value = localStorage.getItem(key);
+    try {
+        if (jsonParse == true) {
+            return JSON.parse(value);
+        }
+        else {
+            return value;
+        }
+    } catch (e) {
+        console.error("Oh no... it looks like we ran into an error... failed to save the key: ", key, e);
+        return null;
+    }
+}

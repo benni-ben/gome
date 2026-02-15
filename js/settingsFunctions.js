@@ -1,7 +1,8 @@
 let settings = {
+    analytics: true,
     animations: true,
     notifications: true,
-    pageTitle: (typeof document !== 'undefined' && document.title) ? document.title : "Gome",
+    pageTitle: (typeof document !== "undefined" && document.title) ? document.title : "Gome",
 };
 
 function pageAnimations(bool) {
@@ -31,7 +32,7 @@ function notifications(bool) {
 };
 
 function changeWebpageTitle(title) {
-    if (typeof title !== 'string') return;
+    if (typeof title !== "string") return;
     settings.pageTitle = title;
     document.title = title;
     window.pageTitle = title;
@@ -39,23 +40,59 @@ function changeWebpageTitle(title) {
 };
 
 function saveSettings() {
-    localStorage.setItem("settings", JSON.stringify(settings));
+    if (typeof localStorageSave === "function") {
+        try {
+            localStorageSave("settings", settings);
+        } catch (e) {
+            console.error("Oh no... there was an error saving settings via localStorageSave function:", e);
+        }
+    } else {
+        try {
+            localStorage.setItem("settings", JSON.stringify(settings));
+        } catch (e) {
+            console.error("Oh no... there was an error saving settings to localStorage:", e);
+        }
+    }
 }
 
 function loadSettings() {
-    const savedSettings = localStorage.getItem("settings");
-    if (savedSettings) {
+    let parsed = null;
+    if (typeof localStorageLoad === "function") {
+        parsed = localStorageLoad("settings", true);
+    } else {
+        const raw = localStorage.getItem("settings");
         try {
-            const parsed = JSON.parse(savedSettings);
-            settings = Object.assign({}, settings, parsed || {});
-            window.animations = settings.animations;
-            window.notifications = settings.notifications;
-            if (settings.pageTitle) document.title = settings.pageTitle;
-            if (settings.animations === false) {
-                pageAnimations(false);
+            parsed = JSON.parse(raw);
+        } catch (e) {
+            console.error("Oh no... there was an error loading the settings:", e);
+            parsed = null;
+        }
+    }
+
+    if (parsed) {
+        settings = Object.assign({}, settings, parsed || {});
+        window.animations = settings.animations;
+        window.notifications = settings.notifications;
+        if (settings.pageTitle) document.title = settings.pageTitle;
+        try {
+            const container = (typeof document !== "undefined") && document.getElementById && document.getElementById("settingsContent");
+            if (container) {
+                const rows = container.querySelectorAll(".setting-row");
+                rows.forEach(row => {
+                    const label = row.querySelector("label");
+                    const input = row.querySelector(".control");
+                    if (!label || !input) return;
+                    const name = (label.textContent || "").trim();
+                    if (name === "Webpage Title") {
+                        input.value = settings.pageTitle || "";
+                    }
+                });
             }
         } catch (e) {
-            console.error("Error loading settings:", e);
+            console.error("Oh no... there was an error updating settings controls:", e);
+        }
+        if (settings.animations === false) {
+            pageAnimations(false);
         }
     }
 }

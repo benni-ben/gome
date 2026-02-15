@@ -54,6 +54,10 @@ function gameLoader() {
                 const description = document.createElement("p");
                 description.textContent = gameDescription;
                 gameElement.addEventListener("click", () => {
+                    // Track game visit in analytics
+                    if (typeof Analytics !== 'undefined') {
+                        Analytics.trackGameVisit(gameName);
+                    }
                     window.location.href = `${gamePath}${gameName}/`;
                 });
                 description.id = "gameDescription";

@@ -320,7 +320,8 @@
 }
 
 #settingsMenuMain,
-#feedbackMenuMain {
+#feedbackMenuMain,
+#analyticsMenuMain {
     --webkit-backdrop-filter: blur(12px)brightness(2);
     backdrop-filter: blur(12px)brightness(2);
     border-radius: 40px;
@@ -340,7 +341,8 @@
 }
 
 #settingsMenuMain.open,
-#feedbackMenuMain.open {
+#feedbackMenuMain.open,
+#analyticsMenuMain.open {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%)scale(1);
@@ -363,7 +365,8 @@
 }
 
 #settingsMenuHeader,
-#feedbackMenuHeader {
+#feedbackMenuHeader,
+#analyticsMenuHeader {
     font-family: 'Fira Mono';
     font-size: 1.5rem;
     margin: 10px;
@@ -661,5 +664,16 @@
 
     50% {
         box-shadow: 0 10px 20px rgb(130, 130, 130);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .analyticsRow {
+        grid-template-columns: 1fr;
+    }
+
+    .analyticsActions {
+        flex-direction: column;
     }
 }
