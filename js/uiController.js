@@ -38,6 +38,26 @@ function closeFeedbackMenu() {
     }
 }
 
+function openAnalyticsMenu() {
+    const overlay = document.getElementById("settingsOverlay");
+    const analyticsMenu = document.getElementById("analyticsMenuMain");
+
+    if (overlay && analyticsMenu) {
+        overlay.classList.add("open");
+        analyticsMenu.classList.add("open");
+    }
+}
+
+function closeAnalyticsMenu() {
+    const overlay = document.getElementById("settingsOverlay");
+    const analyticsMenu = document.getElementById("analyticsMenuMain");
+
+    if (overlay && analyticsMenu) {
+        overlay.classList.remove("open");
+        analyticsMenu.classList.remove("open");
+    }
+}
+
 async function createSettings() {
     const settingsIndexPath = "/js/settingsIndex.json";
     const container = document.getElementById("settingsContent");

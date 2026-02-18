@@ -23,6 +23,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --borderColor: rgb(56, 58, 65);
+        --borderColorHover: rgb(112, 118, 130);
+    }
+
     body {
         background-color: black;
         color: white;
@@ -80,16 +85,6 @@
     #menu {
         background-color: rgb(15, 15, 15, 0.3);
         border: rgba(61, 61, 61, 0.8)solid 6px;
-    }
-
-    #menuDivider {
-        background: #3a3a3a;
-        height: 5px;
-        width: 100%;
-    }
-
-    #menuDivider {
-        background: #3a3a3a;
     }
 }
 
@@ -153,16 +148,61 @@
         color: rgb(0, 0, 0);
     }
 
-    #menuDivider {
-        background: #c6c6c6;
-        height: 5px;
-        width: 100%;
+    :root {
+        --borderColor: rgb(200, 200, 200);
+        --borderColorHover: rgb(150, 150, 150);
     }
 
     #menu {
         background-color: rgb(250, 250, 250, 0.3);
         border: rgb(200, 200, 200)solid 5px;
     }
+}
+
+#analyticsCell {
+    width: 100%;
+    height: 90%;
+    font-family: "Fira Mono";
+    background-color: var(--borderColor);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#analtyicsCell.hover {
+    background-color: var(--borderColorHover);
+}
+
+#analyticsCellContainer {
+    width: fit-content;
+    height: 90%;
+    padding: 10px;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+    margin: auto;
+}
+
+#titleText {
+    padding: 5px;
+    font-size: 26px;
+    margin: auto;
+}
+
+#value {
+    color: rgb(166, 238, 178);
+    padding: 10px;
+    font-family: "Roboto";
+    font-size: 40px;
 }
 
 #infodiv {
@@ -201,7 +241,7 @@
 .control {
     margin-left: 10px;
     font-family: "Roboto";
-    transition: all 0.5s cubic-bezier(.36,.47,.39,1.5);
+    transition: all 0.5s cubic-bezier(.36, .47, .39, 1.5);
 }
 
 .control:focus {
@@ -340,6 +380,10 @@
     z-index: 40;
 }
 
+#analyticsMenuMain {
+    width: 700px;
+}
+
 #settingsMenuMain.open,
 #feedbackMenuMain.open,
 #analyticsMenuMain.open {
@@ -379,6 +423,7 @@
 #menuDivider {
     height: 5px;
     width: 100%;
+    background: (var(--borderColor));
 }
 
 #closeBtn {
@@ -497,6 +542,14 @@
     outline: none;
     outline-offset: 4px;
     z-index: 10;
+}
+
+/* Highlighted search matches */
+mark {
+    background: #ffea6a;
+    color: inherit;
+    padding: 0 .15em;
+    border-radius: 3px;
 }
 
 #notification {

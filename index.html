@@ -42,7 +42,7 @@
         </svg>
     </a>
     <svg xmlns="http://www.w3.org/2000/svg" id="icon" class="webstatistics" viewBox="0 -960 960 960" fill="#e3e3e3"
-        role="button">
+        role="button" onclick="openAnalyticsMenu()">
         <path
             d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
     </svg>
@@ -75,6 +75,14 @@
         </div>
     </div>
 
+    <div id="analyticsMenuMain">
+        <div id="analyticsMenuHeader">Analytics
+            <button id="closeBtn" onclick="closeAnalyticsMenu()" aria-label="Close analytics menu">✕</button>
+        </div>
+        <div id="menuDivider"></div>
+        <div id="analyticsCellContainer">
+        </div>
+    </div>
     <div id="infodiv">
         <h4 id="time" title="The current time according to your device."></h4>
         <h4 id="date" title="The current date according to your device."></h4>
@@ -93,9 +101,10 @@
 <script src="js/gameLoader.js"></script>
 <script src="js/uiController.js"></script>
 <script src="js/analytics.js"></script>
+<script src="js/analyticsDisplay.js"></script>
 <script>
-    const currentVersion = "1.5.7";
-    const changes = "Added analytics tracking, made some changes to the notification system, and added better error handling.";
+    const currentVersion = "1.5.8";
+    const changes = "Made the UI for the analytics, and added animations.";
     const gameContainer = document.getElementById("gameContainer");
     const gameCountElement = document.getElementById("gameCount");
     document.documentElement.style.setProperty("--middle-fade-random-color", getRandomColor());
@@ -114,6 +123,7 @@
         overlay.addEventListener("click", (e) => {
             closeFeedbackMenu();
             closeSettingsMenu();
+            closeAnalyticsMenu();
         });
     });
 </script>
