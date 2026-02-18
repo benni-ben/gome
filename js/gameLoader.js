@@ -56,8 +56,7 @@ function gameLoader() {
                 description.textContent = gameDescription;
                 description.dataset.original = gameDescription;
                 gameElement.addEventListener("click", () => {
-                    // Track game visit in analytics
-                    if (typeof Analytics !== 'undefined') {
+                    if (typeof Analytics !== "undefined") {
                         Analytics.trackGameVisit(gameName);
                     }
                     window.location.href = `${gamePath}${gameName}/`;
@@ -74,16 +73,18 @@ function gameLoader() {
             });
             //update game count
             getGameCount();
-            // set up search behavior after games are loaded
             setupSearch();
         })
-        .catch(error => console.error("Oops! There was an error loading games:", error),
-        window.notify("An error occured loading the games! Check the developer console for more info.", "Oh noes!", "sad.svg", "6000")
-    );
+        .catch(error => {
+            console.error("Oops! There was an error loading games:", error);
+            if (typeof notify !== "undefined") {
+                window.notify("An error occured loading the games! Check the developer console for more info.", "Oh noes!", "sad.svg", "6000");
+            }
+        });
 }
 
 function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function highlightText(element, query) {
@@ -92,38 +93,38 @@ function highlightText(element, query) {
         element.textContent = original;
         return;
     }
-    const re = new RegExp(escapeRegExp(query), 'gi');
+    const re = new RegExp(escapeRegExp(query), "gi");
     element.innerHTML = original.replace(re, match => `<mark>${match}</mark>`);
 }
 
 function setupSearch() {
-    const searchBar = document.getElementById('searchBar');
-    const gameContainer = document.getElementById('gameContainer');
+    const searchBar = document.getElementById("searchBar");
+    const gameContainer = document.getElementById("gameContainer");
     if (!searchBar || !gameContainer) return;
 
-    searchBar.addEventListener('input', (e) => {
+    searchBar.addEventListener("input", (e) => {
         const query = e.target.value.trim();
         const items = Array.from(gameContainer.children);
         let visibleCount = 0;
         items.forEach(item => {
-            const title = item.querySelector('#gameTitle');
-            const desc = item.querySelector('#gameDescription');
-            const titleText = (title && (title.dataset.original || title.textContent)) || '';
-            const descText = (desc && (desc.dataset.original || desc.textContent)) || '';
-            const hay = (titleText + ' ' + descText).toLowerCase();
+            const title = item.querySelector("#gameTitle");
+            const desc = item.querySelector("#gameDescription");
+            const titleText = (title && (title.dataset.original || title.textContent)) || "";
+            const descText = (desc && (desc.dataset.original || desc.textContent)) || "";
+            const hay = (titleText + " " + descText).toLowerCase();
             const q = query.toLowerCase();
             if (!q || hay.includes(q)) {
-                item.style.display = '';
+                item.style.display = "";
                 visibleCount++;
                 if (title) highlightText(title, query);
                 if (desc) highlightText(desc, query);
             } else {
-                item.style.display = 'none';
-                if (title) highlightText(title, '');
-                if (desc) highlightText(desc, '');
+                item.style.display = "none";
+                if (title) highlightText(title, "");
+                if (desc) highlightText(desc, "");
             }
         });
-        const gameCountElement = document.getElementById('gameCount');
-        if (gameCountElement) gameCountElement.textContent = visibleCount + ' games available.';
+        const gameCountElement = document.getElementById("gameCount");
+        if (gameCountElement) gameCountElement.textContent = visibleCount + " games available.";
     });
 }

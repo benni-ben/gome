@@ -215,6 +215,7 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    cursor: help;
 }
 
 .setting-left {
@@ -246,16 +247,6 @@
 
 .control:focus {
     transform: scale(1.1);
-}
-
-
-#infodiv>* {
-    cursor: default;
-    transition: transform 0.3s ease;
-}
-
-#infodiv>*:hover {
-    transform: scale(1.05);
 }
 
 :root {

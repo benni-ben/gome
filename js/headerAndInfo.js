@@ -72,7 +72,7 @@ function getTimeAssociatedColors() {
     if (colors) {
         setGradientColors(colors[0], colors[1], colors[2]);
         try {
-            const notificationsEnabled = (typeof settings !== 'undefined') ? String(settings.notifications_notificationsEnabled) === 'true' : true;
+            const notificationsEnabled = (typeof settings !== "undefined") ? settings.notifications !== false : true;
             const storageKey = 'lastOccasionNotification';
             const currentYear = now.getFullYear();
             let prev = null;
@@ -87,7 +87,6 @@ function getTimeAssociatedColors() {
                 const header = `It's ${name}!`;
                 const text = `Happy ${name}!`;
                 window.notify(text, header, 'specialday.svg');
-
                 try {
                     localStorage.setItem(storageKey, JSON.stringify({ key: dateRangeKey, year: currentYear }));
                 } catch (e) {

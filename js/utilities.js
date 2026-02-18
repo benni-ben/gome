@@ -18,7 +18,9 @@ function getRandomColor() {
 
 function storeLastVersionAcessed() {
     if (localStorage.getItem("lastVersionAccessed") !== currentVersion) {
-        notify("Gome has updated! The following changes were made: " + changes, "Gome has updated to version " + currentVersion + "!", "specialday.svg", "15000")
+        if (typeof notify !== 'undefined') {
+            notify("Gome has updated! The following changes were made: " + changes, "Gome has updated to version " + currentVersion + "!", "specialday.svg", "15000");
+        }
         localStorage.setItem("lastVersionAccessed", currentVersion);
     }
 }
