@@ -8,7 +8,11 @@ This contains stuff to do. Contriubte if you can!
 
  - Lint the code
 
+ - Make infinite animated rectangle pattern for the analytics cell
+
  - Rework the random color generator to make it generate RGB values instead of hex values(so it is easier to work with)
+
+ - Actually do some of the suggestions from the lighthouse report in Chrome
 
  - ~~Rework the open/close functionality into a single efficient function to open and close the menu~~
 
