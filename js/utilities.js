@@ -1,3 +1,8 @@
+/**
+ * Returns a random number in a set range.
+ * @param {number} min - Minimum value.
+ * @param {number} max - Maximum value.
+ */
 function randomNumber(min, max) {
     if (min == max) {
         return min;
@@ -6,7 +11,9 @@ function randomNumber(min, max) {
         return (Math.floor(Math.random() * (max - min + 1)) + min);
     }
 }
-
+/**
+ * Makes a random hexedecimal color.
+ */
 function getRandomColor() {
     let letters = '0123456789ABCDEF';
     let color = '#';
@@ -15,7 +22,9 @@ function getRandomColor() {
     }
     return color;
 }
-
+/**
+ * Stores the last version that was accessed.
+ */
 function storeLastVersionAcessed() {
     if (localStorage.getItem("lastVersionAccessed") !== currentVersion) {
         if (typeof notify !== 'undefined') {
@@ -24,8 +33,13 @@ function storeLastVersionAcessed() {
         localStorage.setItem("lastVersionAccessed", currentVersion);
     }
 }
-
-async function sendFeedback(message){
+/**
+ * Sends feedback using the netlify functions API. 
+ *
+ * @param {string} message The message to send through the API. 
+ * @return {*} Returns the response. 
+ */
+async function sendFeedback(message) {
     const response = await fetch("https://gomestable.netlify.app/.netlify/functions/discord-webhook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -33,10 +47,23 @@ async function sendFeedback(message){
     });
     return response.ok;
 }
-function localStorageSave(key,value) {
+/**
+ * Saves through localStorage.
+ *
+ * @param {*} key Storage key.
+ * @param {*} value Key value.
+ */
+function localStorageSave(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
-function localStorageLoad(key,jsonParse) {
+/**
+ * Loads a localStorage value.
+ *
+ * @param {string} key The key to get the value from.
+ * @param {boolean} jsonParse A boolean value, whether to parse the localStorage value as JSON. 
+ * @return {*} 
+ */
+function localStorageLoad(key, jsonParse) {
     const value = localStorage.getItem(key);
     try {
         if (jsonParse == true) {
