@@ -26,6 +26,7 @@
     :root {
         --borderColor: rgb(56, 58, 65);
         --borderColorHover: rgb(112, 118, 130);
+        --colorPulse: rgb(92, 186, 236);
     }
 
     body {
@@ -151,6 +152,8 @@
     :root {
         --borderColor: rgb(200, 200, 200);
         --borderColorHover: rgb(150, 150, 150);
+        --colorPulse: rgb(57, 51, 246);
+
     }
 
     #menu {
@@ -441,15 +444,11 @@
     transition: all 0.5s cubic-bezier(.54, .1, .53, .97);
     width: 40px;
     margin: auto;
+    transition: all 2s ease-in-out;
 }
 
 #icon:hover {
     fill: rgb(180, 180, 180);
-}
-
-#icon:focus,
-#icon.open {
-    transform: rotate(90deg);
 }
 
 .settingRow .settingLabel {
@@ -710,7 +709,6 @@ mark {
         box-shadow: 0 10px 20px rgb(130, 130, 130);
     }
 }
-
 
 @media (max-width: 600px) {
     .analyticsRow {

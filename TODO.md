@@ -2,17 +2,16 @@
 
 This contains stuff to do. Contriubte if you can! 
 
- - Add statistics(used game site for x days, most viewed game, total time spent on website, most active days, etc.)
 
  - Seperate the image color averager into a different function(so it is easier to reuse)
 
  - Lint the code
 
- - Make infinite animated rectangle pattern for the analytics cell
-
  - Rework the random color generator to make it generate RGB values instead of hex values(so it is easier to work with)
 
  - Actually do some of the suggestions from the lighthouse report in Chrome
+
+~~ - Add statistics(used game site for x days, most viewed game, total time spent on website, most active days, etc.)~~
 
  - ~~Rework the open/close functionality into a single efficient function to open and close the menu~~
 

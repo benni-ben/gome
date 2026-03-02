@@ -114,6 +114,7 @@
         const versionElement = document.getElementById("version");
         const overlay = document.getElementById("settingsOverlay");
         versionElement.textContent = "Version: " + currentVersion;
+        const feedbackButton = document.getElementsByClassName("Feedback"[0]);
         loadSettings();
         getAndSetTimeAndDate();
         gameLoader();
@@ -124,6 +125,9 @@
             closeSettingsMenu();
             closeAnalyticsMenu();
         });
+        if (randomnNumber(1,90) == 1 || test == 1) {
+            notify("If you have any suggestions or just want to say thank you, remember that there is a feedback button at the top!", "info.svg", 10000);
+        }
     });
 </script>
 
