@@ -38,10 +38,6 @@
         fill: white;
     }
 
-    #icon:focus {
-        fill: rgb(150, 150, 150);
-    }
-
     #gameItem {
         background-color: rgb(10, 10, 10);
         border: 0px solid rgb(53, 53, 53);
@@ -110,10 +106,6 @@
         fill: rgb(0, 0, 0);
     }
 
-    #icon:focus {
-        fill: rgb(93, 93, 93);
-    }
-
     #menu {
         background-color: rgba(255, 255, 255, 0.4);
         border: rgba(225, 225, 225, 0.1)solid 6px;
@@ -176,6 +168,22 @@
 
 #analtyicsCell.hover {
     background-color: var(--borderColorHover);
+}
+
+#randText {
+    font-family: "Fira Mono";
+    font-size: 2rem;
+    padding: 10px;
+    width: fit-content;
+    transition: all 1s ease-in-out;
+    text-align: center;
+    margin: auto;
+}
+
+#randText:hover {
+    transform: scale(3, 1);
+    font-size: 2.4rem;
+    text-shadow: 4px 4px 0px rgba(213, 213, 213, 0.61);
 }
 
 #analyticsCellContainer {
@@ -444,11 +452,11 @@
     transition: all 0.5s cubic-bezier(.54, .1, .53, .97);
     width: 40px;
     margin: auto;
-    transition: all 2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #icon:hover {
-    fill: rgb(180, 180, 180);
+    fill: rgb(96, 134, 246);
 }
 
 .settingRow .settingLabel {
