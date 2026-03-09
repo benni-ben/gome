@@ -28,12 +28,7 @@ function getRandomText(text) {
             "fffff",
             "apple is shit",
             "CLICK ME PLEASE!!!!!!!!",
-            "i want to be clicked",
-            "i want to be a car when i grow up - Ikaika Monteilh, 2026",
-            "b",
-            "👁️👅👅👅👅👅👅👅👅👅👅👅👅👅👅👁️",
-            "i got first lunch i just realized that - Ikaika Monteilh, 2026",
-            "vote to imprison gabe esalante"
+            "i want to be clicked"
         ];
         randTextElem.textContent = texts[randomNumber(0, texts.length-1)];
     } else {
