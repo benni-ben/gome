@@ -11,7 +11,9 @@ This contains stuff to do. Contriubte if you can!
 
  - Actually do some of the suggestions from the lighthouse report in Chrome
 
-~~ - Add statistics(used game site for x days, most viewed game, total time spent on website, most active days, etc.)~~
+ - Make overrides for game displaying system(set to a specific path instead of a consistant path)
+
+- ~~Add statistics(used game site for x days, most viewed game, total time spent on website, most active days, etc.)~~
 
  - ~~Rework the open/close functionality into a single efficient function to open and close the menu~~
 
