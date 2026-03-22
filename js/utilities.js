@@ -3,7 +3,7 @@
  * @param {number} min - Minimum value.
  * @param {number} max - Maximum value.
  */
-function randomNumber(min, max) {
+window.randomNumber = function randomNumber(min, max) {
     if (min == max) {
         return min;
     }
@@ -12,15 +12,19 @@ function randomNumber(min, max) {
     }
 }
 /**
- * Makes a random hexedecimal color.
- */
-function getRandomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+ * Makes a random RGB color, with minimum and maximum values for each color(red, green, blue). Defaults to a range of 0-255 for all colors if no paramters are set.
+ * @param {number} rmin Minimum red value.
+ * @param {number} rmax Maximum red value.
+ * @param {number} gmin Minimum green value.
+ * @param {number} gmax Maximum green value.
+ * @param {number} bmin Minimum blue value.
+ * @param {number} bmax Maximum blue value.
+*/
+function getRandomColor(rmin = 0,rmax =255,gmin = 0,gmax = 255,bmin = 0,bmax = 255) {
+    var red = randomNumber(rmin,rmax);
+    var green = randomNumber(gmin,gmax);
+    var blue = randomNumber(bmin,bmax);
+    return "("+red+","+green+","+blue+")";
 }
 /**
  * Stores the last version that was accessed.
