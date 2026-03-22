@@ -7,11 +7,11 @@ This contains stuff to do. Contriubte if you can!
 
  - Lint the code
 
- - Rework the random color generator to make it generate RGB values instead of hex values(so it is easier to work with)
-
  - Actually do some of the suggestions from the lighthouse report in Chrome
 
  - Make overrides for game displaying system(set to a specific path instead of a consistant path)
+
+ - ~~Rework the random color generator to make it generate RGB values instead of hex values(so it is easier to work with)~~
 
 - ~~Add statistics(used game site for x days, most viewed game, total time spent on website, most active days, etc.)~~
 
