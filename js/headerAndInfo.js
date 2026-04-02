@@ -6,12 +6,6 @@ function getAndSetTimeAndDate() {
     dateElement.textContent = now.toLocaleDateString([], { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
-function setGradientColors(color1, color2, color3) {
-    document.documentElement.style.setProperty('--head-grad-color-1', color1);
-    document.documentElement.style.setProperty('--head-grad-color-2', color2);
-    document.documentElement.style.setProperty('--head-grad-color-3', color3);
-}
-
 function getTimeAssociatedColors() {
     const now = new Date();
     const month = now.getMonth() + 1;

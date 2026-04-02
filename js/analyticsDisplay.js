@@ -11,7 +11,9 @@ function createAnalyticsCell(title, value) {
     cell.appendChild(patternDiv);
     const valueElement = document.createElement("div");
     valueElement.textContent = value;
-    valueElement.id = "value"
+    valueElement.id = "value";
+        cell.appendChild(patternDiv);
+
     cell.appendChild(valueElement);
     return cell;
 }

@@ -24,9 +24,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --borderColor: rgb(56, 58, 65);
+        --borderColor: rgb(50, 50, 50);
         --borderColorHover: rgb(112, 118, 130);
         --colorPulse: rgb(92, 186, 236);
+        --background: rgb(44, 44, 44);
     }
 
     body {
@@ -145,13 +146,18 @@
         --borderColor: rgb(200, 200, 200);
         --borderColorHover: rgb(150, 150, 150);
         --colorPulse: rgb(57, 51, 246);
-
+        --background: rgb(255, 255, 255);
     }
 
     #menu {
         background-color: rgb(250, 250, 250, 0.3);
         border: rgb(200, 200, 200)solid 5px;
     }
+}
+
+#body {
+    margin: 0;
+    padding: 0;
 }
 
 #analyticsCell {
@@ -168,6 +174,33 @@
 
 #analtyicsCell.hover {
     background-color: var(--borderColorHover);
+
+}
+
+#analyticsCellPattern {
+    background-color: var(--borderColor);
+    width: 1000%;
+    height: 1000%;
+    content: "";
+    position: absolute;
+    inset: -50%;
+    isolation: isolate;
+    background-color: transparent;
+    background-image:
+        linear-gradient(var(--background) 16px, transparent 16px 60px),
+        linear-gradient(90deg, var(--background) 16px, transparent 10px 50px);
+    background-size: 60px 60px;
+    background-blend-mode: normal;
+    transform: rotate(45deg);
+    animation: slide-up 2s linear infinite;
+    will-change: background-position;
+    z-index: 0;
+}
+
+@keyframes slide-up {
+    to {
+        background-position-y: 60px;
+    }
 }
 
 #randText {
@@ -207,6 +240,8 @@
     padding: 5px;
     font-size: 26px;
     margin: auto;
+    position: sticky;
+    z-index: 70;
 }
 
 #value {
@@ -214,6 +249,8 @@
     padding: 10px;
     font-family: "Roboto";
     font-size: 40px;
+    z-index: 60;
+    position: sticky;
 }
 
 #infodiv {
@@ -264,7 +301,7 @@
     --head-grad-color-1: #000000;
     --head-grad-color-2: #009cbf;
     --head-grad-color-3: #1c19eb;
-    --middle-fade-random-color: ;
+    --fadeColor: rgb(255, 0, 0);
 }
 
 #header {
@@ -355,7 +392,7 @@
 
 #horizontalLine {
     animation: 3s widen ease;
-    background-image: linear-gradient(to right, transparent, var(--middle-fade-random-color), transparent);
+    background-image: linear-gradient(to right, transparent, var(--fadeColor), transparent);
     border: none;
     height: 0.2rem;
     margin: 20px auto;

@@ -21,7 +21,7 @@
         "associatedFunction": "changeWebpageTitle()"
     },
     "Analytics": {
-        "description": "Whether the page's analytics should be enabled. Analytics will track playtime, clicks, and other actions, and can be viewed in the homepage. Disabling this may help improve performance.",
+        "description": "Whether the page's analytics should be enabled. Analytics will track playtime, clicks, and other actions, and can be viewed in the homepage. Disabling this may help improve performance. This does not affect Google Analytics, but rather the custom-made client analytics.",
         "default": "true",
         "category": "Statistics",
         "inputType": "switch",
