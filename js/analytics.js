@@ -3,10 +3,10 @@ const Analytics = {
         totalTimePlayed: 0,
         totalClicks: 0,
         totalKeysPressed: 0,
-        gamesVisited: {},   //{ gameName: visitCount }
+        gamesVisited: {},
         mostVisitedGame: null,
         sessionStartTime: null,
-        dailyStats: {}, //{ YYYY-MM-DD:{ clicks, keys, timePlayed}}
+        dailyStats: {},
         firstVisit: null,
         lastVisit: null,
         totalSessions: 0,

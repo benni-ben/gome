@@ -3,7 +3,6 @@ function getRandomText(text) {
     if (text == null || text == undefined) {
         const texts = [
             "hi",
-            "if you want more games, use the feedback(its at the top",
             "AAAAAAAAHHHHHHH",
             "please donate me im broke :(",
             "Did you know: Your computer is on.",
@@ -16,18 +15,20 @@ function getRandomText(text) {
             "👁️👄👁️",
             "eaeaeaeae",
             "🦛<-a pig",
+            "hi",
             "🥶",
+            "pool noodle",
             "glub",
             "go follow my github please",
             "🦖",
             "very website",
-            "do you like the interface? do you want more animations added? if so, please send feedback.",
             "a",
             "e",
             "👁️👅👁️",
             "fffff",
             "apple is shit",
             "CLICK ME PLEASE!!!!!!!!",
+            "Damn... you went down far twin... 🙉😋🗿",
             "i want to be clicked"
         ];
         randTextElem.textContent = texts[randomNumber(0, texts.length-1)];

@@ -1,7 +1,7 @@
 # Gome
 
+![Social header art](asset/logo/SocialHeader.png)
 This is a very robust game website, with a lot of cool features. 
-
 Features:
  - Top bar info.
  - Integrated styling, no need to have any external .css files.
@@ -36,7 +36,7 @@ An example of a gradient that happens on November 2nd is below:
 "11-2": ["#8a62c9ff", "#c21742", "#ff9797ff"],
 ```
 
-## Adding game
+## Adding games
 
 To add a game, you have to first create a folder inside the `assets` folder. This will be the game's name. Inside that folder, you must have an image named `cover.png`. It must be in PNG format to work. That folder should also have an `index.html` file inside. 
 
@@ -52,9 +52,20 @@ All of the pairs must be inside of the curly brackets.
 
 If you delete a game, it's field must also be deleted frin the `descriptions.json` file(since it expects an index.html file and a PNG cover in the root of the game folder).
 
+## Tags
+
+Along with the descriptions, tags can also be added, similarly to the descriptions. To add a tag, you need to add the game as the key, followed by the tags, seperated by commas. **For example:**
+```  "Fastroads": "driving, modded, racing, calm, radio",
+```
+would set the Fastroads game tags to driving, modded, racing, calm, and radio.
+
+To search for the tags, either click on a tag, or search the tag surrounded by square brackets.
+
+Adding tags is similar to adding descriptions. It relies on a `tags.json` file in the root directory. The `key` is the game name(same as how it appears in the descriptions.json file), and the `value` is the tags, seperated by commas.
+
 ## Feedback
 
-For connecting the feedback, **Netlify functions is used**, and is connected to a Discord webhook. The function on Netlify will send a `POST` request to Discord's webhook API, and return the status. For now, the avatar icon is just a picture of some potatoes. 🥔🥔🥔🥔 
+~~For connecting the feedback, Netlify functions is used, and is connected to a Discord webhook. The function on Netlify will send a POST request to Discord's webhook API, and return the status. For now, the avatar icon is just a picture of some potatoes. 🥔🥔🥔🥔~~ Feedback was dropped, due to Netlify needing a repository to be connected in order to actually use the functions.
 
 
 ## Development tools used

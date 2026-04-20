@@ -18,26 +18,6 @@ function closeSettingsMenu() {
     }
 }
 
-function openFeedbackMenu() {
-    const overlay = document.getElementById("settingsOverlay");
-    const feedbackMenu = document.getElementById("feedbackMenuMain");
-
-    if (overlay && feedbackMenu) {
-        overlay.classList.add("open");
-        feedbackMenu.classList.add("open");
-    }
-}
-
-function closeFeedbackMenu() {
-    const overlay = document.getElementById("settingsOverlay");
-    const feedbackMenu = document.getElementById("feedbackMenuMain");
-
-    if (overlay && feedbackMenu) {
-        overlay.classList.remove("open");
-        feedbackMenu.classList.remove("open");
-    }
-}
-
 function openAnalyticsMenu() {
     const overlay = document.getElementById("settingsOverlay");
     const analyticsMenu = document.getElementById("analyticsMenuMain");
@@ -80,10 +60,12 @@ async function createSettings() {
             if (meta.inputType === "switch") {
                 control = document.createElement("input");
                 control.type = "checkbox";
+                control.id = "switch";
                 control.checked = Boolean(meta.default);
             } else if (meta.inputType === "text") {
                 control = document.createElement("input");
                 control.type = "text";
+                control.id = "settingsControlText";
                 control.value = (meta.default !== undefined && meta.default !== null) ? meta.default : "";
                 control.style.minWidth = "160px";
             } else {
