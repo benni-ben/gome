@@ -4,9 +4,7 @@
 This is a very robust game website, with a lot of cool features. 
 Features:
  - Top bar info.
- - Integrated styling, no need to have any external .css files.
  - UI animations.
- - No external dependencies/libraries. 
  - Game thumbnails. 
  - Runs offline(with local web server).
  - Game descriptions.
@@ -14,6 +12,7 @@ Features:
  - Easy file structure.
  - Notification system. 
  - Holiday reminders(in case you forget that a holiday is on a certain day).
+ - Game tagging
  - AND MORE...
 
 ## Development
