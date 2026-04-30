@@ -20,11 +20,11 @@ window.randomNumber = function randomNumber(min, max) {
  * @param {number} bmin Minimum blue value.
  * @param {number} bmax Maximum blue value.
 */
-function getRandomColor(rmin = 0,rmax =255,gmin = 0,gmax = 255,bmin = 0,bmax = 255) {
-    var red = randomNumber(rmin,rmax);
-    var green = randomNumber(gmin,gmax);
-    var blue = randomNumber(bmin,bmax);
-    return "("+red+","+green+","+blue+")";
+function getRandomColor(rmin = 0, rmax = 255, gmin = 0, gmax = 255, bmin = 0, bmax = 255) {
+    var red = randomNumber(rmin, rmax);
+    var green = randomNumber(gmin, gmax);
+    var blue = randomNumber(bmin, bmax);
+    return "(" + red + "," + green + "," + blue + ")";
 }
 /**
  * Stores the last version that was accessed.
@@ -36,20 +36,6 @@ function storeLastVersionAcessed() {
         }
         localStorage.setItem("lastVersionAccessed", currentVersion);
     }
-}
-/**
- * Sends feedback using the netlify functions API. 
- *
- * @param {string} message The message to send through the API. 
- * @return {*} Returns the response. 
- */
-async function sendFeedback(message) {
-    const response = await fetch("https://gomestable.netlify.app/.netlify/functions/discord-webhook", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ feedback: message })
-    });
-    return response.ok;
 }
 /**
  * Saves through localStorage.
@@ -80,4 +66,37 @@ function localStorageLoad(key, jsonParse) {
         console.error("Oh no... it looks like we ran into an error... failed to save the key: ", key, e);
         return null;
     }
+}
+/**
+ * 
+ * @param {string} thumbnail The image source for average color extraction.
+ * @returns The RGB average color.
+ */
+function getAverageColor(thumbnail) {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const img = new Image();
+    img.src = thumbnail.src;
+    return new Promise((resolve) => {
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            context.drawImage(img, 0, 0);
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            let r = 0,
+                g = 0,
+                b = 0;
+            for (let i = 0; i < imageData.data.length; i += 4) {
+                r += imageData.data[i];
+                g += imageData.data[i + 1];
+                b += imageData.data[i + 2];
+            }
+            const pixelCount = imageData.data.length / 4;
+            r = Math.floor(r / pixelCount);
+            g = Math.floor(g / pixelCount);
+            b = Math.floor(b / pixelCount);
+            resolve(`rgba(${r}, ${g}, ${b})`);
+        };
+        img.onerror = () => resolve("rgba(128, 128, 128, 1)");
+    });
 }

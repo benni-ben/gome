@@ -86,6 +86,12 @@ function loadSettings() {
                     if (name === "Webpage Title") {
                         input.value = settings.pageTitle || "";
                     }
+                    // Handle Animation Step Override
+                    if (name === "Animation Step Override") {
+                        input.value = settings.animationStepOverride !== undefined && settings.animationStepOverride !== null ? settings.animationStepOverride : "";
+                        // Apply the animation steps (will remove if empty)
+                        pageSteps(input.value);
+                    }
                 });
             }
         } catch (e) {

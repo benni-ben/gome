@@ -60,17 +60,18 @@ async function createSettings() {
             if (meta.inputType === "switch") {
                 control = document.createElement("input");
                 control.type = "checkbox";
-                control.id = "switch";
+                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
                 control.checked = Boolean(meta.default);
             } else if (meta.inputType === "text") {
                 control = document.createElement("input");
                 control.type = "text";
-                control.id = "settingsControlText";
+                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
                 control.value = (meta.default !== undefined && meta.default !== null) ? meta.default : "";
                 control.style.minWidth = "160px";
             } else {
                 control = document.createElement("input");
                 control.type = "text";
+                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
                 control.value = meta.default || "";
             }
             control.className = "control"

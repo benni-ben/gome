@@ -4,7 +4,6 @@
     let hideTimer = null;
     let isNotificationShowing = false;
     let notificationQueue = [];
-
     function escapeHtml(str) {
         if (typeof str !== "string") return '';
         return str.replace(/[&<>"']/g, (s) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[s]);
@@ -34,7 +33,6 @@
         if (typeof developer !== 'undefined' && developer === true) {
             console.log('notify() called - window.notifications:', typeof window.notifications !== 'undefined' ? window.notifications : 'undefined');
         }
-        
         if (window.notifications === false) {
             if (typeof developer !== 'undefined' && developer === true) {
                 console.log('notify() blocked: window.notifications is false');
@@ -53,7 +51,6 @@
                 notificationQueue.push([text, header, icon, time]);
                 return;
             }
-
             const notificationsEnabled = (typeof settings !== "undefined") ? settings.notifications !== false : true;
             if (!notificationsEnabled) {
                 if (typeof developer !== 'undefined' && developer === true) {

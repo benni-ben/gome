@@ -1,11 +1,12 @@
 @media (prefers-color-scheme: dark) {
     :root {
-        --borderColor: rgb(75, 75, 75);
-        --borderColorHover: rgb(112, 118, 130);
+        --borderColor: rgb(98, 98, 98);
+        --borderColorHover: rgb(145, 145, 145);
         --searchBackground: rgb(70, 70, 70);
         --colorPulse: rgb(92, 186, 236);
         --background: rgb(44, 44, 44);
         --shadowColor: rgba(0, 100, 255, 0.9);
+        --highContrast: rgb(216, 216, 216);
     }
 
     body {
@@ -15,17 +16,6 @@
 
     #icon {
         fill: white;
-    }
-
-    #gameItem {
-        background-color: rgb(10, 10, 10);
-        border: 0px solid rgb(53, 53, 53);
-        transition: all 0.5s ease;
-    }
-
-    #gameItem:hover {
-        background-color: rgb(62, 62, 62);
-        border: 4px solid rgb(200, 200, 200);
     }
 
     #feedbackText {
@@ -54,20 +44,19 @@
 }
 
 @media (prefers-color-scheme: light) {
+    :root {
+        --borderColor: rgb(200, 200, 200);
+        --borderColorHover: rgb(150, 150, 150);
+        --colorPulse: rgb(57, 51, 246);
+        --background: rgb(255, 255, 255);
+        --shadowColor: rgb(0, 200, 255, 0.9);
+        --searchBackground: rgb(190, 190, 190);
+        --highContrast: rgb(66, 66, 66);
+    }
+
     body {
         background-color: white;
         color: black;
-    }
-
-    #gameItem {
-        background-color: var(--background);
-        border: 0px solid var(--borderColor);
-        transition: all 0.4s ease;
-    }
-
-    #gameItem:hover {
-        background-color: var(--background);
-        border: 4px solid var(--borderColorHover);
     }
 
     #icon {
@@ -98,16 +87,6 @@
         color: rgb(0, 0, 0);
     }
 
-    :root {
-        --borderColor: rgb(200, 200, 200);
-        --borderColorHover: rgb(150, 150, 150);
-        --colorPulse: rgb(57, 51, 246);
-        --background: rgb(255, 255, 255);
-        --shadowColor: rgb(0, 200, 255, 0.9);
-        --searchBackground: rgb(190, 190, 190);
-
-    }
-
     #menu {
         background-color: rgb(250, 250, 250, 0.3);
         border: rgb(200, 200, 200) solid 5px;
@@ -121,8 +100,23 @@
 }
 
 #body {
-    margin: 0;
-    padding: 0;
+    -webkit-font-smoothing: subpixel-antialiasing;
+    image-rendering: optimizeSpeed;
+    caret-shape: bar;
+    scrollbar-color: var(--highContrast) transparent;
+    scrollbar-gutter: stable both-edges;
+}
+
+@keyframes caretPulse {
+
+    0%,
+    100% {
+        caret-color: red;
+    }
+
+    50% {
+        caret-color: transparent;
+    }
 }
 
 #analyticsCell {
@@ -137,17 +131,13 @@
     transition: all 1s ease;
 }
 
-#analtyicsCell.hover {
-    background-color: var(--borderColorHover);
-}
-
 #analyticsCellPattern {
     background-color: var(--borderColor);
     width: 1000%;
-    height: 1000%;
+    height: 1002%;
     content: "";
     position: absolute;
-    inset: -50%;
+    inset: -200%;
     isolation: isolate;
     background-color: transparent;
     background-image:
@@ -212,9 +202,10 @@
     color: rgb(166, 238, 178);
     padding: 10px;
     font-family: "Roboto";
-    font-size: 40px;
+    font-size: 36px;
     z-index: 60;
     position: sticky;
+    overflow: auto;
 }
 
 #infodiv {
@@ -242,6 +233,8 @@
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 1rem;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
 }
 
 .setting-description {
@@ -317,20 +310,24 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.3px rgba(0, 0, 0, 0.65);
     -webkit-background-clip: text;
+    will-change: auto;
 }
 
 .tagsContainer {
     line-height: 26px;
+    overflow-wrap: anywhere;
+    overflow: visible;
 }
 
 #tag {
-    border: 2px dashed var(--borderColor);
+    border: 3px dashed var(--borderColor);
     border-radius: 100px;
     font-family: "Roboto";
     cursor: pointer;
-    padding: 1px 8px;
+    padding: 0px 6px;
+    margin: auto;
+    font-size: 15px;
     text-align: center;
-    margin: 4px;
     max-width: fit-content;
     transition: all 1s cubic-bezier(0.36, 0.47, 0.39, 1.12);
     background-color: var(--background);
@@ -341,30 +338,46 @@
     box-shadow: 0px 0px 10px 2px var(--shadowColor);
 }
 
+a {
+    text-decoration: none;
+}
+
 #gameContainer {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     justify-items: center;
     margin-top: 1rem;
+    gap: 10px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 #gameItem {
     cursor: pointer;
     height: min-content;
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 20rem;
+    max-height: 25rem;
     padding: 1rem;
-    width: 10rem;
+    width: -webkit-fill-available;
     overflow-y: scroll;
     overflow-wrap: anywhere;
+    border: 0px solid transparent;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 32vh;
+    align-items: center;
+    transition: all 0.6s ease;
+}
+
+#gameItem:hover {
+    background-color: var(--searchBackground);
+    border: 4px solid var(--borderColor);
 }
 
 #gameThumbnail {
     height: auto;
-    width: 100%;
+    width: 75%;
+    margin: auto;
 }
 
 #gameTitle {
@@ -375,7 +388,7 @@
     width: max-content;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #gameDescription {
@@ -383,7 +396,7 @@
     font-size: 0.76rem;
     font-style: italic;
     justify-content: center;
-    width: max-content;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -516,6 +529,7 @@
     width: 40px;
     margin: auto;
     transition: all 0.5s ease-in-out;
+    text-decoration: none;
 }
 
 #icon:hover {

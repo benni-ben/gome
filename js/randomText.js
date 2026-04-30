@@ -29,7 +29,8 @@ function getRandomText(text) {
             "apple is shit",
             "CLICK ME PLEASE!!!!!!!!",
             "Damn... you went down far twin... 🙉😋🗿",
-            "i want to be clicked"
+            "i want to be clicked",
+            "🫪",
         ];
         randTextElem.textContent = texts[randomNumber(0, texts.length-1)];
     } else {

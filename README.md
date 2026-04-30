@@ -15,13 +15,15 @@ Features:
  - Game tagging
  - AND MORE...
 
+[**Use the website!**](https://gomestable.netlify.app/)
+
 ## Development
 
 This is made with CSS, HTML, and pure JavaScript. For the fonts, file-embedded base64 encoded fonts are used.
 
-A JSON file is used for the game paths and descriptions. The file is named `descriptions.json`. The JSON file structure is simply composed of 2 parameters for each game: game name and game description.
+A JSON file is used for the game paths, tags, and descriptions. The file is named `games.json`(in the root directory). The JSON file structure is an array with the array name being the game name(the exact name of the folder), and the index 0 of the array is the description, and index 1 of the array is the tags, seperated by commas.
 
-The string is the game's name(must be the exact name used in the path), and the value is the description; it can be whatever you want it to be. Please note that every value must have a string, and every string must have a value.
+The previous implementation of this involved having 2 seperate files with the tags in one, and the descriptions in one. This should be simpler.
 
 ### Header Gradients
 
@@ -39,28 +41,7 @@ An example of a gradient that happens on November 2nd is below:
 
 To add a game, you have to first create a folder inside the `assets` folder. This will be the game's name. Inside that folder, you must have an image named `cover.png`. It must be in PNG format to work. That folder should also have an `index.html` file inside. 
 
-After that, you must update the `descriptions.json` file. Make a new pair in the file, and then set the key to the game's **exact name**, and the value to it's description.
-
-An example of an object in the `descriptions.json` file is below:
-
-```"key": "value",```
-
-You can use this example in the `descriptions.json` file, and then replace the key with the game name, and the value to it's description. 
-
-All of the pairs must be inside of the curly brackets.
-
-If you delete a game, it's field must also be deleted frin the `descriptions.json` file(since it expects an index.html file and a PNG cover in the root of the game folder).
-
-## Tags
-
-Along with the descriptions, tags can also be added, similarly to the descriptions. To add a tag, you need to add the game as the key, followed by the tags, seperated by commas. **For example:**
-```  "Fastroads": "driving, modded, racing, calm, radio",
-```
-would set the Fastroads game tags to driving, modded, racing, calm, and radio.
-
-To search for the tags, either click on a tag, or search the tag surrounded by square brackets.
-
-Adding tags is similar to adding descriptions. It relies on a `tags.json` file in the root directory. The `key` is the game name(same as how it appears in the descriptions.json file), and the `value` is the tags, seperated by commas.
+It is also reccomended to reroute all reused assets(such as the WebGL logo and others) to the single `asset/globalUnityResources/` folder, which has custom SVG versions of some of the common images. This was done with the games on `gomestable.netlify.app`.
 
 ## Feedback
 
@@ -73,13 +54,12 @@ A wide variety of other tools(some closed source, but I will add them here anywa
 
  - As of the 20th commit, [Coolors](https://coolors.co/palettes/) was used to get some of the colors for the header gradients.
 
- - To make the fonts base64 encoded, I used [Transfonter](https://transfonter.org/), which I highly recommend checking out if you want to make good single-file web apps.
-
  - VSCode was used as the development IDE. 
 
  - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) was used to preview the pages quickly without having to start up a local server in another application.
+ - I recently added the [Lenis](https://github.com/darkroomengineering/lenis) library to the website, in order to support smooth scrolling, and make the website feel more unique and creative.
 
-
+ - ~~To make the fonts base64 encoded, I used [Transfonter](https://transfonter.org/), which I highly recommend checking out if you want to make good single-file web apps.~~ This was removed due to the unneccesary refetching of the HTML file every time it got updated(which uses unneccesary bandwidth).
 
 ## Supporting
 
