@@ -1,0 +1,20 @@
+{
+    "Animations": {
+        "description": "Toggles the UI animations. This may help with performance on older, or less powerful devices.",
+        "category": "Animations",
+        "inputType": "switch",
+        "associatedFunction": "pageAnimations()"
+    },
+    "Webpage Title": {
+        "description": "Changes the webpage's title.",
+        "category": "Interface",
+        "inputType": "text",
+        "associatedFunction": "changeWebpageTitle()"
+    },
+    "Analytics": {
+        "description": "Whether the page's analytics should be enabled. Analytics will track playtime, clicks, and other actions, and can be viewed in the homepage. Disabling this may help improve performance. This does not affect Google Analytics, but rather the custom-made client analytics.",
+        "category": "Statistics",
+        "inputType": "switch",
+        "associatedFunction": "changeAnalyticsStatus()"
+    }
+}

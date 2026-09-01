@@ -1,0 +1,843 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --borderColor: rgb(98, 98, 98);
+        --borderColorHover: rgb(145, 145, 145);
+        --searchBackground: rgb(78, 79, 82);
+        --colorPulse: rgb(92, 186, 236);
+        --background: rgb(44, 44, 44);
+        --shadowColor: rgba(96, 180, 255, 0.8);
+        --highContrast: rgb(216, 216, 216);
+        --textColor: rgb(255, 255, 255);
+    }
+
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .icon {
+        fill: white;
+    }
+
+    .icon:hover {
+        fill: rgb(144, 200, 202);
+    }
+
+    #feedbackText {
+        background: rgb(50, 50, 50);
+        color: white;
+    }
+
+    .settingControl select {
+        background: #2e2e2e;
+    }
+
+    /*ty to https://www.w3schools.com/howto/howto_css_placeholder.asp for helping me with this*/
+    ::placeholder {
+        color: rgb(255, 255, 255);
+        opacity: 1;
+    }
+
+    ::-ms-input-placeholder {
+        color: rgb(255, 255, 255);
+    }
+
+    #menu {
+        background-color: rgb(15, 15, 15, 0.3);
+        border: rgba(61, 61, 61, 0.8) solid 6px;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --borderColor: rgb(200, 200, 200);
+        --borderColorHover: rgb(150, 150, 150);
+        --colorPulse: rgb(57, 51, 246);
+        --background: rgb(255, 255, 255);
+        --shadowColor: rgba(67, 129, 255, 0.7);
+        --searchBackground: rgb(190, 190, 190);
+        --highContrast: rgb(66, 66, 66);
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .icon {
+        fill: rgb(0, 0, 0);
+    }
+
+    .icon:hover {
+        fill: rgb(70, 96, 96);
+    }
+
+    #menu {
+        background-color: rgba(255, 255, 255, 0.4);
+        border: rgba(225, 225, 225, 0.1) solid 6px;
+    }
+
+    .settingControl select {
+        background: #dddddd;
+    }
+
+    #feedbackText {
+        background: rgb(226, 226, 226);
+        color: black;
+    }
+
+    /*ty to https://www.w3schools.com/howto/howto_css_placeholder.asp for helping me with this*/
+    ::placeholder {
+        color: rgb(0, 0, 0);
+        opacity: 1;
+    }
+
+    ::-ms-input-placeholder {
+        color: rgb(0, 0, 0);
+    }
+
+    #menu {
+        background-color: rgb(250, 250, 250, 0.3);
+        border: rgb(200, 200, 200) solid 5px;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 210deg;
+    inherits: false;
+}
+
+#body {
+    -webkit-font-smoothing: subpixel-antialiasing;
+    image-rendering: optimizeSpeed;
+    scrollbar-color: var(--highContrast) transparent;
+    scrollbar-gutter: stable both-edges;
+}
+
+textarea,
+input[type="text"] {
+    caret-shape: block;
+    caret-animation: manual;
+    animation: caretPulse 6s cubic-bezier(.54, .1, .53, .97) infinite;
+}
+
+@keyframes caretPulse {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        caret-color: transparent;
+    }
+
+    10% {
+        caret-color: #0ed7ff;
+    }
+
+    30% {
+        caret-color: #3583b6;
+    }
+
+    50% {
+        caret-color: #3040a4;
+    }
+
+    70% {
+        caret-color: #4484b5;
+    }
+
+    90% {
+        caret-color: #60bcfa;
+    }
+}
+
+#analyticsCell {
+    width: 100%;
+    height: 90%;
+    font-family: "Fira Mono";
+    background-color: var(--borderColor);
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+#analyticsCellPattern {
+    background-color: var(--borderColor);
+    width: 1000%;
+    height: 1002%;
+    content: "";
+    position: absolute;
+    inset: -200%;
+    isolation: isolate;
+    background-color: transparent;
+    background-image:
+        linear-gradient(var(--background) 16px, transparent 16px 60px),
+        linear-gradient(90deg, var(--background) 16px, transparent 10px 50px);
+    background-size: 60px 60px;
+    background-blend-mode: normal;
+    transform: rotate(45deg);
+    animation: slide-up 2s linear infinite;
+    will-change: background-position;
+    z-index: 0;
+}
+
+@keyframes slide-up {
+    to {
+        background-position-y: 60px;
+    }
+}
+
+#randText {
+    font-family: "Fira Mono";
+    font-size: 2rem;
+    padding: 10px;
+    width: fit-content;
+    transition: all 1s ease-in-out;
+    text-align: center;
+    margin: auto;
+}
+
+#randText:hover {
+    transform: scale(3, 1);
+    font-size: 2.4rem;
+    text-shadow: 4px 4px 0px rgba(213, 213, 213, 0.61);
+}
+
+#analyticsCellContainer {
+    width: fit-content;
+    height: 90%;
+    padding: 10px;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+    margin: auto;
+}
+
+#titleText {
+    padding: 5px;
+    font-size: 26px;
+    margin: auto;
+    position: sticky;
+    z-index: 70;
+}
+
+#value {
+    color: rgb(166, 238, 178);
+    padding: 10px;
+    font-family: "Roboto";
+    font-size: 36px;
+    z-index: 60;
+    position: sticky;
+    overflow: auto;
+}
+
+#infodiv {
+    align-items: stretch;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    cursor: help;
+}
+
+#headerIcons {
+    display: flex;
+}
+
+h4 {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    height: 2rem;
+    padding: 10px;
+    margin: auto;
+    border-radius: 1000px;
+    display: flex;
+    min-width: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--borderColor);
+    background-color: var(--searchBackground);
+}
+
+.setting-left {
+    font-family: "Fira Sans";
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    text-align: left;
+}
+
+.setting-row {
+    align-items: right;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1rem;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+}
+
+.setting-description {
+    font-family: "Roboto";
+    text-align: right;
+    width: 55vh;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.control {
+    margin-left: 10px;
+    font-family: "Roboto";
+    border: 1px solid gray;
+    transition: all 0.5s cubic-bezier(0.36, 0.47, 0.39, 1.5);
+}
+
+.control:focus {
+    transform: scale(1.1);
+}
+
+#switch {
+    width: 2vh;
+    height: 2vh;
+}
+
+:root {
+    --head-grad-color-1: #000000;
+    --head-grad-color-2: #009cbf;
+    --head-grad-color-3: #1c19eb;
+    --fadeColor: rgb(255, 0, 0);
+}
+
+#header {
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    font-size: 6rem;
+    position: relative;
+    width: min-content;
+    margin-left: auto;
+    background-color: #005f56;
+    background-image:
+        radial-gradient(at 55% 21%, #005f56 0px, transparent 45%),
+        radial-gradient(at 12% 47%, #04c9c6 0px, transparent 45%),
+        radial-gradient(at 40% 64%, #befffe 0px, transparent 45%),
+        radial-gradient(at 34% 88%, #4faeba 0px, transparent 45%),
+        radial-gradient(at 75% 68%, #00928e 0px, transparent 45%),
+        radial-gradient(at 66% 52%, #006a87 0px, transparent 45%),
+        radial-gradient(at 86% 24%, #45bcd3 0px, transparent 45%);
+    margin-right: auto;
+    text-align: center;
+    z-index: 2;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgb(100, 100, 100);
+    -webkit-background-clip: text;
+    will-change: auto;
+    animation: passiveAnim 8s ease-in-out infinite;
+    transition: all 0.8s cubic-bezier(.56,-0.67,.24,1.47);
+}
+
+@keyframes passiveAnim {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg) brightness(100%) contrast(100%) saturate(100%);
+    }
+
+    50% {
+        filter: hue-rotate(60deg) brightness(85%) contrast(170%) saturate(170%)
+    }
+}
+
+#header:hover {
+    transform: scale(1.75);
+text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;}
+
+
+.tagsContainer {
+    line-height: 26px;
+    overflow-wrap: anywhere;
+    overflow: visible;
+}
+
+#tag {
+    border: 3px dashed var(--borderColor);
+    border-radius: 100px;
+    font-family: "Roboto";
+    cursor: pointer;
+    padding: 0px 6px;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
+    max-width: fit-content;
+    transition: all 1s cubic-bezier(0.36, 0.47, 0.39, 1.12);
+    background-color: var(--background);
+}
+
+#tag:hover {
+    background-color: var(--shadowColor);
+    box-shadow: 0px 0px 10px 2px var(--shadowColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+#gameContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    justify-items: center;
+    margin-top: 1rem;
+    gap: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#gameItem {
+    cursor: pointer;
+    height: min-content;
+    max-height: 25rem;
+    padding: 1rem;
+    width: -webkit-fill-available;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+    border: 0px solid transparent;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.6s ease;
+}
+
+#gameItem:hover {
+    background-color: var(--searchBackground);
+    border: 4px solid var(--borderColor);
+}
+
+#gameThumbnail {
+    height: auto;
+    width: 75%;
+    margin: auto;
+}
+
+#gameTitle {
+    font-family: "Fira Sans";
+    font-size: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#gameDescription {
+    font-family: "Fira Mono";
+    font-size: 0.76rem;
+    font-style: italic;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#button,
+#submit {
+    background-color: #48d1a8;
+    border: none;
+    font-family: "Fira Sans";
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+#button:focus,
+#submit:focus {
+    background-color: #119e47;
+}
+
+#horizontalLine {
+    animation: 3s widen ease;
+    background-image: linear-gradient(to right,
+            transparent,
+            var(--fadeColor),
+            transparent);
+    border: none;
+    height: 0.2rem;
+    margin: 20px auto;
+}
+
+#settingsMenuMain,
+#feedbackMenuMain,
+#analyticsMenuMain {
+    --webkit-backdrop-filter: blur(12px) brightness(2);
+    backdrop-filter: blur(12px) brightness(2);
+    border-radius: 40px;
+    box-shadow: 0 5px 10px rgba(122, 167, 185, 0.6);
+    display: block;
+    height: 70%;
+    left: 50%;
+    opacity: 0;
+    overflow: auto;
+    pointer-events: none;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -52%) scale(0.5);
+    transition: all 0.4s cubic-bezier(0.36, 0.47, 0.39, 1.12);
+    width: 70%;
+    z-index: 40;
+}
+
+#analyticsMenuMain {
+    width: 700px;
+}
+
+#settingsMenuMain.open,
+#feedbackMenuMain.open,
+#analyticsMenuMain.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 60;
+    transition: none;
+}
+
+#settingsOverlay {
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}
+
+#settingsOverlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#settingsMenuHeader,
+#feedbackMenuHeader,
+#analyticsMenuHeader {
+    font-family: "Fira Mono";
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#analyticsMenuHeader {
+    cursor: grab;
+}
+
+#analyticsMenuHeader:active {
+    cursor: grabbing;
+}
+
+#menuDivider {
+    height: 5px;
+    width: 100%;
+    background: (var(--borderColor));
+}
+
+#closeBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+#settingsCategoryHeader {
+    font-family: "Fira Sans";
+    font-size: 3rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: all 0.5s cubic-bezier(0.54, 0.1, 0.53, 0.97);
+    width: 30px;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+.settingControl input[type="range"] {
+    vertical-align: middle;
+}
+
+.settingControl select {
+    border: 1px solid #444;
+    border-radius: 6px;
+    padding: 4px 6px;
+}
+
+.settingControl input[type="checkbox"] {
+    height: 32px;
+    transition: all 0.3s ease;
+    width: 32px;
+}
+
+.settingControl input[type="color"] {
+    background: none;
+    border: none;
+    height: 32px;
+    padding: 0;
+    width: 32px;
+}
+
+@media (max-width: 720px) {
+    #settingsMenuMain {
+        height: 84%;
+        left: 50%;
+        top: 50%;
+        width: calc(100% - 40px);
+    }
+}
+
+#actualSettings {
+    grid: auto / 1fr 1fr;
+}
+
+#settingValueTitle {
+    cursor: help;
+    font-family: "Roboto";
+    font-size: 0.9rem;
+    margin: 2px;
+}
+
+#settingsValue {
+    position: relative;
+}
+
+#searchBar {
+    display: block;
+    font-family: "Fira Mono";
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    background: var(--searchBackground);
+    font-size: 1.1rem;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    color: var(--textColor);
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.7s ease;
+    width: 40%;
+}
+
+#searchBar:focus {
+    font-size: 1.2rem;
+    width: 60%;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18),
+        0 0 22px var(--shadowColor),
+        0 12px 28px rgba(15, 23, 42, 0.18);
+}
+
+#searchBar:focus-within {
+    outline: none;
+    z-index: 10;
+}
+
+mark {
+    background: #eddd75;
+    color: inherit;
+    padding: 0 0.15em;
+    border-radius: 3px;
+}
+
+#notification {
+    /* hidden */
+    background-color: var(--background);
+    align-items: flex-start;
+    border: 1px solid var(--borderColor);
+    color: white;
+    display: flex;
+    font-family: "Fira Mono";
+    gap: 12px;
+    left: 50%;
+    max-width: 90%;
+    opacity: 0;
+    padding: 14px 18px;
+    pointer-events: none;
+    position: fixed;
+    top: 20px;
+    transform: translateX(-50%) translateY(-150%);
+    transition:
+        transform 0.4s cubic-bezier(0.36, 0.47, 0.39, 1.12),
+        opacity 0.5s cubic-bezier(0.36, 0.47, 0.39, 1.12),
+        border 0.7s cubic-bezier(0.36, 0.47, 0.39, 1.12);
+    z-index: 1000;
+    animation: notifyPulse 3s infinite;
+}
+
+#notification.show {
+    border: 4px solid rgba(138, 138, 138, 0.8);
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+#notification .notif-icon {
+    flex: 0 0 auto;
+    height: 36px;
+    margin-top: 2px;
+    padding: 2px;
+    width: 36px;
+}
+
+#notification .notif-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+#feedbackContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#feedbackText {
+    box-sizing: border-box;
+    display: block;
+    font-family: "Fira Mono";
+    font-size: 1rem;
+    height: 160px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    resize: both;
+    transition: all 0.3s cubic-bezier(0.54, 0.1, 0.53, 0.97);
+    max-width: 90%;
+}
+
+#feedbackText:focus {
+    font-size: 1.07rem;
+    max-width: 93%;
+}
+
+#notification .notif-header {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+#notification .notif-text {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+#notification .notif-close {
+    align-self: flex-start;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: not-allowed;
+    font-size: 18px;
+    line-height: 1;
+    margin-left: 12px;
+    padding: 4px;
+}
+
+#feedbackcontent {
+    font-family: "Fira Mono";
+    font-size: 1rem;
+    margin: 10px;
+}
+
+#close,
+#feedbackClose {
+    padding: 10px;
+    height: 24px;
+}
+
+/* Compact on small screens */
+@media (max-width: 420px) {
+    #notification {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    #notification .notif-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    #notification .notif-header {
+        font-size: 0.95rem;
+    }
+
+    #notification .notif-text {
+        font-size: 0.7rem;
+    }
+}
+
+@keyframes widen {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes gradientRotate {
+    to {
+        --angle: 570deg;
+    }
+}
+
+@keyframes notifyPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 10px 20px rgb(130, 130, 130);
+    }
+}
+
+@media (max-width: 600px) {
+    .analyticsRow {
+        grid-template-columns: 1fr;
+    }
+
+    .analyticsActions {
+        flex-direction: column;
+    }
+}
