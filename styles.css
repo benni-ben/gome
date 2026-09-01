@@ -2,11 +2,12 @@
     :root {
         --borderColor: rgb(98, 98, 98);
         --borderColorHover: rgb(145, 145, 145);
-        --searchBackground: rgb(70, 70, 70);
+        --searchBackground: rgb(78, 79, 82);
         --colorPulse: rgb(92, 186, 236);
         --background: rgb(44, 44, 44);
-        --shadowColor: rgba(0, 100, 255, 0.9);
+        --shadowColor: rgba(96, 180, 255, 0.8);
         --highContrast: rgb(216, 216, 216);
+        --textColor: rgb(255, 255, 255);
     }
 
     body {
@@ -14,8 +15,12 @@
         color: white;
     }
 
-    #icon {
+    .icon {
         fill: white;
+    }
+
+    .icon:hover {
+        fill: rgb(144, 200, 202);
     }
 
     #feedbackText {
@@ -49,7 +54,7 @@
         --borderColorHover: rgb(150, 150, 150);
         --colorPulse: rgb(57, 51, 246);
         --background: rgb(255, 255, 255);
-        --shadowColor: rgb(0, 200, 255, 0.9);
+        --shadowColor: rgba(67, 129, 255, 0.7);
         --searchBackground: rgb(190, 190, 190);
         --highContrast: rgb(66, 66, 66);
     }
@@ -59,8 +64,12 @@
         color: black;
     }
 
-    #icon {
+    .icon {
         fill: rgb(0, 0, 0);
+    }
+
+    .icon:hover {
+        fill: rgb(70, 96, 96);
     }
 
     #menu {
@@ -102,20 +111,46 @@
 #body {
     -webkit-font-smoothing: subpixel-antialiasing;
     image-rendering: optimizeSpeed;
-    caret-shape: bar;
     scrollbar-color: var(--highContrast) transparent;
     scrollbar-gutter: stable both-edges;
+}
+
+textarea,
+input[type="text"] {
+    caret-shape: block;
+    caret-animation: manual;
+    animation: caretPulse 6s cubic-bezier(.54, .1, .53, .97) infinite;
 }
 
 @keyframes caretPulse {
 
     0%,
+    20%,
+    40%,
+    60%,
+    80%,
     100% {
-        caret-color: red;
+        caret-color: transparent;
+    }
+
+    10% {
+        caret-color: #0ed7ff;
+    }
+
+    30% {
+        caret-color: #3583b6;
     }
 
     50% {
-        caret-color: transparent;
+        caret-color: #3040a4;
+    }
+
+    70% {
+        caret-color: #4484b5;
+    }
+
+    90% {
+        caret-color: #60bcfa;
     }
 }
 
@@ -211,14 +246,31 @@
 #infodiv {
     align-items: stretch;
     display: grid;
-    font-family: "Fira Mono";
-    font-size: 1.6rem;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     justify-content: center;
     text-align: center;
     width: 100%;
     cursor: help;
+}
+
+#headerIcons {
+    display: flex;
+}
+
+h4 {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    height: 2rem;
+    padding: 10px;
+    margin: auto;
+    border-radius: 1000px;
+    display: flex;
+    min-width: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--borderColor);
+    background-color: var(--searchBackground);
 }
 
 .setting-left {
@@ -269,49 +321,49 @@
 }
 
 #header {
-    font-family: "Fira Sans";
-    font-size: 7rem;
+    font-family: "Space Grotesk";
+    font-weight: 700;
+    font-size: 6rem;
     position: relative;
+    width: min-content;
+    margin-left: auto;
+    background-color: #005f56;
+    background-image:
+        radial-gradient(at 55% 21%, #005f56 0px, transparent 45%),
+        radial-gradient(at 12% 47%, #04c9c6 0px, transparent 45%),
+        radial-gradient(at 40% 64%, #befffe 0px, transparent 45%),
+        radial-gradient(at 34% 88%, #4faeba 0px, transparent 45%),
+        radial-gradient(at 75% 68%, #00928e 0px, transparent 45%),
+        radial-gradient(at 66% 52%, #006a87 0px, transparent 45%),
+        radial-gradient(at 86% 24%, #45bcd3 0px, transparent 45%);
+    margin-right: auto;
     text-align: center;
     z-index: 2;
-    animation: gradientRotate 5s linear infinite;
-    background: conic-gradient(from var(--angle),
-            #c5bbb8 0deg,
-            #c5bbb8 24deg,
-            #b8b5b8 calc(24deg + 0.1deg),
-            #b8b5b8 48deg,
-            #a9afb7 calc(48deg + 0.1deg),
-            #a9afb7 72deg,
-            #9aa8b5 calc(72deg + 0.1deg),
-            #9aa8b5 96deg,
-            #8ba1b3 calc(96deg + 0.1deg),
-            #8ba1b3 120deg,
-            #7d98af calc(120deg + 0.1deg),
-            #7d98af 144deg,
-            #7090ab calc(144deg + 0.1deg),
-            #7090ab 168deg,
-            #6587a6 calc(168deg + 0.1deg),
-            #6587a6 192deg,
-            #5c7ea1 calc(192deg + 0.1deg),
-            #5c7ea1 216deg,
-            #55759b calc(216deg + 0.1deg),
-            #55759b 240deg,
-            #516c94 calc(240deg + 0.1deg),
-            #516c94 264deg,
-            #4f638d calc(264deg + 0.1deg),
-            #4f638d 288deg,
-            #505a85 calc(288deg + 0.1deg),
-            #505a85 312deg,
-            #54537d calc(312deg + 0.1deg),
-            #54537d 336deg,
-            #5b4b74 calc(336deg + 0.1deg) 360deg);
     background-clip: text;
-    background-position: 100% 2000px;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.3px rgba(0, 0, 0, 0.65);
+    -webkit-text-stroke: 2px rgb(100, 100, 100);
     -webkit-background-clip: text;
     will-change: auto;
+    animation: passiveAnim 8s ease-in-out infinite;
+    transition: all 0.8s cubic-bezier(.56,-0.67,.24,1.47);
 }
+
+@keyframes passiveAnim {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg) brightness(100%) contrast(100%) saturate(100%);
+    }
+
+    50% {
+        filter: hue-rotate(60deg) brightness(85%) contrast(170%) saturate(170%)
+    }
+}
+
+#header:hover {
+    transform: scale(1.75);
+text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;}
+
 
 .tagsContainer {
     line-height: 26px;
@@ -364,7 +416,6 @@ a {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    max-width: 32vh;
     align-items: center;
     transition: all 0.6s ease;
 }
@@ -520,20 +571,16 @@ a {
     font-size: 3rem;
 }
 
-#icon {
+.icon {
     cursor: pointer;
-    height: 20px;
+    height: 30px;
     position: relative;
     transform: rotate(0deg);
     transition: all 0.5s cubic-bezier(0.54, 0.1, 0.53, 0.97);
-    width: 40px;
+    width: 30px;
     margin: auto;
     transition: all 0.5s ease-in-out;
     text-decoration: none;
-}
-
-#icon:hover {
-    fill: rgb(174, 182, 207);
 }
 
 .settingControl input[type="range"] {
@@ -587,22 +634,26 @@ a {
 #searchBar {
     display: block;
     font-family: "Fira Mono";
-    border: 5px solid var(--background);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     background: var(--searchBackground);
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-top: -30px;
+    margin-bottom: 50px;
     margin-left: auto;
+    color: var(--textColor);
     margin-right: auto;
     padding: 10px;
     text-align: center;
-    transition: all 1.3s ease;
+    transition: all 0.7s ease;
     width: 40%;
 }
 
 #searchBar:focus {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: 60%;
-    box-shadow: 0px 0px 70px 4px var(--borderColorHover);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18),
+        0 0 22px var(--shadowColor),
+        0 12px 28px rgba(15, 23, 42, 0.18);
 }
 
 #searchBar:focus-within {
@@ -694,6 +745,7 @@ mark {
 
 #notification .notif-header {
     font-family: "Roboto";
+    font-weight: 600;
     font-size: 1rem;
     letter-spacing: 0.2px;
 }

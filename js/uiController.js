@@ -1,7 +1,6 @@
 function openSettingsMenu() {
     const overlay = document.getElementById("settingsOverlay");
     const settingsMenu = document.getElementById("settingsMenuMain");
-
     if (overlay && settingsMenu) {
         overlay.classList.add("open");
         settingsMenu.classList.add("open");
@@ -11,7 +10,6 @@ function openSettingsMenu() {
 function closeSettingsMenu() {
     const overlay = document.getElementById("settingsOverlay");
     const settingsMenu = document.getElementById("settingsMenuMain");
-
     if (overlay && settingsMenu) {
         overlay.classList.remove("open");
         settingsMenu.classList.remove("open");
@@ -21,7 +19,6 @@ function closeSettingsMenu() {
 function openAnalyticsMenu() {
     const overlay = document.getElementById("settingsOverlay");
     const analyticsMenu = document.getElementById("analyticsMenuMain");
-
     if (overlay && analyticsMenu) {
         overlay.classList.add("open");
         analyticsMenu.classList.add("open");
@@ -31,7 +28,6 @@ function openAnalyticsMenu() {
 function closeAnalyticsMenu() {
     const overlay = document.getElementById("settingsOverlay");
     const analyticsMenu = document.getElementById("analyticsMenuMain");
-
     if (overlay && analyticsMenu) {
         overlay.classList.remove("open");
         analyticsMenu.classList.remove("open");
@@ -57,21 +53,27 @@ async function createSettings() {
             label.textContent = name;
             label.style.fontWeight = "600";
             let control;
+            const settingKeyMap = {
+                "Animations": "animations",
+                "Analytics": "analytics",
+                "Webpage Title": "pageTitle"
+            };
+            const savedValue = settingKeyMap[name] && typeof settings !== "undefined" ? settings[settingKeyMap[name]] : undefined;
             if (meta.inputType === "switch") {
                 control = document.createElement("input");
                 control.type = "checkbox";
-                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
-                control.checked = Boolean(meta.default);
+                control.id = name.replace(/\s+/g, "");
+                control.checked = savedValue !== undefined ? Boolean(savedValue) : Boolean(meta.default);
             } else if (meta.inputType === "text") {
                 control = document.createElement("input");
                 control.type = "text";
-                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
+                control.id = name.replace(/\s+/g, "");
                 control.value = (meta.default !== undefined && meta.default !== null) ? meta.default : "";
                 control.style.minWidth = "160px";
             } else {
                 control = document.createElement("input");
                 control.type = "text";
-                control.id = name.replace(/\s+/g, ""); // Remove spaces for valid ID
+                control.id = name.replace(/\s+/g, "");
                 control.value = meta.default || "";
             }
             control.className = "control"

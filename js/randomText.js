@@ -26,7 +26,6 @@ function getRandomText(text) {
             "e",
             "👁️👅👁️",
             "fffff",
-            "apple is shit",
             "CLICK ME PLEASE!!!!!!!!",
             "Damn... you went down far twin... 🙉😋🗿",
             "i want to be clicked",

@@ -1,7 +1,6 @@
 let settings = {
     analytics: true,
     animations: true,
-    notifications: true,
     pageTitle: (typeof document !== "undefined" && document.title) ? document.title : "Gome",
 };
 
@@ -13,6 +12,7 @@ function pageAnimations(bool) {
         if (!document.getElementById(id)) {
             const style = document.createElement("style");
             style.id = id;
+            settings.animations = false;
             style.textContent = "* { -webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; transition: none !important; -webkit-animation: none !important; animation: none !important; }";
             (document.head || document.documentElement).appendChild(style);
         }
@@ -21,13 +21,6 @@ function pageAnimations(bool) {
         if (element) element.remove();
     }
     window.animations = settings.animations;
-    saveSettings();
-};
-
-function notifications(bool) {
-    const enabled = Boolean(bool);
-    settings.notifications = enabled;
-    window.notifications = enabled;
     saveSettings();
 };
 
@@ -72,7 +65,7 @@ function loadSettings() {
     if (parsed) {
         settings = Object.assign({}, settings, parsed || {});
         window.animations = settings.animations;
-        window.notifications = settings.notifications;
+        saveSettings();
         if (settings.pageTitle) document.title = settings.pageTitle;
         try {
             const container = (typeof document !== "undefined") && document.getElementById && document.getElementById("settingsContent");
@@ -83,8 +76,16 @@ function loadSettings() {
                     const input = row.querySelector(".control");
                     if (!label || !input) return;
                     const name = (label.textContent || "").trim();
-                    if (name === "Webpage Title") {
+                    const settingKeyMap = {
+                        "Animations": "animations",
+                        "Analytics": "analytics",
+                        "Webpage Title": "pageTitle"
+                    };
+                    const key = settingKeyMap[name];
+                    if (key === "pageTitle") {
                         input.value = settings.pageTitle || "";
+                    } else if (key && input.type === "checkbox") {
+                        input.checked = Boolean(settings[key]);
                     }
                     // Handle Animation Step Override
                     if (name === "Animation Step Override") {

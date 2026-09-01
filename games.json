@@ -1,6 +1,7518 @@
-// {
-  // "folder name": [
-    // "description",
-    // "comma-seperated tags"
-  // ]
-// }
+{
+  "Death Car": [
+    "A game where you drive a car and try to avoid obstacles while racing against time.",
+    "driving, racing, 3d, casual, arcade"
+  ],
+  "ICycle": [
+    "A game where you ride a bicycle and perform tricks.",
+    "cycling, stunt, 2d, casual, arcade"
+  ],
+  "Sky Car Stunt": [
+    "A game where you drive a car in the sky and perform stunts.",
+    "driving, stunt, 3d, casual, arcade"
+  ],
+  "Scrap Metal": [
+    "A game where you collect scrap metal and build things.",
+    "simulation, building, crafting, 3d, casual"
+  ],
+  "Moving Truck": [
+    "A game where you drive a moving truck and deliver items to different locations.",
+    "driving, simulation, delivery, 3d, casual"
+  ],
+  "1": [
+    "It is like 2048, but with division. Your goal is to get to 1.",
+    "2048, modded, puzzle, 2d, math"
+  ],
+  "2048": [
+    "The classic 2048 game, where you combine blocks to get to a 2048 block.",
+    "puzzle, 2d, number, casual, arcade, 2048"
+  ],
+  "Dog Breed Detector": [
+    "Not a game but it is cool. It is based on my AI, which was trained on over 20,000 pictures of dogs.",
+    "ai, dog, machine learning, 2d, fun, casual"
+  ],
+  "10 Minutes Till Dawn": [
+    "2d zombie killing game.",
+    "2d, zombie, killing, shooter, fight"
+  ],
+  "3D Basketball": [
+    "A 3D basketball game with various game modes and challenges.",
+    "sports, basketball, 3d, casual, arcade"
+  ],
+  "3D City Tractor Garbage Sim": [
+    "A 3D simulation game where you drive a garbage truck around the city.",
+    "simulation, driving, 3d, city, garbage, truck, job"
+  ],
+  "3D Pony Creator": [
+    "A 3D character creator game featuring ponies with customization options.",
+    "creator, pony, 3d, customization, casual, creative"
+  ],
+  "3Dash": [
+    "A game like geometry dash where you jump over obstacles.",
+    "platformer, rhythm, precision, 2d, arcade, difficult, side-scroller"
+  ],
+  "3Dash Editor": [
+    "A level editor for 3Dash.",
+    "tool, level-editor, creation, 2d"
+  ],
+  "3x5 Cell": [
+    "A puzzle game played on a 3x5 grid.",
+    "puzzle, grid, casual, 2d, strategy"
+  ],
+  "500 Caliber Contacts": [
+    "A 3D Platformer where you play as a contract killer and your eyes glaze over.",
+    "adventure, platformer, killing, murder, shooter, hitman, 3d"
+  ],
+  "60 Second Burger Run": [
+    "A fast-paced burger cooking and delivery game with a 60-second time limit.",
+    "time-management, cooking, fast-paced, arcade, casual, 2d"
+  ],
+  "9007199254740992": [
+    "A numerical puzzle or incremental game.",
+    "puzzle, incremental, casual, numerical, 2d"
+  ],
+  "99 Nights In The Forest": [
+    "Shitty game about a forest.",
+    "horror, adventure, supernatural, exploration, puzzle, atmospheric"
+  ],
+  "A Midnight Pizza": [
+    "A horror game set in a pizza shop at midnight.",
+    "horror, scary, pizza, midnight, atmospheric, 3d, indie"
+  ],
+  "ASyntax": [
+    "It is old. That is all I know.",
+    "retro, 2d, emulator, old"
+  ],
+  "Ages of Conflict": [
+    "A strategy simulation game where you build an army and kill bad guys.",
+    "strategy, simulation, war, 4x, 2d"
+  ],
+  "Alex Kid in Miracle World": [
+    "A classic platformer game, where this kid does things.",
+    "platformer, retro, action, casual, 2d, arcade"
+  ],
+  "Ambulance Rush": [
+    "A fast-paced time management game where you drive an ambulance.",
+    "time-management, driving, casual, arcade, 2d"
+  ],
+  "Amogus Kill": [
+    "A game where you kill Amogus characters.",
+    "action, funny, killing, casual, 2d, meme, among-us"
+  ],
+  "Amoongus96": [
+    "A game featuring Amoongus characters😲.",
+    "funny, casual, 2d, meme, among-us, pokemon"
+  ],
+  "Angry Birds: Sling Shot Frenzy": [
+    "A physics-based puzzle game where you launch birds to defeat pigs.",
+    "puzzle, physics, arcade, 2d, casual, birds, catapult"
+  ],
+  "Angry Dews": [
+    "A game featuring angry dew characters.",
+    "casual, funny, 2d, arcade, mountain dew, strategy, fun"
+  ],
+  "Animal Forest 64": [
+    "A life simulation game set in a forest with animals.",
+    "simulation, life, casual, 2d, animals, relaxing"
+  ],
+  "Antrumba": [
+    "Text based horror game. It is documented as being 'extremely hard'.",
+    "horror, creepy, scary, hard, 2d, point and click"
+  ],
+  "Apes VS Helium": [
+    "Apes vs Helium is a fan-made, first-person shooter game, largely based on Bloons TD, where players act as monkeys popping balloons with various weapons and upgrades.",
+    "fan made, action, fps, shooter, bloons td, monkeys, 3d"
+  ],
+  "Apocrypha": [
+    "A mysterious or apocalyptic themed game.",
+    "horror, atmospheric, mystery, indie, 3d, scary"
+  ],
+  "Apollo 2": [
+    "A space-themed game where you can walk around the moon.",
+    "space, simulation, 3d, exploration, sci-fi"
+  ],
+  "Arthur's Nightmare": [
+    "A horror adventure game featuring Arthur in a nightmare scenario.",
+    "horror, adventure, puzzle, 2d"
+  ],
+  "Awesome Tanks 2": [
+    "A tank battle game with various modes and maps. You can upgrade your stats too.",
+    "action, tank, battle, 2d, multiplayer, upgrade"
+  ],
+  "BTD5": [
+    "A tower defense game with various towers and enemies.",
+    "tower-defense, strategy, 2d, balloons, casual"
+  ],
+  "Babel Tower": [
+    "A game where you build a tower as high as possible by getting resources and stuff.",
+    "simulation, incremental, building, casual, 2d"
+  ],
+  "Bad Piggies": [
+    "A physics-based puzzle game where you build contraptions to transport pigs.",
+    "puzzle, physics, arcade, 2d, casual, construction"
+  ],
+  "Baldi's Basics": [
+    "A game where you have to collect notebooks while avoiding the dreaded bald boy, Baldi.",
+    "horror, scary, puzzle, stealth, school, 3d"
+  ],
+  "Baldstien": [
+    "If you know, you know.",
+    "horror, scary, baldi, school, 3d"
+  ],
+  "Ball Fill": [
+    "A puzzle game where you fill balls into containers.",
+    "puzzle, ball, casual, 2d, physics"
+  ],
+  "Ball Paint": [
+    "A game where you paint balls.",
+    "casual, painting, ball, 2d, creative, puzzle"
+  ],
+  "Banjo Tooie": [
+    "A classic 3D platformer adventure game.",
+    "platformer, adventure, 3d, casual, retro"
+  ],
+  "Barry Has a Secret": [
+    "Horror game where you hide meals(I think).",
+    "horror, scary, cooking, food, 3d"
+  ],
+  "Basically GMod": [
+    "A sandbox game similar to Garry's Mod with creative building elements.",
+    "sandbox, building, creative, multiplayer, physics, indie"
+  ],
+  "Basketball Random": [
+    "A game where you control a stick guy and try to play basketball. This has been modded by me.",
+    "sports, basketball, 2d, casual, funny"
+  ],
+  "Basketball Stars": [
+    "A multiplayer basketball game with various modes and customization options.",
+    "sports, basketball, multiplayer, 2d, competitive"
+  ],
+  "Basketbros": [
+    "A game where you play basketball.",
+    "sports, basketball, 2d, casual, multiplayer"
+  ],
+  "Beat Up Ben": [
+    "A game where you beat up a character named Ben.",
+    "action, fighting, casual, 2d, funny, beat-em-up, ben"
+  ],
+  "Bitlife": [
+    "A life game where you get to make choices that affect your ingame life. This version is extremely outdated, so expect it to be missing a lot.",
+    "simulation, life, casual, choice-based, 2d"
+  ],
+  "Blackjack": [
+    "A classic card game where you try to get as close to 21 as possible without going over.",
+    "card, casino, gambling, 2d, casual"
+  ],
+  "Block Blast": [
+    "A block-breaking game where have to clear blocks with more blocks.",
+    "puzzle, arcade, 2d, casual"
+  ],
+  "Blocky Demolition Derby": [
+    "A SICK ASS GAME WHERE YOU RUN INTO OTHER CARS FOR MONEY!!!!!!!😁👍🫪",
+    "blocky, cars, racing, demolition, destroy, destruction, 3d"
+  ],
+  "Boba Simulator": [
+    "A business simulation game where you run a boba tea shop.",
+    "simulation, business, cooking, management, casual, restaurant, tycoon, food"
+  ],
+  "Bombox": [
+    "A music or rhythm game featuring a bombox.",
+    "music, rhythm, arcade, casual, 2d"
+  ],
+  "Bottle Cracks": [
+    "Idk man, I think it's a game where you answer math questions? It is extremely laggy though.",
+    "weird, 3d, laggy, multiplayer, bottle, terrible"
+  ],
+  "Boxing Random": [
+    "A boxing game with random elements and various characters.",
+    "sports, boxing, fighting, 2d, casual"
+  ],
+  "Brawl Simulator 3D": [
+    "A game where you fight... I think...",
+    "simulator, simulation, fighting, brawl, 3d"
+  ],
+  "Breaking Bad - THE GAME": [
+    "A game based on the Breaking Bad series.",
+    "action, adventure, tv-series, 3d, crime, chemistry, walter"
+  ],
+  "Breaking The Bank": [
+    "A game where you break the bank. Were you expecting more?",
+    "humorous, casual, arcade, 2d"
+  ],
+  "Brotato": [
+    "A survival action game where you fight endless waves of enemies.",
+    "action, survival, arcade, 2d, waves, shooting"
+  ],
+  "Buckshot": [
+    "A game(sometimes referred to as Buckshot Roulette or Russian Roulette), where you have to kill the dealer.",
+    "puzzle, buckshot, simulator, 3d"
+  ],
+  "Bunny Land": [
+    "A cute platformer game featuring a bunny character.",
+    "platformer, adventure, casual, cute, 2d, indie"
+  ],
+  "Burger and Frights": [
+    "A burger shop game with horror elements.",
+    "horror, burger, restaurant, scary, 3d, indie, scary"
+  ],
+  "Burgeria": [
+    "A time management game where you run a burger restaurant.",
+    "time-management, cooking, restaurant, casual, 2d"
+  ],
+  "CSGO Clicker": [
+    "CS:GO clicker.",
+    "clicker, click, idle, simulator, 2d"
+  ],
+  "Car": [
+    "A simple car driving game.",
+    "driving, casual, 3d, car, simulation"
+  ],
+  "Care For Duck": [
+    "A game where you take care of a duck.",
+    "casual, simulation, animals, duck, 2d, cute, duckie"
+  ],
+  "Carving Pumpkin": [
+    "A game where you carve pumpkins, likely Halloween-themed.",
+    "halloween, casual, carving, 2d, creative, pumpkin"
+  ],
+  "Case Clicker": [
+    "A game where you open cases to get virtual items and earn in-game currency.",
+    "clicker, idle, simulation, 2d, casual"
+  ],
+  "Cave Crawler": [
+    "A game where you crawl... IN A CAVE!!",
+    "cave, crawling, simulator, simulation, platformer, mario, 2d"
+  ],
+  "Chasm": [
+    "A game set in a chasm or deep ravine.",
+    "horror, atmospheric, exploration, 3d, indie, scary"
+  ],
+  "Cheese Rolling": [
+    "A game based on the famous cheese rolling event.",
+    "casual, sports, racing, 3d, funny"
+  ],
+  "Chicken CS": [
+    "A competitive shooting game featuring chickens.",
+    "action, shooter, multiplayer, 2d, casual, animals"
+  ],
+  "Claw Machine": [
+    "A virtual claw machine game for grabbing prizes.",
+    "arcade, casual, skill, 2d, prize, crane, gambling"
+  ],
+  "Clu Clu Land": [
+    "Clu Clu Land is a 1984 puzzle video game developed and published by Nintendo for the Nintendo Entertainment System.",
+    "puzzle, shooter, strategy, old, emulated, 2d"
+  ],
+  "Coil": [
+    "A game where you try to eat other small balls.",
+    "action, arcade, 2d, casual, eating"
+  ],
+  "Coldpines": [
+    "An atmospheric horror or adventure game set in a cold, isolated location.",
+    "horror, atmospheric, psychological, short, indie, psx, first-person, 3d"
+  ],
+  "Cookie Clicker": [
+    "A game where you get to make money from selling cookies by clicking a button, while somehow being able to upgrade the cookies.",
+    "clicker, idle, simulation, incremental, 2d, casual"
+  ],
+  "Core Ball": [
+    "A game where you control a ball and navigate through various levels and obstacles.",
+    "arcade, ball, 2d, casual, skill"
+  ],
+  "Counder Strike": [
+    "A tactical shooting game.",
+    "action, shooter, strategy, 2d, arcade"
+  ],
+  "Crank It!": [
+    "Crank it. Now.",
+    "horror, scary, stylized, quality, cave, multiple endings, 3d"
+  ],
+  "Crash Bandicoot": [
+    "A classic 3D platformer adventure game.",
+    "platformer, adventure, 3d, casual, retro, jumping"
+  ],
+  "Crazy Cattle 3d": [
+    "This is so crazy! You are a cow, and you have to do cow things in a 3D world. Wow!😩",
+    "crazy, cattle, 3d, simulation, farming, animals"
+  ],
+  "Crazy Chicken 3d": [
+    "A 3D action game featuring a crazy chicken character.",
+    "action, arcade, 3d, casual, funny, animals"
+  ],
+  "Crazy Plane Landing": [
+    "A game strictly about landing a plane.",
+    "horror, scary, flight school, plane, flying, fly, 3d"
+  ],
+  "Crazy Tunnel 3d": [
+    "A fast-paced game where you navigate a ball through a tunnel filled with obstacles.",
+    "arcade, 3d, fast-paced, obstacle, skill"
+  ],
+  "Crossing The Pit": [
+    "Have you ever wanted to cross a pit? Well, in Crossing-The-Pit, you can do so!",
+    "puzzle, arcade, 2d, casual"
+  ],
+  "Crossy Road": [
+    "A game where you cross roads and rivers while trying to avoid obstacles.",
+    "arcade, endless-runner, 2d, casual, mobile"
+  ],
+  "Cupcake 2048": [
+    "A puzzle game where you combine cupcakes to reach the beloved 2048 tile.",
+    "puzzle, 2d, casual"
+  ],
+  "Cupcakeria": [
+    "A game where you help manage a cupcake shop and serve customers.",
+    "time-management, cooking, restaurant, casual, 2d"
+  ],
+  "Customer Support": [
+    "You are left alone to manage the customer support calls of the night at a 90's tech store. CaseOh played this.",
+    "simulation, customer support, 3d, horror, atmospheric, 90s, tech, indie, caseoh"
+  ],
+  "Cut The Rope": [
+    "A puzzle game where you cut ropes to feed candy to an ever-growing stupid turd named Om Nom.",
+    "puzzle, physics, 2d, casual, cartoon"
+  ],
+  "DOOM": [
+    "An unofficial web port of the classic first-person shooter game where you kill demons.",
+    "action, fps, shooter, first-person, 2d, retro, classic"
+  ],
+  "Deadly Descent": [
+    "A game where you drive through obstacles.",
+    "driving, simulator, obstacles, car, 3d"
+  ],
+  "Diddy Kong Racing": [
+    "A kart racing game featuring Diddy Kong and other characters.",
+    "racing, driving, arcade, 2d, casual, kart"
+  ],
+  "Dig To China": [
+    "A digging game where you excavate your way through the earth.",
+    "arcade, digging, 2d, endless-runner, upgrade"
+  ],
+  "Discord Simulator": [
+    "A simulator game based on Discord.",
+    "simulation, funny, casual, 2d, meme, social"
+  ],
+  "Doblox": [
+    "A Roblox-style sandbox building and game creation platform.",
+    "sandbox, building, creative, multiplayer, roblox-style, 3d"
+  ],
+  "Dog Simulator": [
+    "A simulation game where you play as a dog.",
+    "simulation, animals, 3d, casual, dog, funny, doggy"
+  ],
+  "Doge Miner": [
+    "A game where you mine for dogecoins and upgrade your mining equipment using said dogecoins.",
+    "clicker, idle, incremental, casual, 2d, cryptocurrency"
+  ],
+  "Dolly Wants To Play": [
+    "A weird horror game with dolls. It looks terrible.",
+    "horror, scary, doll, atmospheric, 3d, indie"
+  ],
+  "Dr. Psycho Hospital": [
+    "A horror game set in a psychiatric hospital.",
+    "horror, scary, hospital, psycho, 3d, atmospheric, thriller"
+  ],
+  "Draw The Hill": [
+    "A game where you draw lines to help a little guy navigate through hills and obstacles.",
+    "arcade, drawing, 2d, casual, skill"
+  ],
+  "Dreamin About Sammiches": [
+    "A game about dreaming of sandwiches.",
+    "casual, funny, 2d, food, sandwich, silly"
+  ],
+  "Drift Boss": [
+    "A racing game where you drift around corners to earn points.",
+    "racing, driving, drifting, arcade, 3d, casual"
+  ],
+  "Drink and Drive Simulator": [
+    "A simulation game about drinking and driving. NOT RECOMMENDED.",
+    "simulation, driving, terrible, 3d, controversial"
+  ],
+  "Duck Life 4": [
+    "A game where you train a duck to compete in races and other challenges.",
+    "simulation, racing, training, animals, 2d"
+  ],
+  "Edy's Car Simulator": [
+    "A car driving simulator game.",
+    "driving, simulation, 3d, casual, car"
+  ],
+  "Egg": [
+    "A mysterious or minimalist game featuring an egg.",
+    "arcade, puzzle, 2d, casual"
+  ],
+  "Eggy Car": [
+    "A game where you drive a car while balancing an egg on top of it.",
+    "driving, simulation, balance, 2d, casual"
+  ],
+  "Eldritch Crossing": [
+    "A horror game with Lovecraftian or eldritch themes.",
+    "horror, scary, lovecraft, atmospheric, 3d, indie, cosmic-horror"
+  ],
+  "Endoparasitic 2": [
+    "Scary game.",
+    "horror, scary, tactical, parasite, arcship, immersive, 3d"
+  ],
+  "Escape The Ayuwoki": [
+    "A horror game where you escape from Ayuwoki (Michael Jackson zombie).",
+    "horror, scary, monster, escape, 3d, atmospheric, ayuwoki"
+  ],
+  "Escape Tralalero Tralala Tung Tung Tung": [
+    "Tung Tung is coming.",
+    "scary, horror, tung tung, brainrot, tralala, tralalero, terrible, triple t, 3d"
+  ],
+  "Eugene's Life": [
+    "Help Eugene, the crosseyed, mutated blobfish! He has infinite stamina, and has an unnamed disease! Don't let him get too excited... if you do, he will blow up into an obese balloon!",
+    "fatass, blob, parkour, obby, physics, stupid, weird, 2d"
+  ],
+  "Everything Must Go": [
+    "A horror game taking place in a store.",
+    "scary, horror, 3d, vhs, old, monster, escape"
+  ],
+  "Evil Nun": [
+    "A horror game featuring an evil nun character.",
+    "horror, scary, nun, religious, 3d, atmospheric, escape"
+  ],
+  "Evo Wars": [
+    "A game where you evolve a creature by eating smaller creatures and avoiding larger ones.",
+    "action, 2d, evolution, survival, arena"
+  ],
+  "Extreme Run 3D": [
+    "A 3D endless running or parkour game.",
+    "arcade, endless-runner, parkour, 3d, fast-paced"
+  ],
+  "FISH": [
+    "Help teach a fish how to kill enimies. This fish is extremely gangster. This fish was raised on the streets of Los Santos, so do not get in his way.",
+    "sea, fish, pond, water, killer fish, shooter, scary fish, ahh, gangster, 2d"
+  ],
+  "Fastroads": [
+    "Modded slowroads. You can now get a radio and listen to music while playing. The game was modded by me.",
+    "driving, modded, racing, calm, radio, fun, 3d"
+  ],
+  "Fear Assessment": [
+    "A horror game like 'The Survey Game' where you take a survey. Very good.",
+    "horror, psychological, survey, puzzle, indie, 2d"
+  ],
+  "Five Nights At Skibidi": [
+    "A Five Nights style horror game with Skibidi Toilet elements.",
+    "horror, scary, skibidi, fnaf, 3d, survival, atmospheric"
+  ],
+  "Flight Sim": [
+    "A flight simulation game.",
+    "simulation, flight, casual, 3d"
+  ],
+  "Flow": [
+    "A game where you connect stuff together.",
+    "puzzle, ai generated, electricity, 2d"
+  ],
+  "Fluid": [
+    "A fluid simulation.",
+    "simulation, fluid, physics, 2d, experimental"
+  ],
+  "Fox Simulator": [
+    "A simulation game where you play as a fox.",
+    "simulation, animals, 3d, casual, fox, nature"
+  ],
+  "Freezeria": [
+    "A time management game where you run an ice cream shop.",
+    "time-management, cooking, restaurant, casual, 2d"
+  ],
+  "Friday Night Funking": [
+    "A game where you make music to bring a dad back or somethin like that.",
+    "rhythm, music, indie, 2d, rap, battle"
+  ],
+  "Funny Battle": [
+    "HAHAHAHAHAHA FUNNY!",
+    "battle, shooting, funny, killing, simulation"
+  ],
+  "Funny Mad Racing": [
+    "A humorous and chaotic racing game.",
+    "racing, arcade, casual, funny, 3d, multiplayer"
+  ],
+  "GTA": [
+    "A Grand Theft Auto sandbox game with open-world gameplay.",
+    "action, adventure, open-world, sandbox, driving, crime, 3d, singleplayer"
+  ],
+  "GTA 6": [
+    "A game which was taken from Rockstar Games, it is the official version.",
+    "action, open-world, driving, 3d, fan-game, gta"
+  ],
+  "Gangster Bros": [
+    "A gangster-themed action or shooting game featuring brothers.",
+    "action, shooter, multiplayer, 2d, crime"
+  ],
+  "Geometry Dash - Remastered": [
+    "A platformer game where you navigate through levels filled with obstacles. Very popular.",
+    "platformer, rhythm, precision, 2d, arcade, difficult"
+  ],
+  "Getaway Shootout": [
+    "A multiplayer shooting game where players try to escape while others try to stop them.",
+    "action, shooter, multiplayer, 2d, arcade"
+  ],
+  "Gimmie The Airpod": [
+    "A humorous game about obtaining or stealing AirPods.",
+    "humorous, casual, arcade"
+  ],
+  "Go To Bed": [
+    "The game 'Go to Bed', ported to web.",
+    "horror, scary, stylized, quality, short, 3d"
+  ],
+  "Gobble": [
+    "A puzzle or action game with a eating/consumption mechanic.",
+    "puzzle, action, arcade, casual"
+  ],
+  "Gordon Ramsay Simulator": [
+    "A cooking simulation game featuring Gordon Ramsay.",
+    "simulation, cooking, restaurant, celebrity, 2d, funny, chef"
+  ],
+  "Granny 1": [
+    "Granny 1. You better know what this is.",
+    "horror, scary, granny, classic, puzzle, survival, escape, 3d"
+  ],
+  "Granny 2": [
+    "Granny 2. You may not know what this is.",
+    "horror, scary, granny, grandpa, puzzle, survival, escape, classic, 3d"
+  ],
+  "Granny and Gramps": [
+    "A game featuring elderly characters in adventures or mini-games.",
+    "casual, arcade, multiplayer, 2d"
+  ],
+  "Grass Mowing Tycoon": [
+    "A business tycoon game where you manage a grass mowing operation.",
+    "simulation, business, management, casual, tycoon, incremental"
+  ],
+  "Grow a Garden": [
+    "A gardening simulation game where you grow and cultivate plants.",
+    "simulation, gardening, casual, management, farming"
+  ],
+  "Gun Mayhem 2": [
+    "A shooting game with some characters and weapons.",
+    "action, shooter, platformer, 2d, multiplayer"
+  ],
+  "Gun Spin": [
+    "A game where you spin a gun and try to shoot targets while avoiding obstacles.",
+    "arcade, action, 2d, casual, skill"
+  ],
+  "Gymstack": [
+    "A fitness or gym management tycoon game.",
+    "simulation, business, management, fitness, tycoon, casual"
+  ],
+  "HELL": [
+    "A horror game set in hell.",
+    "horror, scary, hell, fire, 3d, atmospheric, demon"
+  ],
+  "Habibi Highways": [
+    "A game where an arab does super cool running tricks.",
+    "arcade, running, 2d, casual, arabian"
+  ],
+  "Handulum": [
+    "A game similar to Stickman Hook, except much MUCH harder.",
+    "action, puzzle, hard, swinging, cool, 2d"
+  ],
+  "Hardware Tycoon": [
+    "A business simulation game focused on hardware/computer manufacturing.",
+    "simulation, business, management, strategy, tycoon, tech"
+  ],
+  "Harvest.io": [
+    "Casual harvesting game.",
+    "simulator, simulation, casual, calm, mowing, grass, mobile game, upgrade, incremental 3d"
+  ],
+  "Haunted School": [
+    "A horror game set in a haunted school building.",
+    "horror, adventure, school, exploration, 3d"
+  ],
+  "Heavy Excavator": [
+    "A simulation game where you operate heavy excavator equipment.",
+    "simulation, construction, 3d, driving, job, excavator"
+  ],
+  "Hextris": [
+    "A puzzle game where you stack lines to form big lines. Inspired by tetris.",
+    "puzzle, arcade, 2d, casual, tetris-like"
+  ],
+  "Hide and Smash": [
+    "A multiplayer game where players hide and seek while trying to smash each other.",
+    "action, multiplayer, 2d, casual, hide-and-seek"
+  ],
+  "House of Hazards": [
+    "A multiplayer game where players navigate through a house filled with traps and obstacles.",
+    "action, multiplayer, 2d, casual, party"
+  ],
+  "I Can't Carry All These Ducks": [
+    "A funny game about carrying too many ducks.",
+    "funny, casual, 2d, silly, ducks, physics"
+  ],
+  "IRON LUNG": [
+    "A horror game based in a submarine. Played by Markiplier.",
+    "horror, scary, submarine, short, stylized, markiplier, 3d"
+  ],
+  "Ice Age Baby Adventure": [
+    "An adventure game featuring the Ice Age baby character.",
+    "adventure, platformer, 2d, movie-tie-in, ice-age, funny"
+  ],
+  "Idle Digging Tycoon": [
+    "A game where you can dig without having to touch your computer!",
+    "idle, incremental, simulation, 2d, tycoon"
+  ],
+  "Impeached": [
+    "A political simulation or strategy game.",
+    "strategy, political, simulation, 2d, funny"
+  ],
+  "It's Getting Cold Out Here...": [
+    "A game with a cold or winter theme.",
+    "horror, atmospheric, cold, winter, 3d, indie, scary"
+  ],
+  "Jack Smith": [
+    "A game where you craft weapons and armor to defeat enemies and complete quests.",
+    "action, rpg, crafting, adventure, 2d"
+  ],
+  "Jailbreak Obby 2 Player": [
+    "A terrible Roblox Jailbreak Obby clone.",
+    "obby, simulator, clone, roblox, terrible, parkour, jailbreak, 3d"
+  ],
+  "Jane the Killer": [
+    "A horror game featuring Jane The Killer Creepypasta character.",
+    "horror, scary, creepypasta, killer, 3d, atmospheric, slenderman"
+  ],
+  "Jeff the Killer - Horrendous Smile": [
+    "A horror game featuring Jeff The Killer with his horrendous smile.",
+    "horror, scary, creepypasta, killer, 3d, atmospheric, jeff-the-killer"
+  ],
+  "Jeff the Killer VS Slenderina": [
+    "A horror game where Jeff The Killer fights Slenderina.",
+    "horror, scary, creepypasta, fighting, 3d, killer, slenderman"
+  ],
+  "Jelly Mario": [
+    "Mario, but with jelly physics.",
+    "mario, jelly, physics, modded, arcade, classic, puzzle, strategy, 2d"
+  ],
+  "Jumping Shell": [
+    "A puzzle game where you do puzzles because it is a puzzle game with puzzles.",
+    "puzzle, platformer, 2d, casual"
+  ],
+  "Jumpscare Palace": [
+    "A horror game filled with jumpscares set in a palace.",
+    "horror, scary, jumpscare, palace, 3d, atmospheric, terror"
+  ],
+  "Just Fall": [
+    "A multiplayer game where players try to avoid falling off platforms while competing against each other.",
+    "action, multiplayer, 2d, casual, survival"
+  ],
+  "Karlson": [
+    "A 3D action platformer game.",
+    "action, platformer, 3d, fps, shooter"
+  ],
+  "Knock Knock": [
+    "A horror game based on the suspenseful 'knock knock' concept.",
+    "horror, puzzle, stealth, psychological, 3d"
+  ],
+  "LEGO City Builder": [
+    "A city building game with LEGO bricks.",
+    "building, lego, city-builder, 3d, casual, creative, construction"
+  ],
+  "Late Night Train": [
+    "A horror game set on a late night train.",
+    "horror, scary, train, atmospheric, 3d, indie, thriller"
+  ],
+  "Lazy Jump 3D": [
+    "A game where you are a dumb, dead lumpy boy that is too lazy to get up, and resorts to flopping around instead of walking.",
+    "arcade, 3d, casual, skill, funny"
+  ],
+  "Learn Man Fish": [
+    "Motivational quotes. All quotes are accurate.",
+    "educational, casual, quotes, 2d"
+  ],
+  "Logan Cart": [
+    "A game featuring Logan and a cart.",
+    "casual, 2d, funny, meme"
+  ],
+  "Lone Journey Home": [
+    "A survival or adventure game about a lone journey home.",
+    "adventure, survival, 3d, atmospheric, indie, journey"
+  ],
+  "Lucky Blocks": [
+    "A game with blocks. Some are lucky.",
+    "lucky, blocks. simulator, fighting, fight, random, rng, lucky block, weapons, 3d"
+  ],
+  "MOMO Horror Story": [
+    "A horror game based on the MOMO challenge urban legend.",
+    "horror, scary, momo, creepypasta, 3d, atmospheric, urban-legend"
+  ],
+  "Mad Honey": [
+    "A casual game about honey.",
+    "casual, honey, 2d"
+  ],
+  "Magic Pet": [
+    "A game where you have a magic pet.",
+    "casual, pets, magic, 2d, cute, fantasy"
+  ],
+  "Mario 64": [
+    "A classic 3D platformer adventure game.",
+    "platformer, adventure, 3d, casual, retro, jumping"
+  ],
+  "Matter Playground": [
+    "A 2d playground using matter.js.",
+    "matter.js, playground, sandbox, box, physics, 2d"
+  ],
+  "Meme Shooter": [
+    "A shooting game featuring meme characters.",
+    "action, shooter, 2d, meme, funny, casual"
+  ],
+  "Minecraft-1.11.2": [
+    "It is just Minecraft in the browser. The original developer actually got multiple DMCA takedowns for this and I hope I do not get one as well.",
+    "sandbox, building, survival, 2d, casual"
+  ],
+  "Mini Shooters": [
+    "A collection of mini shooting games.",
+    "action, shooter, multiplayer, casual, collection, 2d"
+  ],
+  "Money Rush": [
+    "A fast-paced game focused on collecting money or resources.",
+    "arcade, casual, runner, collecting, 2d"
+  ],
+  "Monkeymart": [
+    "A game where monkeys can get bananas and sell them.",
+    "simulation, management, casual, animals, 2d"
+  ],
+  "Monster Tracks": [
+    "A game where you jump over obstacles and shi. Nothing more, really.",
+    "racing, arcade, 3d, vehicles, obstacles"
+  ],
+  "Moto X3M Pool": [
+    "A motorcycle racing game with various levels and obstacles.",
+    "racing, motorcycle, 3d, stunt, casual"
+  ],
+  "Moto X3M Spooky": [
+    "A motorcycle racing game with a spooky theme and various levels and obstacles",
+    "racing, motorcycle, 3d, halloween, casual"
+  ],
+  "MotoX3M 2": [
+    "A motorcycle racing game with various levels and obstacles.",
+    "racing, motorcycle, 3d, stunt, casual"
+  ],
+  "MotoX3M Winter": [
+    "A motorcycle racing game with a winter theme and various levels and obstacles.",
+    "racing, motorcycle, 3d, winter, casual"
+  ],
+  "Murder The Homicidal Liu": [
+    "A horror game featuring a character named Liu with homicidal tendencies.",
+    "horror, scary, murder, 3d, atmospheric, creepypasta, slenderman"
+  ],
+  "Nectar": [
+    "A game about collecting or producing nectar.",
+    "casual, nature, 2d, relaxing, simulation, bees"
+  ],
+  "Noob Miner": [
+    "A mining simulation game for beginners.",
+    "simulation, mining, casual, incremental, 2d"
+  ],
+  "OVERBURDEN": [
+    "An experiemntal, tactile horror game, about trying to escape an underground bunker, by using an unstable, industrial drill to attempt to get out.",
+    "horror, scary, drill, bunker, nuclear strike, escape, 3d"
+  ],
+  "Obby Yard Sale": [
+    "An obstacle course (obby) game with a yard sale theme.",
+    "obby, platformer, arcade, 3d, multiplayer"
+  ],
+  "Odd Bot Out": [
+    "A robot-themed puzzle or platformer game.",
+    "puzzle, platformer, robot, 2d, indie"
+  ],
+  "Office Horror Story": [
+    "A horror game set in an office building.",
+    "horror, scary, office, atmospheric, 3d, indie, workplace"
+  ],
+  "Oh Flip": [
+    "A game about doing backflips.",
+    "arcade, backflips, backflip, simulator, incremental, 3d"
+  ],
+  "Only Up": [
+    "An obby game where you try to get very high up, by jumping on objects that normally would not be able to support your weight. This game is not the original, however, it is based on it. The original was played by IShowSpeed.",
+    "arcade, jumping, up, platformer, climbing, obby, 3d"
+  ],
+  "Pancakeria": [
+    "A management game where you run a pancake restaurant.",
+    "time-management, cooking, restaurant, casual, pancake, 2d"
+  ],
+  "Panda Simulator": [
+    "A simulation game where you play as a panda and do panda activities.",
+    "simulation, animals, 3d, casual, panda, cute"
+  ],
+  "Papa Louie": [
+    "A management game where you run a pizzeria.",
+    "time-management, cooking, restaurant, casual, louie, 2d"
+  ],
+  "Paper.io 2": [
+    "A multiplayer game where you control a cube and run around aimlessly.",
+    "strategy, io, multiplayer, casual, 2d"
+  ],
+  "Perfect Hotel": [
+    "Casual hotel game.",
+    "casual, hotel, simulator, incremental, mobile game, 3d"
+  ],
+  "Pet Simulator 99": [
+    "Terrible Pet Sim 99 clone.",
+    "roblox, simulator, casual, arcade, p2w, terrible, pets, eggs, 3d"
+  ],
+  "Phasma": [
+    "A sci-fi action or horror game.",
+    "action, sci-fi, horror, first-person, 3d"
+  ],
+  "Piggy - Escape From Piggy": [
+    "A horror game where you escape from Piggy, similar to Granny.",
+    "horror, scary, piggy, escape, 3d, atmospheric, survival"
+  ],
+  "Pixel Gun": [
+    "A first-person shooter game with various weapons and multiplayer modes.",
+    "action, shooter, fps, 2d, multiplayer, pixel-art"
+  ],
+  "Pizzeria": [
+    "A management game where you run a pizza restaurant.",
+    "time-management, cooking, restaurant, casual, 2d"
+  ],
+  "Plinko": [
+    "Plinko. It has gambling.",
+    "plinko, gambling, fun, arcade, money, balls, loopit, ai generated, 2d"
+  ],
+  "Pogo 3D": [
+    "A 3D game featuring pogo stick mechanics.",
+    "arcade, sports, 3d, casual"
+  ],
+  "Poppy Office Nightmare": [
+    "A horror game featuring Poppy in an office nightmare scenario.",
+    "horror, scary, poppy, office, atmospheric, 3d, indie"
+  ],
+  "Pou": [
+    "ITS POU!!!!!!",
+    "pou, shit, thing, dumb, simulator, adoption, upgrades, pet, mobile game, 2d"
+  ],
+  "President Evil": [
+    "A parody horror game combining President and Resident Evil themes.",
+    "horror, parody, funny, 3d, scary, political, evil"
+  ],
+  "Pretend it's Not There": [
+    "A psychological horror or puzzle game with an unusual premise.",
+    "horror, psychological, puzzle, indie, 2d"
+  ],
+  "Processor Tycoon": [
+    "A tycoon game focused on processor or computer manufacturing.",
+    "simulation, business, management, tycoon, strategy, tech"
+  ],
+  "Ragdoll Archers": [
+    "Ragdoll Archers",
+    "physics, archery, action, simulation, ragdoll, stickman, 2d, casual"
+  ],
+  "Ragdoll Drop": [
+    "Ragdoll game, where you drop ragdolls.",
+    "physics, puzzle, ragdoll, casual, simulation, destruction, funny"
+  ],
+  "Ragdoll Hit": [
+    "A game where you hit ragdolls.",
+    "action, physics, casual, 2d, fighting"
+  ],
+  "Ragdoll Soccer": [
+    "A physics-based soccer game with ragdoll characters.",
+    "sports, soccer, physics, ragdoll, multiplayer, 2d"
+  ],
+  "Ragebait Flappy Bird": [
+    "A Flappy Bird clone designed to ragebait players.",
+    "arcade, flappy-bird, rage, 2d, frustrating, casual"
+  ],
+  "Residence of Evil": [
+    "It looks like a low quality horror game.",
+    "evil, bad, low quality, horror, monster, weird"
+  ],
+  "Retro Racing": [
+    "A simple racing game made in Godot.",
+    "racing, driving, simple, godot, 3d"
+  ],
+  "Revenge of the SUS": [
+    "A game about getting revenge on SUS characters😲.",
+    "funny, 2d, meme, casual, among-us, revenge"
+  ],
+  "Ring Rotate": [
+    "A game where you try to get a ball through a hole.",
+    "simulator, mobile game, clone, ai generated, 2d"
+  ],
+  "Rocket League Knockoff": [
+    "A car soccer game similar to Rocket League.",
+    "sports, racing, car, soccer, multiplayer, 3d, arcade"
+  ],
+  "Rocket Pult": [
+    "A game involving launching objects with a rocket launcher.",
+    "action, arcade, physics, 2d, casual"
+  ],
+  "Rodha": [
+    "A platformer game.",
+    "platformer, action, arcade, casual, 2d, fast-paced, precision, jumping, ball, side-scroller, indie, minimalist"
+  ],
+  "Roof Top Snipers": [
+    "A game where you try to snipe people from the roof.",
+    "action, shooter, sniper, 2d, multiplayer"
+  ],
+  "Run 3D": [
+    "A game where you run.",
+    "arcade, endless-runner, 3d, casual"
+  ],
+  "Russia Driver": [
+    "Russian driving game.🥖",
+    "driving, russia, simulator, sandbox, drive, car, racing, 3d"
+  ],
+  "Russian Car Thing": [
+    "A car-based game with Russian theme or vehicles.",
+    "driving, racing, 3d, casual, car"
+  ],
+  "Russian Sandbox": [
+    "Russian sandbox game.",
+    "casual, sandbox, simulator, russia, free roam, open world, 3d"
+  ],
+  "SONIC.EXE": [
+    "SCARY SONICCC D:",
+    "horror, platformer, 2d, pixel-art, dark, creepypasta, psychological"
+  ],
+  "SUPERHOT": [
+    "A stylish first-person shooter with unique time-based mechanics.",
+    "action, indie, fps, first-person-shooter, bullet-time, time-manipulation, puzzle, minimalist, difficult, short, cyberpunk, fast-paced, violent, sci-fi"
+  ],
+  "Sandbox City": [
+    "Sandbox game. It is honestly not that fun.",
+    "cars, ragdolls, sandbox, city, freeroam, open world, 3d"
+  ],
+  "Sandboxels": [
+    "A game where you play with sand I think.",
+    "sandbox, simulation, 2d, casual, experimental"
+  ],
+  "Sanitorium": [
+    "A horror game set in a sanitorium or mental hospital. It also crashed my browser.",
+    "horror, scary, hospital, atmospheric, 3d, indie, psychological"
+  ],
+  "Satisfaction": [
+    "Just a satisfying game.",
+    "satisfying, cool, simulator, fun, ai generated, physics, 2d"
+  ],
+  "Saul Goodman Run": [
+    "A running game themed around the Saul Goodman character.",
+    "arcade, runner, 2d, casual, character"
+  ],
+  "Sausage Flip": [
+    "A game made by the same company developing stickman hook, where you flip sausage.",
+    "arcade, physics, 2d, casual, funny"
+  ],
+  "Scary Maze": [
+    "A horror maze game designed to scare players.",
+    "horror, scary, maze, 2d, jumpscare, atmospheric"
+  ],
+  "Scary Teacher 3D": [
+    "A 3D horror game featuring a scary teacher character.",
+    "horror, 3d, stealth, school, puzzle, escape"
+  ],
+  "Scooperia": [
+    "A management game where you run an ice cream shop.",
+    "time-management, cooking, restaurant, casual, 2d"
+  ],
+  "Scotty Goes To Centrylink": [
+    "A game about Scotty going to CenturyLink.",
+    "funny, 2d, meme, casual, silly"
+  ],
+  "Seven Days": [
+    "An open world, survival and horror game. Known as '7 days to die'.",
+    "horror, death, open world, shooter, survival, scary, 3d"
+  ],
+  "Shift at Midnight": [
+    "A horror game about working at midnight.",
+    "horror, detective, simulation, multiplayer, co-op, first-person, mystery, investigation, 1990s, atmospheric, choices-matter, comedy, retro"
+  ],
+  "Shoot Your Nightmare": [
+    "A horror game where you shoot your nightmares.",
+    "horror, scary, shooting, 3d, nightmare, atmospheric, survival"
+  ],
+  "Side Effects": [
+    "A puzzle or action game exploring side effects mechanics.",
+    "puzzle, action, indie, 2d"
+  ],
+  "Siren Apocalyptic": [
+    "A horror game featuring sirens and apocalyptic themes.",
+    "horror, scary, siren, apocalypse, 3d, atmospheric, disaster"
+  ],
+  "Siren Head Resolution Web": [
+    "A horror game featuring Siren Head monster.",
+    "horror, scary, siren-head, monster, 3d, atmospheric, creepypasta"
+  ],
+  "Skibidi Shooter": [
+    "A shooter game featuring Skibidi characters.",
+    "action, shooter, 3d, skibidi, casual"
+  ],
+  "Skibidi in the Backrooms": [
+    "A horror game combining Skibidi and Backrooms aesthetics.",
+    "horror, backrooms, skibidi, 3d, indie"
+  ],
+  "Slap Chicken": [
+    "A funny game where you slap chickens.",
+    "funny, casual, 2d, silly, chicken, slap"
+  ],
+  "Slender Tubbies": [
+    "A horror game combining Slender Man with Teletubbies.",
+    "horror, slenderman, teletubbies, 3d, indie"
+  ],
+  "Slenderman": [
+    "A horror game featuring the Slender Man entity.",
+    "horror, first-person, stealth, survival, 3d"
+  ],
+  "Slendrina Must Die": [
+    "A horror game where you must kill Slendrina.",
+    "horror, scary, slendrina, killing, 3d, shooter, atmospheric"
+  ],
+  "Slendrina Must Die - The House": [
+    "A horror game where you must kill Slendrina in a house.",
+    "horror, scary, slendrina, house, 3d, shooter, atmospheric, kill"
+  ],
+  "Slice it All": [
+    "A puzzle game where you slice objects or obstacles.",
+    "puzzle, slice, 2d, casual"
+  ],
+  "Slide in the Woods": [
+    "A horror or adventure game set in a mysterious forest.",
+    "horror, adventure, exploration, 3d"
+  ],
+  "Slime Laboratory": [
+    "A slime laboratory obby game where you are a slime that jumps. Do NOT question the thumbnail.",
+    "platformer, obby, arcade, 2d, slime"
+  ],
+  "Slope": [
+    "A fast-paced game where you navigate a ball down a slope while avoiding obstacles.",
+    "arcade, endless-runner, racing, 3d, obstacle, skill, fast-paced, precision"
+  ],
+  "Slope 2 Player": [
+    "Slope, but 2 players.",
+    "arcade, endless-runner, racing, 3d, obstacle, skill, fast-paced, multiplayer"
+  ],
+  "Slurgle Playground": [
+    "A playground game where you get to play with squirgles",
+    "slurgle, playground, sandbox, weird, fun, crazy, ai generated, physics, 3d"
+  ],
+  "Snow Rider": [
+    "A snowboarding game where you perform tricks and navigate through courses.",
+    "sports, snowboarding, 3d, arcade, racing"
+  ],
+  "Snowball.io": [
+    "Casual snowball game.",
+    "casual, snowball, snow, winter, io game, mobile game, 3d"
+  ],
+  "Soccer Random": [
+    "It is 2 player soccer.",
+    "sports, soccer, 2d, multiplayer, casual"
+  ],
+  "Social Credit Test": [
+    "A game testing your social credit score, likely satirical.",
+    "funny, satire, 2d, casual, meme, political"
+  ],
+  "Space Waves": [
+    "A Geometry-Dash like game.",
+    "platformer, rhythm, precision, 2d, arcade, difficult, side-scroller"
+  ],
+  "Squid Game Dismounting": [
+    "A Squid Game themed dismounting/stumbling game.",
+    "squid-game, physics, 3d, casual, series-inspired, ragdoll"
+  ],
+  "Squid Game Obby": [
+    "An obstacle course inspired by the Squid Game series.",
+    "obby, platformer, arcade, 3d, multiplayer, series-inspired"
+  ],
+  "Squid Playground": [
+    "A casual playground game with squid-themed elements.",
+    "casual, playground, multiplayer, 3d"
+  ],
+  "Stack Ball.io": [
+    "Stack balls.",
+    "hypercasual, arcade, 3d, io, reflex"
+  ],
+  "Stack Bump 3D": [
+    "A game where you stack blocks while avoiding obstacles to reach new heights.",
+    "arcade, stack, 3d, casual, obstacle"
+  ],
+  "Stacktris": [
+    "A puzzle game where you stack blocks to clear blocks.",
+    "puzzle, tetris, 2d, casual, arcade"
+  ],
+  "State.io": [
+    "State.io is another IO game.",
+    "strategy, io, real-time strategy, conquest, minimalistic"
+  ],
+  "Station 141": [
+    "A sci-fi or horror game set aboard a space station.",
+    "sci-fi, horror, exploration, 3d, indie"
+  ],
+  "Station Meltdown": [
+    "An action game set in a malfunctioning space station.",
+    "action, 3d, sci-fi, shooter"
+  ],
+  "Steal a Brainrot": [
+    "A humorous stealing/heist game.",
+    "humorous, casual, stealing, arcade"
+  ],
+  "Steal a Brainrot DUEL": [
+    "A competitive two-player version of Steal A Brainrot.",
+    "humorous, casual, competitive, multiplayer, two-player"
+  ],
+  "Stickman Golf": [
+    "A golf game where you control a stickman and try to complete courses in as few strokes as possible.",
+    "sports, golf, 2d, casual, stickman"
+  ],
+  "Stickman Hook": [
+    "A game where you are a faceless stickman that ropes to these dots and does courses.",
+    "arcade, platformer, 2d, hook, stickman, fast-paced"
+  ],
+  "Stickman Warriors": [
+    "A fighting game featuring stickman warriors.",
+    "action, fighting, stickman, 2d, casual, warrior, combat"
+  ],
+  "Stone House Orphanage": [
+    "Horror game.",
+    "horror, adventure, 3d, indie"
+  ],
+  "Storm in The House": [
+    "A survival or horror game where a storm traps you in a house.",
+    "survival, horror, 3d, indie"
+  ],
+  "Subway Surfers": [
+    "You know.",
+    "casual, mobile game, runner, infinite, collector, subway, cop, escape, chase, 3d"
+  ],
+  "Suika": [
+    "A puzzle or farming game (Suika = watermelon in Japanese).",
+    "puzzle, farming, watermelon, 2d, casual, arcade"
+  ],
+  "Super Falling Fred": [
+    "A platformer game about a character named Fred falling or falling from heights.",
+    "platformer, arcade, 2d, casual, falling"
+  ],
+  "Super Liquid Soccer": [
+    "A soccer game where you play soccer.",
+    "sports, soccer, 2d, fluid, arcade"
+  ],
+  "Sydney Shark": [
+    "A game featuring a shark theme, possibly set in Sydney.",
+    "action, arcade, shark, 2d, casual"
+  ],
+  "Table Tank": [
+    "A tank battle game played on a table surface.",
+    "action, tank, battle, 2d, arcade, multiplayer"
+  ],
+  "Takeover": [
+    "A strategy or action game focused on taking over territory or enemies.",
+    "strategy, action, 2d, multiplayer, competitive"
+  ],
+  "Tall Man Run": [
+    "A running or platformer game featuring a tall man character.",
+    "arcade, running, platformer, 3d, casual, mobile game, runner"
+  ],
+  "Tank Maker": [
+    "A game where you create and customize tanks.",
+    "creator, tank, 2d, customization, military, creative"
+  ],
+  "Tank Trouble": [
+    "A tank battle game with various maps and modes.",
+    "action, tank, battle, 2d, multiplayer, maze"
+  ],
+  "Telephone Trouble": [
+    "Puzzle game about a telephione.",
+    "puzzle, physics, simulation, comedy, 2d"
+  ],
+  "Temple Run 2": [
+    "A jungle-themed endless running game.",
+    "endless-runner, arcade, 3d, casual, mobile"
+  ],
+  "Terrible Rocket League": [
+    "Rocket League, but terrible.",
+    "sports, arcade, parody, multiplayer, physics"
+  ],
+  "Terry": [
+    "A game featuring a character named Terry.",
+    "horror, scary, atmospheric, 3d, indie, mystery"
+  ],
+  "Thats Not My Neighbor": [
+    "Horror game about checking whether neighbors are correct or not.",
+    "horror, puzzle, simulation, detective, 2d"
+  ],
+  "The Chronicles of Obama": [
+    "In this beautiful game, you get to experience the real life... OF OBAMA!",
+    "funny, parody, 2d, meme, political, adventure"
+  ],
+  "The Man in the Window": [
+    "Super scary game about a momma bunny and a scary man in the window.",
+    "horror, short, indie, thriller, atmospheric"
+  ],
+  "The Skinwalker": [
+    "A horror game featuring the Skinwalker entity.",
+    "horror, supernatural, exploration, 3d, indie"
+  ],
+  "They Are Coming": [
+    "A horror game.",
+    "tower defense, roguelike, survival, zombie, side-scroller"
+  ],
+  "Three Goblets": [
+    "A puzzle game involving three goblets or cups.",
+    "puzzle, 2d, casual"
+  ],
+  "Throw a Potato": [
+    "A casual game where you throw potatoes.",
+    "casual, arcade, physics, 2d, potato"
+  ],
+  "Time Shooter 3": [
+    "A shooting game where you control a character and shoot enemies while avoiding their attacks.",
+    "action, shooter, fps, 3d, wave-survival"
+  ],
+  "Tiny Fishing": [
+    "A game where you fish for fish and sell the fish to get more fish.",
+    "simulation, fishing, casual, incremental, 2d"
+  ],
+  "Tomb of The Mask": [
+    "A fast-paced arcade game where you navigate through a maze while avoiding obstacles and collecting treasures.",
+    "arcade, platformer, puzzle, action, casual, side view, endless runner, pixel art, precision, 2d"
+  ],
+  "Top Speed Racing 3D": [
+    "A massive open-world browser game that provides drifting, racing, stunts, and parkour in a huge playground.",
+    "racing, open-world, driving, 3d, stunt, playground, parkour, casual"
+  ],
+  "Townscraper": [
+    "A game where you slowly build a city by stacking colorful buildings on top of each other.",
+    "casual, indie, city builder, building, relaxing, sandbox, atmospheric, stylized, colorful, procedural generation, singleplayer, short"
+  ],
+  "Traffic Jam 3D": [
+    "A casual game where you navigate through traffic jams.",
+    "driving, simulation, 3d, traffic, casual"
+  ],
+  "Trap The Cat": [
+    "A puzzle game where you trap a cat character.",
+    "puzzle, strategy, 2d, casual"
+  ],
+  "Triggore": [
+    "A 2d horror game.",
+    "action, 2d, horror, scary, gore"
+  ],
+  "Truck Simulator": [
+    "A truck driving simulator game.",
+    "simulation, driving, truck, 3d, casual, job"
+  ],
+  "Tung Tung Horror": [
+    "AHHH! Tung Tung!",
+    "horror, survival, meme, 3d, psychological, scary, granny"
+  ],
+  "Turbo Stars": [
+    "A fast-paced racing or action game with stars.",
+    "racing, arcade, 3d, fast-paced, casual"
+  ],
+  "Ultimate Car Driving Simulator": [
+    "A game where you drive cars in a realistic environment.",
+    "simulation, driving, open-world, realistic, 3d, cars"
+  ],
+  "Uncanny Cat Golf": [
+    "A golf game featuring an uncanny cat character.",
+    "sports, golf, casual, 2d, animals"
+  ],
+  "Underneath": [
+    "A mysterious horror or exploration game set underground.",
+    "horror, exploration, 3d, indie, atmospheric"
+  ],
+  "Untitled Goose Game": [
+    "A game where you play as a mischievous goose causing trouble in a village.",
+    "puzzle, stealth, simulation, action, adventure, funny, cute, comedy, indie, sandbox, physics, singleplayer, family-friendly, colorful, casual"
+  ],
+  "Upgrade Complete": [
+    "A progress-based game focused on upgrades and improvements.",
+    "simulation, incremental, upgrade, management, 2d"
+  ],
+  "WHERE'S MY GRANDMA": [
+    "A horror game about finding your missing grandma.",
+    "horror, scary, grandma, search, 3d, atmospheric, missing"
+  ],
+  "We Become What We Behold": [
+    "A game... Not sure what the point is, but it is cool.",
+    "puzzle, narrative, indie, 2d, popular"
+  ],
+  "Weltling": [
+    "Weird ass game with dumb skin creatures.",
+    "stupid, dumb, skin, 2d, weird, creatures"
+  ],
+  "Wendigo": [
+    "A horror game featuring the Wendigo creature, which orginated from Native American folklore.",
+    "horror, scary, wendigo, atmospheric, 3d, indie, monster, folklore"
+  ],
+  "Whack Your Boss": [
+    "A stress-relief game where you whack your boss character.",
+    "casual, stress-relief, arcade, 2d, funny, silly"
+  ],
+  "World's Hardest Game": [
+    "A challenging game where you navigate a small square through levels.",
+    "hard, puzzle, difficult, good, circles, 2d"
+  ],
+  "YOU VS 100 SKIBIDI": [
+    "Action game about beating 100 skibidi.",
+    "action, shooter, arcade, 2d, Skibidi, horror, terrible"
+  ],
+  "1 On 1 Soccer": [
+    "",
+    ""
+  ],
+  "2048 Cupcakes": [
+    "",
+    ""
+  ],
+  "3 Slices": [
+    "",
+    ""
+  ],
+  "3d Bowling": [
+    "",
+    ""
+  ],
+  "40x Escape": [
+    "",
+    ""
+  ],
+  "6 Ways to Die": [
+    "",
+    ""
+  ],
+  "8 Ball Classic": [
+    "",
+    ""
+  ],
+  "8 Ball Pool": [
+    "",
+    ""
+  ],
+  "99 Balls": [
+    "",
+    ""
+  ],
+  "A Bite at Freddy's": [
+    "",
+    ""
+  ],
+  "A Small World Cup": [
+    "",
+    ""
+  ],
+  "Abandoned": [
+    "",
+    ""
+  ],
+  "Abandoned 3": [
+    "",
+    ""
+  ],
+  "Ace Combat 2": [
+    "",
+    ""
+  ],
+  "Ace Combat 3": [
+    "",
+    ""
+  ],
+  "Ace Gangster - Taxi": [
+    "",
+    ""
+  ],
+  "Achievement Unlocked 1": [
+    "",
+    ""
+  ],
+  "Achievement Unlocked 2": [
+    "",
+    ""
+  ],
+  "Achievement Unlocked 3": [
+    "",
+    ""
+  ],
+  "Achillies 1": [
+    "",
+    ""
+  ],
+  "Achillies 2": [
+    "",
+    ""
+  ],
+  "Advance Wars 1": [
+    "",
+    ""
+  ],
+  "Advance Wars 2": [
+    "",
+    ""
+  ],
+  "Adventneon": [
+    "",
+    ""
+  ],
+  "Adventure Capatalist": [
+    "",
+    ""
+  ],
+  "Adventure Drivers": [
+    "",
+    ""
+  ],
+  "Ahoy Survival": [
+    "",
+    ""
+  ],
+  "Alien Hominid": [
+    "",
+    ""
+  ],
+  "Amanda the Adventurer": [
+    "",
+    ""
+  ],
+  "Amaze": [
+    "",
+    ""
+  ],
+  "Amigo Pancho": [
+    "",
+    ""
+  ],
+  "Among Us": [
+    "",
+    ""
+  ],
+  "Amorphous": [
+    "",
+    ""
+  ],
+  "Ancient Sins": [
+    "",
+    ""
+  ],
+  "Andy's Apple Farm": [
+    "",
+    ""
+  ],
+  "Angry Birds": [
+    "",
+    ""
+  ],
+  "Angry Birds Chrome": [
+    "",
+    ""
+  ],
+  "Angry Birds Showdown": [
+    "",
+    ""
+  ],
+  "Angry Birds Space": [
+    "",
+    ""
+  ],
+  "Another World": [
+    "",
+    ""
+  ],
+  "Apes vs Helium": [
+    "",
+    ""
+  ],
+  "Apollo Justice - Ace Attorney": [
+    "",
+    ""
+  ],
+  "Apple Shooter": [
+    "",
+    ""
+  ],
+  "Apple Worm": [
+    "",
+    ""
+  ],
+  "Arceus Legend": [
+    "",
+    ""
+  ],
+  "Archery World Tour": [
+    "",
+    ""
+  ],
+  "Arena": [
+    "",
+    ""
+  ],
+  "Armor Mayhem 2": [
+    "",
+    ""
+  ],
+  "Arsonate": [
+    "",
+    ""
+  ],
+  "Ascent": [
+    "",
+    ""
+  ],
+  "Asteroids": [
+    "",
+    ""
+  ],
+  "Attack Hole": [
+    "",
+    ""
+  ],
+  "Avalanche": [
+    "",
+    ""
+  ],
+  "Aviamasters": [
+    "",
+    ""
+  ],
+  "Awesome Pirates": [
+    "",
+    ""
+  ],
+  "Awesome Planes": [
+    "",
+    ""
+  ],
+  "Awesome Tanks": [
+    "",
+    ""
+  ],
+  "BLOOD MONEY": [
+    "",
+    ""
+  ],
+  "BMX2": [
+    "",
+    ""
+  ],
+  "Baby Chicco Adventure": [
+    "",
+    ""
+  ],
+  "Baby Kaizo": [
+    "",
+    ""
+  ],
+  "Baby Sniper in Vietnam": [
+    "",
+    ""
+  ],
+  "Backyard Soccer": [
+    "",
+    ""
+  ],
+  "Bacon May Die": [
+    "",
+    ""
+  ],
+  "Bad Bodyguards": [
+    "",
+    ""
+  ],
+  "Bad Ice Cream 1": [
+    "",
+    ""
+  ],
+  "Bad Ice Cream 2": [
+    "",
+    ""
+  ],
+  "Bad Ice Cream 3": [
+    "",
+    ""
+  ],
+  "Bad Monday Simulator": [
+    "",
+    ""
+  ],
+  "Bad Parenting": [
+    "",
+    ""
+  ],
+  "Bad Time Simulator": [
+    "",
+    ""
+  ],
+  "Baldi's Basics - Classic Remastered": [
+    "",
+    ""
+  ],
+  "Baldi's Basics - The Ultra Decompile": [
+    "",
+    ""
+  ],
+  "Baldi's Fun New School Ultimate": [
+    "",
+    ""
+  ],
+  "Ball Blast": [
+    "",
+    ""
+  ],
+  "Balls and Bricks": [
+    "",
+    ""
+  ],
+  "Banana Simulator": [
+    "",
+    ""
+  ],
+  "Bandit Gun Slingers": [
+    "",
+    ""
+  ],
+  "Banjo Kazooie": [
+    "",
+    ""
+  ],
+  "Bank Robbery 1": [
+    "",
+    ""
+  ],
+  "Bank Robbery 2": [
+    "",
+    ""
+  ],
+  "Bank Robbery 3": [
+    "",
+    ""
+  ],
+  "Bart Bash": [
+    "",
+    ""
+  ],
+  "Bart Blast": [
+    "",
+    ""
+  ],
+  "Bas": [
+    "",
+    ""
+  ],
+  "Baseball Bros": [
+    "",
+    ""
+  ],
+  "Basket Battle": [
+    "",
+    ""
+  ],
+  "Basketball Frvr": [
+    "",
+    ""
+  ],
+  "Batter Up": [
+    "",
+    ""
+  ],
+  "Battle Karts": [
+    "",
+    ""
+  ],
+  "Battle Sim": [
+    "",
+    ""
+  ],
+  "Battle Zone": [
+    "",
+    ""
+  ],
+  "Battles": [
+    "",
+    ""
+  ],
+  "Bazooka Boy": [
+    "",
+    ""
+  ],
+  "Beam Rider": [
+    "",
+    ""
+  ],
+  "Bearsus": [
+    "",
+    ""
+  ],
+  "Beatblock": [
+    "",
+    ""
+  ],
+  "Ben 10 Alienforce": [
+    "",
+    ""
+  ],
+  "Ben 10 Omniverse": [
+    "",
+    ""
+  ],
+  "Ben 10 Protector": [
+    "",
+    ""
+  ],
+  "Ben 10 Racing": [
+    "",
+    ""
+  ],
+  "Ben 10 Ultimatealien": [
+    "",
+    ""
+  ],
+  "Bendy and the Ink Machine": [
+    "",
+    ""
+  ],
+  "Bergentruck 201X": [
+    "",
+    ""
+  ],
+  "Bfdia 5B": [
+    "",
+    ""
+  ],
+  "Big ICE Tower Tiny Square": [
+    "",
+    ""
+  ],
+  "Big NEON Tower Tiny Square": [
+    "",
+    ""
+  ],
+  "Big Time Butter Baron": [
+    "",
+    ""
+  ],
+  "Bigshot Boxing 2": [
+    "",
+    ""
+  ],
+  "Binding of Isacc Sheep Time": [
+    "",
+    ""
+  ],
+  "Bio Evil 4": [
+    "",
+    ""
+  ],
+  "Bit Planes": [
+    "",
+    ""
+  ],
+  "Blade Ball": [
+    "",
+    ""
+  ],
+  "Blastronaut": [
+    "",
+    ""
+  ],
+  "Blaze Drifter": [
+    "",
+    ""
+  ],
+  "Bleach vs Naruto": [
+    "",
+    ""
+  ],
+  "Blightborne": [
+    "",
+    ""
+  ],
+  "Blobs Story 2": [
+    "",
+    ""
+  ],
+  "Block Post": [
+    "",
+    ""
+  ],
+  "Block the Pig": [
+    "",
+    ""
+  ],
+  "Blockcraft Parkour": [
+    "",
+    ""
+  ],
+  "Blockcraft Shooter": [
+    "",
+    ""
+  ],
+  "Blocky Snakes": [
+    "",
+    ""
+  ],
+  "Blood Tournament": [
+    "",
+    ""
+  ],
+  "Bloons TD1": [
+    "",
+    ""
+  ],
+  "Bloons TD2": [
+    "",
+    ""
+  ],
+  "Bloons TD3": [
+    "",
+    ""
+  ],
+  "Bloons TD4": [
+    "",
+    ""
+  ],
+  "Bloons TD5": [
+    "",
+    ""
+  ],
+  "Blumgi Rocket": [
+    "",
+    ""
+  ],
+  "Bob the Robber": [
+    "",
+    ""
+  ],
+  "Bolly Beat": [
+    "",
+    ""
+  ],
+  "Bomberman": [
+    "",
+    ""
+  ],
+  "Bomberman Hero": [
+    "",
+    ""
+  ],
+  "Boom Slingers": [
+    "",
+    ""
+  ],
+  "Boom Slingers Reboom": [
+    "",
+    ""
+  ],
+  "Bottle Flip 3d": [
+    "",
+    ""
+  ],
+  "Bottle Jump 3d": [
+    "",
+    ""
+  ],
+  "Bounce Back": [
+    "",
+    ""
+  ],
+  "Bounce Masters": [
+    "",
+    ""
+  ],
+  "Bouncy Balls": [
+    "",
+    ""
+  ],
+  "Bouncy Motors": [
+    "",
+    ""
+  ],
+  "Bounty of One": [
+    "",
+    ""
+  ],
+  "Bowlalt": [
+    "",
+    ""
+  ],
+  "Bowmasters": [
+    "",
+    ""
+  ],
+  "Boxhead 2 Playrooms": [
+    "",
+    ""
+  ],
+  "Boxhead Nightmare": [
+    "",
+    ""
+  ],
+  "Brawl Simulator 3d": [
+    "",
+    ""
+  ],
+  "Break Lock": [
+    "",
+    ""
+  ],
+  "Breath of the Wild": [
+    "",
+    ""
+  ],
+  "Bridge Race": [
+    "",
+    ""
+  ],
+  "Bubble Shooter": [
+    "",
+    ""
+  ],
+  "Bubble Shooter Pirate": [
+    "",
+    ""
+  ],
+  "Bubble Tanks": [
+    "",
+    ""
+  ],
+  "Bubble Tanks 2": [
+    "",
+    ""
+  ],
+  "Bubble Tanks 3": [
+    "",
+    ""
+  ],
+  "Bubble Tanks Arenas": [
+    "",
+    ""
+  ],
+  "Bubsy": [
+    "",
+    ""
+  ],
+  "Build a Big Army": [
+    "",
+    ""
+  ],
+  "Build a Plane": [
+    "",
+    ""
+  ],
+  "Build a Queen": [
+    "",
+    ""
+  ],
+  "Bunnyland": [
+    "",
+    ""
+  ],
+  "Burrito Bison Launcha Libre": [
+    "",
+    ""
+  ],
+  "Bust a Loop": [
+    "",
+    ""
+  ],
+  "CG FC 25": [
+    "",
+    ""
+  ],
+  "Cactus Mc Coy": [
+    "",
+    ""
+  ],
+  "Camouflage and Sniper": [
+    "",
+    ""
+  ],
+  "Candy Crush": [
+    "",
+    ""
+  ],
+  "Cannon Balls 3d": [
+    "",
+    ""
+  ],
+  "Cannon Basketball": [
+    "",
+    ""
+  ],
+  "Cannon Basketball 2": [
+    "",
+    ""
+  ],
+  "Cannon Fodder": [
+    "",
+    ""
+  ],
+  "Cannonballs 3d": [
+    "",
+    ""
+  ],
+  "Capybara Clicker": [
+    "",
+    ""
+  ],
+  "Car Crash 3": [
+    "",
+    ""
+  ],
+  "Car Drawing": [
+    "",
+    ""
+  ],
+  "Car Mods": [
+    "",
+    ""
+  ],
+  "Car Stunts Driving": [
+    "",
+    ""
+  ],
+  "Car Survival 3d": [
+    "",
+    ""
+  ],
+  "Careat Scar 2 Deluxe": [
+    "",
+    ""
+  ],
+  "Carking Arena": [
+    "",
+    ""
+  ],
+  "Carrom Clash": [
+    "",
+    ""
+  ],
+  "Cartoon Network Table Tennis Ultimate Tournament": [
+    "",
+    ""
+  ],
+  "Castle Bloodline": [
+    "",
+    ""
+  ],
+  "Castle Circle of Moon": [
+    "",
+    ""
+  ],
+  "Castle Vanianes": [
+    "",
+    ""
+  ],
+  "Castle Wars Modern": [
+    "",
+    ""
+  ],
+  "Castlevania": [
+    "",
+    ""
+  ],
+  "Castlevania 2": [
+    "",
+    ""
+  ],
+  "Castlevania 3": [
+    "",
+    ""
+  ],
+  "Castlevania Aria of Sorrow": [
+    "",
+    ""
+  ],
+  "Castlevania Dawn of Sorrow": [
+    "",
+    ""
+  ],
+  "Cat Connection": [
+    "",
+    ""
+  ],
+  "Cat Gunner Super Zombie Shoot": [
+    "",
+    ""
+  ],
+  "Cat Mario": [
+    "",
+    ""
+  ],
+  "Cats Love Cake 2": [
+    "",
+    ""
+  ],
+  "Celeste 2": [
+    "",
+    ""
+  ],
+  "Celeste PICO": [
+    "",
+    ""
+  ],
+  "Cell Machine": [
+    "",
+    ""
+  ],
+  "Cellar Door": [
+    "",
+    ""
+  ],
+  "Chaosfaction 2": [
+    "",
+    ""
+  ],
+  "Checkers": [
+    "",
+    ""
+  ],
+  "Cheese Chompers 3d": [
+    "",
+    ""
+  ],
+  "Cheshire in a Chat Room": [
+    "",
+    ""
+  ],
+  "Chess": [
+    "",
+    ""
+  ],
+  "Chess Classic": [
+    "",
+    ""
+  ],
+  "Chibiknight": [
+    "",
+    ""
+  ],
+  "Chicken Scream": [
+    "",
+    ""
+  ],
+  "Chicken War": [
+    "",
+    ""
+  ],
+  "Chiikawa Puzzle": [
+    "",
+    ""
+  ],
+  "Chip's Challenge": [
+    "",
+    ""
+  ],
+  "Choppy Orc": [
+    "",
+    ""
+  ],
+  "Christmas Massacre": [
+    "",
+    ""
+  ],
+  "Chronotrigger": [
+    "",
+    ""
+  ],
+  "Chuzzle": [
+    "",
+    ""
+  ],
+  "Circle Path": [
+    "",
+    ""
+  ],
+  "CircloO": [
+    "",
+    ""
+  ],
+  "City Defense": [
+    "",
+    ""
+  ],
+  "City Smash": [
+    "",
+    ""
+  ],
+  "Civiballs": [
+    "",
+    ""
+  ],
+  "Civiballs 2": [
+    "",
+    ""
+  ],
+  "Clash Of Vikings": [
+    "",
+    ""
+  ],
+  "Clashofvikings": [
+    "",
+    ""
+  ],
+  "Class of 09": [
+    "",
+    ""
+  ],
+  "Clear Vision": [
+    "",
+    ""
+  ],
+  "Clearvision 2": [
+    "",
+    ""
+  ],
+  "Clearvision 3": [
+    "",
+    ""
+  ],
+  "Clearvision 4": [
+    "",
+    ""
+  ],
+  "Clearvision 5": [
+    "",
+    ""
+  ],
+  "Clothing Shop 3d": [
+    "",
+    ""
+  ],
+  "Clubby the Seal": [
+    "",
+    ""
+  ],
+  "Cluster Rush": [
+    "",
+    ""
+  ],
+  "CoD 4": [
+    "",
+    ""
+  ],
+  "CoD Black Ops": [
+    "",
+    ""
+  ],
+  "CoD Defiance": [
+    "",
+    ""
+  ],
+  "CoD Modern Warfare": [
+    "",
+    ""
+  ],
+  "CoD World at War": [
+    "",
+    ""
+  ],
+  "Coal LLC": [
+    "",
+    ""
+  ],
+  "Codename Gordon": [
+    "",
+    ""
+  ],
+  "Coffee Maker": [
+    "",
+    ""
+  ],
+  "Color Burst 3d": [
+    "",
+    ""
+  ],
+  "Color Match": [
+    "",
+    ""
+  ],
+  "Color Water Sort 3d": [
+    "",
+    ""
+  ],
+  "Combo Pool": [
+    "",
+    ""
+  ],
+  "Command Conquer": [
+    "",
+    ""
+  ],
+  "Conkers Bad Furday": [
+    "",
+    ""
+  ],
+  "Contra": [
+    "",
+    ""
+  ],
+  "Contra 3": [
+    "",
+    ""
+  ],
+  "Cooking Mama": [
+    "",
+    ""
+  ],
+  "Cooking Mama 2": [
+    "",
+    ""
+  ],
+  "Cooking Mama 3": [
+    "",
+    ""
+  ],
+  "Cool Cars Run 3d": [
+    "",
+    ""
+  ],
+  "Coreball": [
+    "",
+    ""
+  ],
+  "Cotlk": [
+    "",
+    ""
+  ],
+  "Count Masters Stickman Games": [
+    "",
+    ""
+  ],
+  "Cover Orange": [
+    "",
+    ""
+  ],
+  "Cover Orange Journey Gangsters": [
+    "",
+    ""
+  ],
+  "Cover Orange Journey Knights": [
+    "",
+    ""
+  ],
+  "Cover Orange Journey Pirates": [
+    "",
+    ""
+  ],
+  "Cover Orange Journey Space": [
+    "",
+    ""
+  ],
+  "Cover Orange Players Pack": [
+    "",
+    ""
+  ],
+  "Crash Team Racing": [
+    "",
+    ""
+  ],
+  "Crazy Cars": [
+    "",
+    ""
+  ],
+  "Crazy Frog Racer": [
+    "",
+    ""
+  ],
+  "Crazy Kitty 3d": [
+    "",
+    ""
+  ],
+  "Crazy Motorcycle": [
+    "",
+    ""
+  ],
+  "Creeper World 2": [
+    "",
+    ""
+  ],
+  "Cruelty Squad": [
+    "",
+    ""
+  ],
+  "Crunchball 3000": [
+    "",
+    ""
+  ],
+  "Crush Cars 3d": [
+    "",
+    ""
+  ],
+  "Curveball": [
+    "",
+    ""
+  ],
+  "Cut the Rope": [
+    "",
+    ""
+  ],
+  "Cut the Rope Time Travel": [
+    "",
+    ""
+  ],
+  "Cyber Sensation": [
+    "",
+    ""
+  ],
+  "Cyberbung Racing": [
+    "",
+    ""
+  ],
+  "DBOrigins": [
+    "",
+    ""
+  ],
+  "DBSniper": [
+    "",
+    ""
+  ],
+  "DEAD PLATE": [
+    "",
+    ""
+  ],
+  "DONT YOU LECTURE ME": [
+    "",
+    ""
+  ],
+  "Dad Game": [
+    "",
+    ""
+  ],
+  "Dad and Me": [
+    "",
+    ""
+  ],
+  "Dadish": [
+    "",
+    ""
+  ],
+  "Dadish 2": [
+    "",
+    ""
+  ],
+  "Dadish 3": [
+    "",
+    ""
+  ],
+  "Daggerfall": [
+    "",
+    ""
+  ],
+  "Daily Dadish": [
+    "",
+    ""
+  ],
+  "Dalgona Candy Honeycomb Cookie": [
+    "",
+    ""
+  ],
+  "Danktomb": [
+    "",
+    ""
+  ],
+  "Dead Estate": [
+    "",
+    ""
+  ],
+  "Deadplate": [
+    "",
+    ""
+  ],
+  "Deadzed": [
+    "",
+    ""
+  ],
+  "Death Chase": [
+    "",
+    ""
+  ],
+  "Death Run 3d": [
+    "",
+    ""
+  ],
+  "Deblob 2": [
+    "",
+    ""
+  ],
+  "Decision": [
+    "",
+    ""
+  ],
+  "Decision Medieval": [
+    "",
+    ""
+  ],
+  "Deep Sleep": [
+    "",
+    ""
+  ],
+  "Deeper Sleep": [
+    "",
+    ""
+  ],
+  "Deepest Sword": [
+    "",
+    ""
+  ],
+  "Defend Your Castle": [
+    "",
+    ""
+  ],
+  "Defend Your Nuts": [
+    "",
+    ""
+  ],
+  "Defend Your Nuts 2": [
+    "",
+    ""
+  ],
+  "Delta Traveler": [
+    "",
+    ""
+  ],
+  "Deltarune": [
+    "",
+    ""
+  ],
+  "Dementium": [
+    "",
+    ""
+  ],
+  "Destiny Run 3d": [
+    "",
+    ""
+  ],
+  "Destroy the Car 3d": [
+    "",
+    ""
+  ],
+  "Diablo": [
+    "",
+    ""
+  ],
+  "Diamond Hollow": [
+    "",
+    ""
+  ],
+  "Diamond Hollow 2": [
+    "",
+    ""
+  ],
+  "Diamond Seeker": [
+    "",
+    ""
+  ],
+  "Dice a Million": [
+    "",
+    ""
+  ],
+  "Die in the Dungeon": [
+    "",
+    ""
+  ],
+  "Dig Deep": [
+    "",
+    ""
+  ],
+  "Dig to China": [
+    "",
+    ""
+  ],
+  "Digdug": [
+    "",
+    ""
+  ],
+  "Digdug 2": [
+    "",
+    ""
+  ],
+  "Dimension Incident": [
+    "",
+    ""
+  ],
+  "Dinodudes": [
+    "",
+    ""
+  ],
+  "Dire Decks": [
+    "",
+    ""
+  ],
+  "Do NOT Take This Cat Home": [
+    "",
+    ""
+  ],
+  "Dogeminer": [
+    "",
+    ""
+  ],
+  "DokiDoki Literature Club": [
+    "",
+    ""
+  ],
+  "Don't Escape": [
+    "",
+    ""
+  ],
+  "Donkey Kong": [
+    "",
+    ""
+  ],
+  "Donkey Kong 64": [
+    "",
+    ""
+  ],
+  "Donkey Kong Country": [
+    "",
+    ""
+  ],
+  "Donkey Kong Country 2": [
+    "",
+    ""
+  ],
+  "Donkey Kong Country 3": [
+    "",
+    ""
+  ],
+  "Doodle Jump": [
+    "",
+    ""
+  ],
+  "Douchebag Life": [
+    "",
+    ""
+  ],
+  "Douchebag Workout": [
+    "",
+    ""
+  ],
+  "Down the Mountain": [
+    "",
+    ""
+  ],
+  "Dr. Mario": [
+    "",
+    ""
+  ],
+  "Dr. Weedgaster": [
+    "",
+    ""
+  ],
+  "Dragon Ball Z": [
+    "",
+    ""
+  ],
+  "Dragon Quest": [
+    "",
+    ""
+  ],
+  "Dragon vs Bricks": [
+    "",
+    ""
+  ],
+  "Draw Climber": [
+    "",
+    ""
+  ],
+  "Draw Joust": [
+    "",
+    ""
+  ],
+  "Draw the Hill": [
+    "",
+    ""
+  ],
+  "Draw the Line": [
+    "",
+    ""
+  ],
+  "Dreadhead Parkour": [
+    "",
+    ""
+  ],
+  "Drift Hunters": [
+    "",
+    ""
+  ],
+  "Driven Wild": [
+    "",
+    ""
+  ],
+  "Dubstep": [
+    "",
+    ""
+  ],
+  "Duck Life": [
+    "",
+    ""
+  ],
+  "Duck Life 2": [
+    "",
+    ""
+  ],
+  "Duck Life 3": [
+    "",
+    ""
+  ],
+  "Duck Life 5": [
+    "",
+    ""
+  ],
+  "Duck Life Battle": [
+    "",
+    ""
+  ],
+  "Duck Life Space": [
+    "",
+    ""
+  ],
+  "Ducktales": [
+    "",
+    ""
+  ],
+  "Dud": [
+    "",
+    ""
+  ],
+  "Duke Nukem 3d": [
+    "",
+    ""
+  ],
+  "Dumpling": [
+    "",
+    ""
+  ],
+  "Dungeon Deck": [
+    "",
+    ""
+  ],
+  "Dungeon Raid": [
+    "",
+    ""
+  ],
+  "Dungeons and Degenerate Gamblers": [
+    "",
+    ""
+  ],
+  "Dunkshot": [
+    "",
+    ""
+  ],
+  "Duskchild": [
+    "",
+    ""
+  ],
+  "Dying Dreams": [
+    "",
+    ""
+  ],
+  "Dynamite Headdy": [
+    "",
+    ""
+  ],
+  "ET": [
+    "",
+    ""
+  ],
+  "Eagleride": [
+    "",
+    ""
+  ],
+  "Earn to Die": [
+    "",
+    ""
+  ],
+  "Earth Taken": [
+    "",
+    ""
+  ],
+  "Earth Taken 2": [
+    "",
+    ""
+  ],
+  "Earth Taken 3": [
+    "",
+    ""
+  ],
+  "Earthbound": [
+    "",
+    ""
+  ],
+  "Edel Weiss": [
+    "",
+    ""
+  ],
+  "Effing Hail": [
+    "",
+    ""
+  ],
+  "Effing Machines": [
+    "",
+    ""
+  ],
+  "Effing Worms": [
+    "",
+    ""
+  ],
+  "Effing Zombies": [
+    "",
+    ""
+  ],
+  "Elastic Man": [
+    "",
+    ""
+  ],
+  "Enchain": [
+    "",
+    ""
+  ],
+  "Enduro": [
+    "",
+    ""
+  ],
+  "Epic Battle Fantasy 5": [
+    "",
+    ""
+  ],
+  "Escalating Duel": [
+    "",
+    ""
+  ],
+  "Escape Road": [
+    "",
+    ""
+  ],
+  "Escape Road 3": [
+    "",
+    ""
+  ],
+  "Etrian Oddyssey": [
+    "",
+    ""
+  ],
+  "Evil Glitch": [
+    "",
+    ""
+  ],
+  "Evolution": [
+    "",
+    ""
+  ],
+  "Evolving Bombs 3d": [
+    "",
+    ""
+  ],
+  "Excitebike 64": [
+    "",
+    ""
+  ],
+  "Extreme Run 3d": [
+    "",
+    ""
+  ],
+  "FIFA - A Road to World Cup 98": [
+    "",
+    ""
+  ],
+  "FIFA 10": [
+    "",
+    ""
+  ],
+  "FIFA 11": [
+    "",
+    ""
+  ],
+  "FIFA International Soccer": [
+    "",
+    ""
+  ],
+  "FNF Zardy": [
+    "",
+    ""
+  ],
+  "FNF vs Bob v2.0 (Bobs Onslaught)": [
+    "",
+    ""
+  ],
+  "FNF vs Hypnos Lullaby v2": [
+    "",
+    ""
+  ],
+  "FNF vs Pibby Corrupted": [
+    "",
+    ""
+  ],
+  "Factory Balls": [
+    "",
+    ""
+  ],
+  "Factory Balls 2": [
+    "",
+    ""
+  ],
+  "Factory Balls 3": [
+    "",
+    ""
+  ],
+  "Factory Balls 4": [
+    "",
+    ""
+  ],
+  "Fairy Tale vs One Piece": [
+    "",
+    ""
+  ],
+  "Fallout": [
+    "",
+    ""
+  ],
+  "Famidash": [
+    "",
+    ""
+  ],
+  "Fancy Pants Adventure": [
+    "",
+    ""
+  ],
+  "Fancy Pants Adventure 2": [
+    "",
+    ""
+  ],
+  "Fancy Pants Adventure 3": [
+    "",
+    ""
+  ],
+  "Fancy Pants Adventure 4 Part 1": [
+    "",
+    ""
+  ],
+  "Fancy Pants Adventure 4 Part 2": [
+    "",
+    ""
+  ],
+  "Fashion Battle": [
+    "",
+    ""
+  ],
+  "Fattygenius": [
+    "",
+    ""
+  ],
+  "Fears to Fathom Home Alone": [
+    "",
+    ""
+  ],
+  "Feedus": [
+    "",
+    ""
+  ],
+  "Feedus 2": [
+    "",
+    ""
+  ],
+  "Feedus 3": [
+    "",
+    ""
+  ],
+  "Feedus 4": [
+    "",
+    ""
+  ],
+  "Feedus 5": [
+    "",
+    ""
+  ],
+  "Ffmysticquest": [
+    "",
+    ""
+  ],
+  "Fifa 2000": [
+    "",
+    ""
+  ],
+  "Final Earth 2": [
+    "",
+    ""
+  ],
+  "Final Fantasy": [
+    "",
+    ""
+  ],
+  "Final Fantasy Tactics": [
+    "",
+    ""
+  ],
+  "Final Fantasy VII": [
+    "",
+    ""
+  ],
+  "Final Ninja": [
+    "",
+    ""
+  ],
+  "Find the Alien": [
+    "",
+    ""
+  ],
+  "Fire Emblem": [
+    "",
+    ""
+  ],
+  "Fire and Frost Master": [
+    "",
+    ""
+  ],
+  "Fireblob": [
+    "",
+    ""
+  ],
+  "Fireboy and Watergirl": [
+    "",
+    ""
+  ],
+  "Fireboy and Watergirl 2": [
+    "",
+    ""
+  ],
+  "Fireboy and Watergirl 3": [
+    "",
+    ""
+  ],
+  "Fish Eat Getting Big": [
+    "",
+    ""
+  ],
+  "Fisquarium": [
+    "",
+    ""
+  ],
+  "Fitness Empire": [
+    "",
+    ""
+  ],
+  "Five Nights at Candys": [
+    "",
+    ""
+  ],
+  "Five Nights at Candys 2": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys 2": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys 3": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys 4": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys 4 Halloween": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys Pizza Simulator": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys Sister Location": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys Ultimate Custom Night": [
+    "",
+    ""
+  ],
+  "Five Nights at Freddys World": [
+    "",
+    ""
+  ],
+  "Five Nights at Shreks Hotel": [
+    "",
+    ""
+  ],
+  "Flappy Bird": [
+    "",
+    ""
+  ],
+  "Flappy Dunk": [
+    "",
+    ""
+  ],
+  "Flashsonic": [
+    "",
+    ""
+  ],
+  "Flick Goal": [
+    "",
+    ""
+  ],
+  "Flip Master": [
+    "",
+    ""
+  ],
+  "Floodrunner": [
+    "",
+    ""
+  ],
+  "Floodrunner 2": [
+    "",
+    ""
+  ],
+  "Floodrunner 4": [
+    "",
+    ""
+  ],
+  "Flying Gorilla 3d": [
+    "",
+    ""
+  ],
+  "Focus": [
+    "",
+    ""
+  ],
+  "Folder Dungeon": [
+    "",
+    ""
+  ],
+  "Football Bros": [
+    "",
+    ""
+  ],
+  "Fork n Sausage": [
+    "",
+    ""
+  ],
+  "Fortzone": [
+    "",
+    ""
+  ],
+  "Free Gemas": [
+    "",
+    ""
+  ],
+  "Freerider": [
+    "",
+    ""
+  ],
+  "Freerider 2": [
+    "",
+    ""
+  ],
+  "Freerider 3": [
+    "",
+    ""
+  ],
+  "From Rust to Ash": [
+    "",
+    ""
+  ],
+  "Fruit Ninja": [
+    "",
+    ""
+  ],
+  "Fuelled By Hotdogs": [
+    "",
+    ""
+  ],
+  "Fundamental Paper Novel": [
+    "",
+    ""
+  ],
+  "Fused 240": [
+    "",
+    ""
+  ],
+  "Gabriels Awesome Schoolhouse": [
+    "",
+    ""
+  ],
+  "Galaga": [
+    "",
+    ""
+  ],
+  "Gangsta Bean": [
+    "",
+    ""
+  ],
+  "Garcello": [
+    "",
+    ""
+  ],
+  "General Chaos": [
+    "",
+    ""
+  ],
+  "Generic Fighter Maybe": [
+    "",
+    ""
+  ],
+  "George and the Printer": [
+    "",
+    ""
+  ],
+  "Get On Top": [
+    "",
+    ""
+  ],
+  "Get Yoked": [
+    "",
+    ""
+  ],
+  "Get to the Top Although I thought There is No Top": [
+    "",
+    ""
+  ],
+  "Getting Over it with Bennett Foddy": [
+    "",
+    ""
+  ],
+  "Giant Wanted": [
+    "",
+    ""
+  ],
+  "Gladihoppers": [
+    "",
+    ""
+  ],
+  "Glory Hunters": [
+    "",
+    ""
+  ],
+  "Glover": [
+    "",
+    ""
+  ],
+  "Goal South Africa": [
+    "",
+    ""
+  ],
+  "Goblin Goopmaxxing": [
+    "",
+    ""
+  ],
+  "Gods Flesh": [
+    "",
+    ""
+  ],
+  "Godzilla Daikaiju Battle Royale": [
+    "",
+    ""
+  ],
+  "Going Balls": [
+    "",
+    ""
+  ],
+  "Gold Digger FRVR": [
+    "",
+    ""
+  ],
+  "Gold Miner": [
+    "",
+    ""
+  ],
+  "Golden Sun - The Lost Age": [
+    "",
+    ""
+  ],
+  "Goldeneye 007": [
+    "",
+    ""
+  ],
+  "Golf Orbit": [
+    "",
+    ""
+  ],
+  "Golf Sunday": [
+    "",
+    ""
+  ],
+  "Good Boy Galaxy": [
+    "",
+    ""
+  ],
+  "Google Baseball": [
+    "",
+    ""
+  ],
+  "Google Feud": [
+    "",
+    ""
+  ],
+  "Grand Action Simulator NY": [
+    "",
+    ""
+  ],
+  "Grand Theft Auto Advance": [
+    "",
+    ""
+  ],
+  "Granddad": [
+    "",
+    ""
+  ],
+  "Granturismo": [
+    "",
+    ""
+  ],
+  "Grass Mowing": [
+    "",
+    ""
+  ],
+  "Gravity": [
+    "",
+    ""
+  ],
+  "Grey Box Testing": [
+    "",
+    ""
+  ],
+  "Grimace Birthday": [
+    "",
+    ""
+  ],
+  "Grindcraft": [
+    "",
+    ""
+  ],
+  "Groon Groon Babey": [
+    "",
+    ""
+  ],
+  "Guess Their Answer": [
+    "",
+    ""
+  ],
+  "Gun Blood": [
+    "",
+    ""
+  ],
+  "Gun Clone": [
+    "",
+    ""
+  ],
+  "Gun Knight": [
+    "",
+    ""
+  ],
+  "Gun Mayhem": [
+    "",
+    ""
+  ],
+  "Gun Night": [
+    "",
+    ""
+  ],
+  "Gun Runner": [
+    "",
+    ""
+  ],
+  "Gun Smoke": [
+    "",
+    ""
+  ],
+  "Guncho": [
+    "",
+    ""
+  ],
+  "Gym Stack": [
+    "",
+    ""
+  ],
+  "Hacx": [
+    "",
+    ""
+  ],
+  "Hajimeippo": [
+    "",
+    ""
+  ],
+  "Half Life": [
+    "",
+    ""
+  ],
+  "Half Life Opposing Force": [
+    "",
+    ""
+  ],
+  "Halocombatdevolved": [
+    "",
+    ""
+  ],
+  "Handshakes": [
+    "",
+    ""
+  ],
+  "Handsofwar": [
+    "",
+    ""
+  ],
+  "Hanger 2": [
+    "",
+    ""
+  ],
+  "Happy Sheepies": [
+    "",
+    ""
+  ],
+  "Happy Wheels": [
+    "",
+    ""
+  ],
+  "Happyroom": [
+    "",
+    ""
+  ],
+  "Harvestmoon 64": [
+    "",
+    ""
+  ],
+  "Haunt the House": [
+    "",
+    ""
+  ],
+  "Heart and Soul": [
+    "",
+    ""
+  ],
+  "Hei$T": [
+    "",
+    ""
+  ],
+  "Helix Jump": [
+    "",
+    ""
+  ],
+  "Hellron": [
+    "",
+    ""
+  ],
+  "Helltaker": [
+    "",
+    ""
+  ],
+  "Help No Brakes": [
+    "",
+    ""
+  ],
+  "Hero 3 Flying Robot": [
+    "",
+    ""
+  ],
+  "HexGL": [
+    "",
+    ""
+  ],
+  "Hi No Homo": [
+    "",
+    ""
+  ],
+  "Hide N Seek": [
+    "",
+    ""
+  ],
+  "High Heels": [
+    "",
+    ""
+  ],
+  "High Stakes": [
+    "",
+    ""
+  ],
+  "Highway Racer": [
+    "",
+    ""
+  ],
+  "Highway Racer 2": [
+    "",
+    ""
+  ],
+  "Highway Racer 2 REMASTERED": [
+    "",
+    ""
+  ],
+  "Highway Traffic 3d": [
+    "",
+    ""
+  ],
+  "Hill Climb Racing Lite": [
+    "",
+    ""
+  ],
+  "Hipster Kick Ball": [
+    "",
+    ""
+  ],
+  "Hit 8 Ox": [
+    "",
+    ""
+  ],
+  "Hobo 1": [
+    "",
+    ""
+  ],
+  "Hobo 2": [
+    "",
+    ""
+  ],
+  "Hobo 3": [
+    "",
+    ""
+  ],
+  "Hobo 4": [
+    "",
+    ""
+  ],
+  "Hobo 5": [
+    "",
+    ""
+  ],
+  "Hobo 6": [
+    "",
+    ""
+  ],
+  "Hobo 7": [
+    "",
+    ""
+  ],
+  "Hobo vs Zombies": [
+    "",
+    ""
+  ],
+  "Hole.io": [
+    "",
+    ""
+  ],
+  "Hollow Knight": [
+    "",
+    ""
+  ],
+  "Hover Racer Drive": [
+    "",
+    ""
+  ],
+  "Hula Hoop Race": [
+    "",
+    ""
+  ],
+  "Human Expenditure Program": [
+    "",
+    ""
+  ],
+  "Hungry Knight": [
+    "",
+    ""
+  ],
+  "Hungry Lamu": [
+    "",
+    ""
+  ],
+  "I Have No Mouth and I Must Scream": [
+    "",
+    ""
+  ],
+  "Ice Age Baby": [
+    "",
+    ""
+  ],
+  "Ice Dodo": [
+    "",
+    ""
+  ],
+  "Icy Purple Head": [
+    "",
+    ""
+  ],
+  "Idle Breakout": [
+    "",
+    ""
+  ],
+  "Idle Dice": [
+    "",
+    ""
+  ],
+  "Idle Game Dev": [
+    "",
+    ""
+  ],
+  "Idle Lumber Inc": [
+    "",
+    ""
+  ],
+  "Idle Miner Tycoon": [
+    "",
+    ""
+  ],
+  "Idle Mining Empire": [
+    "",
+    ""
+  ],
+  "Infinimoes": [
+    "",
+    ""
+  ],
+  "Ink Game": [
+    "",
+    ""
+  ],
+  "Inn Keeper": [
+    "",
+    ""
+  ],
+  "Inside Story": [
+    "",
+    ""
+  ],
+  "Interactive Buddy": [
+    "",
+    ""
+  ],
+  "Into Ruins": [
+    "",
+    ""
+  ],
+  "Into Space": [
+    "",
+    ""
+  ],
+  "Into Space 2": [
+    "",
+    ""
+  ],
+  "Into Space 3": [
+    "",
+    ""
+  ],
+  "Into the Deep Web": [
+    "",
+    ""
+  ],
+  "Intrusion": [
+    "",
+    ""
+  ],
+  "Iron Snout": [
+    "",
+    ""
+  ],
+  "Iron Soldier": [
+    "",
+    ""
+  ],
+  "JUMP": [
+    "",
+    ""
+  ],
+  "Jefflings": [
+    "",
+    ""
+  ],
+  "Jelly Dad Hero": [
+    "",
+    ""
+  ],
+  "Jelly Drift": [
+    "",
+    ""
+  ],
+  "Jelly Restaurant": [
+    "",
+    ""
+  ],
+  "Jelly Truck": [
+    "",
+    ""
+  ],
+  "Jet Force Gemini": [
+    "",
+    ""
+  ],
+  "Jet Ski Racing": [
+    "",
+    ""
+  ],
+  "Jetpack Joyride": [
+    "",
+    ""
+  ],
+  "Jetrush": [
+    "",
+    ""
+  ],
+  "Johnny Trigger": [
+    "",
+    ""
+  ],
+  "Johnny Upgrade": [
+    "",
+    ""
+  ],
+  "Journey Downhill": [
+    "",
+    ""
+  ],
+  "Just Hit the Button": [
+    "",
+    ""
+  ],
+  "Just One Boss": [
+    "",
+    ""
+  ],
+  "JustFall.lol": [
+    "",
+    ""
+  ],
+  "Kaizo Mario World": [
+    "",
+    ""
+  ],
+  "Kaji Run": [
+    "",
+    ""
+  ],
+  "Kapi": [
+    "",
+    ""
+  ],
+  "Karate Bros": [
+    "",
+    ""
+  ],
+  "Ken Griffey Jr Presents Major League Baseball": [
+    "",
+    ""
+  ],
+  "Kill the Ice Age Baby Adventure": [
+    "",
+    ""
+  ],
+  "Killer Instinct": [
+    "",
+    ""
+  ],
+  "Killover": [
+    "",
+    ""
+  ],
+  "Kindergarten": [
+    "",
+    ""
+  ],
+  "Kindergarten 2": [
+    "",
+    ""
+  ],
+  "Kindergarten 3": [
+    "",
+    ""
+  ],
+  "Kirby 64": [
+    "",
+    ""
+  ],
+  "Kirby Soft Wet": [
+    "",
+    ""
+  ],
+  "Kirby Squeak Squad": [
+    "",
+    ""
+  ],
+  "Kirby Super Star Ultra": [
+    "",
+    ""
+  ],
+  "Kirby and the Amazing Mirror": [
+    "",
+    ""
+  ],
+  "Kirby's Adventure": [
+    "",
+    ""
+  ],
+  "Kirbys Dreamland": [
+    "",
+    ""
+  ],
+  "Kitchen Bazar": [
+    "",
+    ""
+  ],
+  "Kitten Cannon": [
+    "",
+    ""
+  ],
+  "Kitty Toy": [
+    "",
+    ""
+  ],
+  "Klifur": [
+    "",
+    ""
+  ],
+  "Knife Hit": [
+    "",
+    ""
+  ],
+  "Knightmare Tower": [
+    "",
+    ""
+  ],
+  "Konkrio": [
+    "",
+    ""
+  ],
+  "Koopas Revenge": [
+    "",
+    ""
+  ],
+  "Kourio": [
+    "",
+    ""
+  ],
+  "LEGO Batman 2 Superheroes": [
+    "",
+    ""
+  ],
+  "LEGO Indiana Jones": [
+    "",
+    ""
+  ],
+  "LEGO Ninja Go": [
+    "",
+    ""
+  ],
+  "LEGO Star Wars": [
+    "",
+    ""
+  ],
+  "LWBTG": [
+    "",
+    ""
+  ],
+  "Laceys Flash Games": [
+    "",
+    ""
+  ],
+  "Last Fire Red": [
+    "",
+    ""
+  ],
+  "Last Horizon": [
+    "",
+    ""
+  ],
+  "Laststand": [
+    "",
+    ""
+  ],
+  "Laststand 2": [
+    "",
+    ""
+  ],
+  "Layers Roll": [
+    "",
+    ""
+  ],
+  "Lazy Jumper": [
+    "",
+    ""
+  ],
+  "Leaderstrike": [
+    "",
+    ""
+  ],
+  "Learn to Fly": [
+    "",
+    ""
+  ],
+  "Learn to Fly 2": [
+    "",
+    ""
+  ],
+  "Learn to Fly 3": [
+    "",
+    ""
+  ],
+  "Learn to Fly Idle": [
+    "",
+    ""
+  ],
+  "Lemmings": [
+    "",
+    ""
+  ],
+  "Lethal Ape": [
+    "",
+    ""
+  ],
+  "Leveldevil": [
+    "",
+    ""
+  ],
+  "Lever Warriors": [
+    "",
+    ""
+  ],
+  "Light it Up": [
+    "",
+    ""
+  ],
+  "Lil Runmo": [
+    "",
+    ""
+  ],
+  "Line": [
+    "",
+    ""
+  ],
+  "Line Rider": [
+    "",
+    ""
+  ],
+  "Linerider": [
+    "",
+    ""
+  ],
+  "Link to the Past": [
+    "",
+    ""
+  ],
+  "Little Runmo": [
+    "",
+    ""
+  ],
+  "Lock the Door": [
+    "",
+    ""
+  ],
+  "Lode Runner": [
+    "",
+    ""
+  ],
+  "Lonewolf": [
+    "",
+    ""
+  ],
+  "Look Outside": [
+    "",
+    ""
+  ],
+  "Los Angeles Shark": [
+    "",
+    ""
+  ],
+  "Love Letters": [
+    "",
+    ""
+  ],
+  "Lowknight": [
+    "",
+    ""
+  ],
+  "MX Offroad Master": [
+    "",
+    ""
+  ],
+  "Mad Skills Moto Cross 2": [
+    "",
+    ""
+  ],
+  "Mad Stunt Cars 2": [
+    "",
+    ""
+  ],
+  "Madalin Stunt Cars 1": [
+    "",
+    ""
+  ],
+  "Madalin Stunt Cars 2": [
+    "",
+    ""
+  ],
+  "Madalin Stunt Cars 3": [
+    "",
+    ""
+  ],
+  "Madden 93": [
+    "",
+    ""
+  ],
+  "Madden 94": [
+    "",
+    ""
+  ],
+  "Madden 96": [
+    "",
+    ""
+  ],
+  "Madden 99": [
+    "",
+    ""
+  ],
+  "Madden Football 64": [
+    "",
+    ""
+  ],
+  "Madden NFL 2000": [
+    "",
+    ""
+  ],
+  "Madden NFL 2001": [
+    "",
+    ""
+  ],
+  "Madden NFL 2002": [
+    "",
+    ""
+  ],
+  "Maddy 98": [
+    "",
+    ""
+  ],
+  "Madness Accelerant": [
+    "",
+    ""
+  ],
+  "Madness Combat Defense": [
+    "",
+    ""
+  ],
+  "Madness Combat Nexus": [
+    "",
+    ""
+  ],
+  "Madness Combat Project Nexus (classic)": [
+    "",
+    ""
+  ],
+  "Madness Gemini": [
+    "",
+    ""
+  ],
+  "Madness Hydraulic": [
+    "",
+    ""
+  ],
+  "Madness Interactive": [
+    "",
+    ""
+  ],
+  "Madness Off Color": [
+    "",
+    ""
+  ],
+  "Madness Premediation": [
+    "",
+    ""
+  ],
+  "Madness Retaliation": [
+    "",
+    ""
+  ],
+  "Madness Stand": [
+    "",
+    ""
+  ],
+  "Madnesss 2010": [
+    "",
+    ""
+  ],
+  "Madstick": [
+    "",
+    ""
+  ],
+  "Magic Tiles 3": [
+    "",
+    ""
+  ],
+  "Major Asmask": [
+    "",
+    ""
+  ],
+  "Make a SuperBoat": [
+    "",
+    ""
+  ],
+  "Makeover Run": [
+    "",
+    ""
+  ],
+  "Man Runner 2048": [
+    "",
+    ""
+  ],
+  "Managod": [
+    "",
+    ""
+  ],
+  "Mario 3": [
+    "",
+    ""
+  ],
+  "Mario Combat": [
+    "",
+    ""
+  ],
+  "Mario Golf": [
+    "",
+    ""
+  ],
+  "Mario Kart 64": [
+    "",
+    ""
+  ],
+  "Mario Kart DS": [
+    "",
+    ""
+  ],
+  "Mario Kart Super Circuit": [
+    "",
+    ""
+  ],
+  "Mario Madness": [
+    "",
+    ""
+  ],
+  "Mario Minus Rabbids": [
+    "",
+    ""
+  ],
+  "Mario Party 1": [
+    "",
+    ""
+  ],
+  "Mario Party 2": [
+    "",
+    ""
+  ],
+  "Mario Party 3": [
+    "",
+    ""
+  ],
+  "Mario Party DS": [
+    "",
+    ""
+  ],
+  "Mario Tennis": [
+    "",
+    ""
+  ],
+  "Mario and Luigi - Partners in Time": [
+    "",
+    ""
+  ],
+  "Mario and Luigi Superstar Saga": [
+    "",
+    ""
+  ],
+  "Mario's Mystery Meat": [
+    "",
+    ""
+  ],
+  "Masked Forces Unlimited": [
+    "",
+    ""
+  ],
+  "Mastermind World Conquerer": [
+    "",
+    ""
+  ],
+  "Match Triple 3d": [
+    "",
+    ""
+  ],
+  "Matrix Rampage": [
+    "",
+    ""
+  ],
+  "Maze Speedrun": [
+    "",
+    ""
+  ],
+  "Mcfpsfbhd": [
+    "",
+    ""
+  ],
+  "Meatboy": [
+    "",
+    ""
+  ],
+  "Mechanical Watch": [
+    "",
+    ""
+  ],
+  "Medal of Honor": [
+    "",
+    ""
+  ],
+  "Medieval Shark": [
+    "",
+    ""
+  ],
+  "Medievil": [
+    "",
+    ""
+  ],
+  "Mega Car Jumps": [
+    "",
+    ""
+  ],
+  "Mega Chess": [
+    "",
+    ""
+  ],
+  "Mega Man - The Willy Wars": [
+    "",
+    ""
+  ],
+  "Megaman 1": [
+    "",
+    ""
+  ],
+  "Megaman 2": [
+    "",
+    ""
+  ],
+  "Megaman 3": [
+    "",
+    ""
+  ],
+  "Megaman 4": [
+    "",
+    ""
+  ],
+  "Megaman 5": [
+    "",
+    ""
+  ],
+  "Megaman 6": [
+    "",
+    ""
+  ],
+  "Megaman 7": [
+    "",
+    ""
+  ],
+  "Megaman 8": [
+    "",
+    ""
+  ],
+  "Megaman Legends 1": [
+    "",
+    ""
+  ],
+  "Megaman Legends 2": [
+    "",
+    ""
+  ],
+  "Megaman X 1": [
+    "",
+    ""
+  ],
+  "Megaman X 2": [
+    "",
+    ""
+  ],
+  "Megaman X 3": [
+    "",
+    ""
+  ],
+  "Megaman X 4": [
+    "",
+    ""
+  ],
+  "Megaman ZX": [
+    "",
+    ""
+  ],
+  "Megaman Zero": [
+    "",
+    ""
+  ],
+  "Megaminer": [
+    "",
+    ""
+  ],
+  "Melon Playground": [
+    "",
+    ""
+  ],
+  "Meow UwU": [
+    "",
+    ""
+  ],
+  "Merge Harvest": [
+    "",
+    ""
+  ],
+  "Merge Round Racers": [
+    "",
+    ""
+  ],
+  "Metal Gear": [
+    "",
+    ""
+  ],
+  "Metal Gear Solid": [
+    "",
+    ""
+  ],
+  "Metal Slug Advance": [
+    "",
+    ""
+  ],
+  "Metal Slug Mission 1": [
+    "",
+    ""
+  ],
+  "Metal Slug Mission 2": [
+    "",
+    ""
+  ],
+  "Metal Sonic Hyperdrive": [
+    "",
+    ""
+  ],
+  "Metroid": [
+    "",
+    ""
+  ],
+  "Metroid 2": [
+    "",
+    ""
+  ],
+  "Metroid Fusion": [
+    "",
+    ""
+  ],
+  "Metroid Zero Mission": [
+    "",
+    ""
+  ],
+  "MiSide": [
+    "",
+    ""
+  ],
+  "Miami Shark": [
+    "",
+    ""
+  ],
+  "Micromages": [
+    "",
+    ""
+  ],
+  "Midnight Shift": [
+    "",
+    ""
+  ],
+  "Milk Outside a Bag of Milk Outside a Bag of Milk": [
+    "",
+    ""
+  ],
+  "Million Dollar Homepage": [
+    "",
+    ""
+  ],
+  "Mimic": [
+    "",
+    ""
+  ],
+  "Mindscape": [
+    "",
+    ""
+  ],
+  "Minecraft Shooter": [
+    "",
+    ""
+  ],
+  "Minhero": [
+    "",
+    ""
+  ],
+  "Mini Crossword": [
+    "",
+    ""
+  ],
+  "Mini Tooth": [
+    "",
+    ""
+  ],
+  "Minimart": [
+    "",
+    ""
+  ],
+  "Miragine War": [
+    "",
+    ""
+  ],
+  "Missle Command": [
+    "",
+    ""
+  ],
+  "Mk 4 Ampedup": [
+    "",
+    ""
+  ],
+  "Mob Control": [
+    "",
+    ""
+  ],
+  "Mobius Revolution": [
+    "",
+    ""
+  ],
+  "Monkey Mart": [
+    "",
+    ""
+  ],
+  "Monster Box 3d": [
+    "",
+    ""
+  ],
+  "Mortal Kombat": [
+    "",
+    ""
+  ],
+  "Mortal Kombat 2": [
+    "",
+    ""
+  ],
+  "Mortal Kombat 3": [
+    "",
+    ""
+  ],
+  "Mortal Kombat 4": [
+    "",
+    ""
+  ],
+  "Mortal Kombat Advance": [
+    "",
+    ""
+  ],
+  "Motherload": [
+    "",
+    ""
+  ],
+  "Moto Road Rash": [
+    "",
+    ""
+  ],
+  "Moto X3M": [
+    "",
+    ""
+  ],
+  "Moto X3M Pool Party": [
+    "",
+    ""
+  ],
+  "Moto X3M Winter": [
+    "",
+    ""
+  ],
+  "Moto X3M2": [
+    "",
+    ""
+  ],
+  "Moto X3M3": [
+    "",
+    ""
+  ],
+  "Mountain Bike Racer": [
+    "",
+    ""
+  ],
+  "Mr. Racer": [
+    "",
+    ""
+  ],
+  "Ms. Space Man": [
+    "",
+    ""
+  ],
+  "Multitask": [
+    "",
+    ""
+  ],
+  "Mutilate a Doll": [
+    "",
+    ""
+  ],
+  "My Friend Pedro": [
+    "",
+    ""
+  ],
+  "My Teardrop": [
+    "",
+    ""
+  ],
+  "NES World Champion": [
+    "",
+    ""
+  ],
+  "NET Attack": [
+    "",
+    ""
+  ],
+  "NPlus": [
+    "",
+    ""
+  ],
+  "Nail": [
+    "",
+    ""
+  ],
+  "Natural Selection": [
+    "",
+    ""
+  ],
+  "Nazi Zombies Portable": [
+    "",
+    ""
+  ],
+  "Need For Speed Carbon": [
+    "",
+    ""
+  ],
+  "Need For Speed Most Wanted": [
+    "",
+    ""
+  ],
+  "Need For Speed Underground": [
+    "",
+    ""
+  ],
+  "Neon Blaster": [
+    "",
+    ""
+  ],
+  "Neon Rider": [
+    "",
+    ""
+  ],
+  "Never Ending Legacy": [
+    "",
+    ""
+  ],
+  "New Super Mario World 2 - Around the World": [
+    "",
+    ""
+  ],
+  "New York Shark": [
+    "",
+    ""
+  ],
+  "Newgrounds Rumble": [
+    "",
+    ""
+  ],
+  "Nextdoor": [
+    "",
+    ""
+  ],
+  "Nickelodeon Super Brawl": [
+    "",
+    ""
+  ],
+  "Nicktoons Freeze Frame Frenzy": [
+    "",
+    ""
+  ],
+  "Night Club Showdown": [
+    "",
+    ""
+  ],
+  "Night Fire": [
+    "",
+    ""
+  ],
+  "Night Shade": [
+    "",
+    ""
+  ],
+  "Nijikas Ahoge": [
+    "",
+    ""
+  ],
+  "Nimrods": [
+    "",
+    ""
+  ],
+  "Ninja vs EvilCorp": [
+    "",
+    ""
+  ],
+  "Ninjabrawl": [
+    "",
+    ""
+  ],
+  "Nintendo World Cup": [
+    "",
+    ""
+  ],
+  "Nintendogs Lab": [
+    "",
+    ""
+  ],
+  "Nitrome Must Die": [
+    "",
+    ""
+  ],
+  "Not Your Pawn": [
+    "",
+    ""
+  ],
+  "Nubby's Number Factory": [
+    "",
+    ""
+  ],
+  "Null Kevin": [
+    "",
+    ""
+  ],
+  "Nutsand Bolts Screwing Puzzle": [
+    "",
+    ""
+  ],
+  "OMORI": [
+    "",
+    ""
+  ],
+  "Obby 99 WILL LOSE": [
+    "",
+    ""
+  ],
+  "Off": [
+    "",
+    ""
+  ],
+  "Office Fight": [
+    "",
+    ""
+  ],
+  "Offline Paradise": [
+    "",
+    ""
+  ],
+  "Offroad Mountain Bike": [
+    "",
+    ""
+  ],
+  "Om Nom Run": [
+    "",
+    ""
+  ],
+  "Omega Nugget Clicker": [
+    "",
+    ""
+  ],
+  "One Bit Adventure": [
+    "",
+    ""
+  ],
+  "One Night As Freddy": [
+    "",
+    ""
+  ],
+  "One Piece": [
+    "",
+    ""
+  ],
+  "Oneshot": [
+    "",
+    ""
+  ],
+  "Operious": [
+    "",
+    ""
+  ],
+  "Opposite Day": [
+    "",
+    ""
+  ],
+  "Opposum Country": [
+    "",
+    ""
+  ],
+  "Orange Roulette": [
+    "",
+    ""
+  ],
+  "Orb of Creation": [
+    "",
+    ""
+  ],
+  "Ordinary Sonic ROM Hack": [
+    "",
+    ""
+  ],
+  "Oregon Trail": [
+    "",
+    ""
+  ],
+  "Oshi Oshi Punch": [
+    "",
+    ""
+  ],
+  "Ourple Guy": [
+    "",
+    ""
+  ],
+  "Outhold": [
+    "",
+    ""
+  ],
+  "OvO Dimensions": [
+    "",
+    ""
+  ],
+  "Pacman": [
+    "",
+    ""
+  ],
+  "Pacman Scary": [
+    "",
+    ""
+  ],
+  "Pacman Superfast": [
+    "",
+    ""
+  ],
+  "Pacman World": [
+    "",
+    ""
+  ],
+  "Papa Bakeria": [
+    "",
+    ""
+  ],
+  "Papa Burgeria": [
+    "",
+    ""
+  ],
+  "Papa Cheeseria": [
+    "",
+    ""
+  ],
+  "Papa Cupcakeria": [
+    "",
+    ""
+  ],
+  "Papa Donuteria": [
+    "",
+    ""
+  ],
+  "Papa Freezeria": [
+    "",
+    ""
+  ],
+  "Papa Hot Doggeria": [
+    "",
+    ""
+  ],
+  "Papa Louie Night Hunt": [
+    "",
+    ""
+  ],
+  "Papa Louie Pizza Attack": [
+    "",
+    ""
+  ],
+  "Papa Louie Sundae Attack": [
+    "",
+    ""
+  ],
+  "Papa Pancakeria": [
+    "",
+    ""
+  ],
+  "Papa Pastaria": [
+    "",
+    ""
+  ],
+  "Papa Pizeria": [
+    "",
+    ""
+  ],
+  "Papa Scooperia": [
+    "",
+    ""
+  ],
+  "Papa Sushiria": [
+    "",
+    ""
+  ],
+  "Papa Taco Mia": [
+    "",
+    ""
+  ],
+  "Papa Wingeria": [
+    "",
+    ""
+  ],
+  "Paper Mario": [
+    "",
+    ""
+  ],
+  "Paper.io": [
+    "",
+    ""
+  ],
+  "Paper.io 3d": [
+    "",
+    ""
+  ],
+  "Paper.io Mania": [
+    "",
+    ""
+  ],
+  "Papers Please": [
+    "",
+    ""
+  ],
+  "Papery Planes": [
+    "",
+    ""
+  ],
+  "Parappa The Rapper": [
+    "",
+    ""
+  ],
+  "Parking Fury 3d": [
+    "",
+    ""
+  ],
+  "Parking Rush": [
+    "",
+    ""
+  ],
+  "Peacekeeper": [
+    "",
+    ""
+  ],
+  "Peaks of Yore": [
+    "",
+    ""
+  ],
+  "Peggle": [
+    "",
+    ""
+  ],
+  "Penalty Kicks": [
+    "",
+    ""
+  ],
+  "Penguin Diner": [
+    "",
+    ""
+  ],
+  "Penguin Pass": [
+    "",
+    ""
+  ],
+  "Pepsiman": [
+    "",
+    ""
+  ],
+  "Pereelous": [
+    "",
+    ""
+  ],
+  "Perfect Dark": [
+    "",
+    ""
+  ],
+  "Persona": [
+    "",
+    ""
+  ],
+  "Persona 2": [
+    "",
+    ""
+  ],
+  "Phoenix Wright - Ace Attorney": [
+    "",
+    ""
+  ],
+  "Phoenix Wright - Ace Attorney - Justice for All": [
+    "",
+    ""
+  ],
+  "Phoenix Wright - Ace Attorney - Trials and Tribulations": [
+    "",
+    ""
+  ],
+  "Pibby Apocalypse": [
+    "",
+    ""
+  ],
+  "Pico 8": [
+    "",
+    ""
+  ],
+  "Pico Night Punkin": [
+    "",
+    ""
+  ],
+  "Picodriller": [
+    "",
+    ""
+  ],
+  "Picohot": [
+    "",
+    ""
+  ],
+  "Picolife": [
+    "",
+    ""
+  ],
+  "Picos School": [
+    "",
+    ""
+  ],
+  "Pieces of Cake": [
+    "",
+    ""
+  ],
+  "Ping Pong Chaos": [
+    "",
+    ""
+  ],
+  "Pink Bike": [
+    "",
+    ""
+  ],
+  "Pit of 100 Trials": [
+    "",
+    ""
+  ],
+  "Pitfall": [
+    "",
+    ""
+  ],
+  "Pixel Battlegrounds.io": [
+    "",
+    ""
+  ],
+  "Pixel Combat 2": [
+    "",
+    ""
+  ],
+  "Pixel Gun Survival": [
+    "",
+    ""
+  ],
+  "Pixel Quest - Lost Idols": [
+    "",
+    ""
+  ],
+  "Pixel Shooter": [
+    "",
+    ""
+  ],
+  "Pixel Speedrun": [
+    "",
+    ""
+  ],
+  "Pixel Warfare": [
+    "",
+    ""
+  ],
+  "Pizza Tower": [
+    "",
+    ""
+  ],
+  "Plang Man": [
+    "",
+    ""
+  ],
+  "Plants vs Zombies": [
+    "",
+    ""
+  ],
+  "Plauge Inc.": [
+    "",
+    ""
+  ],
+  "Plazmaburst": [
+    "",
+    ""
+  ],
+  "Please Dont Touch Anything": [
+    "",
+    ""
+  ],
+  "Plonky": [
+    "",
+    ""
+  ],
+  "Pogo 3d": [
+    "",
+    ""
+  ],
+  "Poke Battle Fact": [
+    "",
+    ""
+  ],
+  "Poke Black": [
+    "",
+    ""
+  ],
+  "Pokemon Amnesia": [
+    "",
+    ""
+  ],
+  "Pokemon Clover": [
+    "",
+    ""
+  ],
+  "Pokemon Crystal": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Crest": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Imperium": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Kaizo": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Mini": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Rouge": [
+    "",
+    ""
+  ],
+  "Pokemon Emerald Seaglass": [
+    "",
+    ""
+  ],
+  "Pokemon Energized Emerald": [
+    "",
+    ""
+  ],
+  "Pokemon Fire Red": [
+    "",
+    ""
+  ],
+  "Pokemon Fire Red Randomized": [
+    "",
+    ""
+  ],
+  "Pokemon Fire Red and Leaf Green Plus Edition": [
+    "",
+    ""
+  ],
+  "Pokemon Firered": [
+    "",
+    ""
+  ],
+  "Pokemon Gold": [
+    "",
+    ""
+  ],
+  "Pokemon Heart Gold": [
+    "",
+    ""
+  ],
+  "Pokemon Kaizo Iron Fire Red": [
+    "",
+    ""
+  ],
+  "Pokemon Lazarus": [
+    "",
+    ""
+  ],
+  "Pokemon Leaf Green": [
+    "",
+    ""
+  ],
+  "Pokemon Modern Emerald": [
+    "",
+    ""
+  ],
+  "Pokemon Mystery Dungeon": [
+    "",
+    ""
+  ],
+  "Pokemon Quetzal": [
+    "",
+    ""
+  ],
+  "Pokemon Red": [
+    "",
+    ""
+  ],
+  "Pokemon Roaring Red": [
+    "",
+    ""
+  ],
+  "Pokemon Rocket Edition": [
+    "",
+    ""
+  ],
+  "Pokemon Ruby": [
+    "",
+    ""
+  ],
+  "Pokemon Sapphire": [
+    "",
+    ""
+  ],
+  "Pokemon Shin Sigma": [
+    "",
+    ""
+  ],
+  "Pokemon Silver": [
+    "",
+    ""
+  ],
+  "Pokemon Snap": [
+    "",
+    ""
+  ],
+  "Pokemon Stadium": [
+    "",
+    ""
+  ],
+  "Pokemon Tower Defense": [
+    "",
+    ""
+  ],
+  "Pokemon Ultimate Fusion": [
+    "",
+    ""
+  ],
+  "Pokemon Unbound": [
+    "",
+    ""
+  ],
+  "Police Pursuit": [
+    "",
+    ""
+  ],
+  "Polished Crystal": [
+    "",
+    ""
+  ],
+  "Poly Track": [
+    "",
+    ""
+  ],
+  "Pond": [
+    "",
+    ""
+  ],
+  "Poor Bunny": [
+    "",
+    ""
+  ],
+  "Porklike": [
+    "",
+    ""
+  ],
+  "PortaBoy": [
+    "",
+    ""
+  ],
+  "Portal": [
+    "",
+    ""
+  ],
+  "Portal 2d": [
+    "",
+    ""
+  ],
+  "Portal Flash": [
+    "",
+    ""
+  ],
+  "Porter": [
+    "",
+    ""
+  ],
+  "Possess Quest": [
+    "",
+    ""
+  ],
+  "Potato Man Seeks the Roof": [
+    "",
+    ""
+  ],
+  "Pottery Master": [
+    "",
+    ""
+  ],
+  "Power Hover": [
+    "",
+    ""
+  ],
+  "Praxis Fighter X": [
+    "",
+    ""
+  ],
+  "Pre-Civilization Bronze Age": [
+    "",
+    ""
+  ],
+  "Prehistoric Shark": [
+    "",
+    ""
+  ],
+  "Primary": [
+    "",
+    ""
+  ],
+  "Protektor": [
+    "",
+    ""
+  ],
+  "Pullfrog": [
+    "",
+    ""
+  ],
+  "Punch the Drump": [
+    "",
+    ""
+  ],
+  "Punch the Trump": [
+    "",
+    ""
+  ],
+  "Punchout": [
+    "",
+    ""
+  ],
+  "Puppet Hockey": [
+    "",
+    ""
+  ],
+  "Push Your Luck": [
+    "",
+    ""
+  ],
+  "Puyo Puyo Fever": [
+    "",
+    ""
+  ],
+  "Pyrotoad": [
+    "",
+    ""
+  ],
+  "Q*bert": [
+    "",
+    ""
+  ],
+  "QWOP": [
+    "",
+    ""
+  ],
+  "Quake 2": [
+    "",
+    ""
+  ],
+  "Quake 3": [
+    "",
+    ""
+  ],
+  "Quake 64": [
+    "",
+    ""
+  ],
+  "Quake III Arena": [
+    "",
+    ""
+  ],
+  "Quickie World": [
+    "",
+    ""
+  ],
+  "R.E.P.O": [
+    "",
+    ""
+  ],
+  "RERUN": [
+    "",
+    ""
+  ],
+  "Race Master 3d": [
+    "",
+    ""
+  ],
+  "Racing Arena": [
+    "",
+    ""
+  ],
+  "Rad Racer": [
+    "",
+    ""
+  ],
+  "Radical Red": [
+    "",
+    ""
+  ],
+  "Raft": [
+    "",
+    ""
+  ],
+  "Raft Wars": [
+    "",
+    ""
+  ],
+  "Ragdoll.io": [
+    "",
+    ""
+  ],
+  "Rainbow Obby": [
+    "",
+    ""
+  ],
+  "Rainbow Six": [
+    "",
+    ""
+  ],
+  "Raldi's Crackhouse": [
+    "",
+    ""
+  ],
+  "Ray 1": [
+    "",
+    ""
+  ],
+  "Ray 2": [
+    "",
+    ""
+  ],
+  "Rayman": [
+    "",
+    ""
+  ],
+  "Raze 1": [
+    "",
+    ""
+  ],
+  "Raze 2": [
+    "",
+    ""
+  ],
+  "Raze 3": [
+    "",
+    ""
+  ],
+  "Reach the Core": [
+    "",
+    ""
+  ],
+  "Real Flight Simulator": [
+    "",
+    ""
+  ],
+  "Rebuild 1": [
+    "",
+    ""
+  ],
+  "Rebuild 2": [
+    "",
+    ""
+  ],
+  "Recoil": [
+    "",
+    ""
+  ],
+  "Red Ball 1": [
+    "",
+    ""
+  ],
+  "Red Ball 2": [
+    "",
+    ""
+  ],
+  "Red Ball 3": [
+    "",
+    ""
+  ],
+  "Red Ball 4": [
+    "",
+    ""
+  ],
+  "Red Tie Runner": [
+    "",
+    ""
+  ],
+  "Red vs Blue 2": [
+    "",
+    ""
+  ],
+  "Redhanded": [
+    "",
+    ""
+  ],
+  "Reign of Centipede": [
+    "",
+    ""
+  ],
+  "Renegades": [
+    "",
+    ""
+  ],
+  "Resident Evil 1": [
+    "",
+    ""
+  ],
+  "Resident Evil 2": [
+    "",
+    ""
+  ],
+  "Resident Evil 3": [
+    "",
+    ""
+  ],
+  "Resizer": [
+    "",
+    ""
+  ],
+  "Resort Empire": [
+    "",
+    ""
+  ],
+  "Retro Bowl": [
+    "",
+    ""
+  ],
+  "Retro Highway": [
+    "",
+    ""
+  ],
+  "Retro Ping Pong": [
+    "",
+    ""
+  ],
+  "Return to Riddle School": [
+    "",
+    ""
+  ],
+  "Returnman 1": [
+    "",
+    ""
+  ],
+  "Returnman 2": [
+    "",
+    ""
+  ],
+  "Revolution Idle": [
+    "",
+    ""
+  ],
+  "Rhythm Heaven": [
+    "",
+    ""
+  ],
+  "Rich Run 3d": [
+    "",
+    ""
+  ],
+  "Ricochet Kills 2": [
+    "",
+    ""
+  ],
+  "Riddle School 1": [
+    "",
+    ""
+  ],
+  "Riddle School 2": [
+    "",
+    ""
+  ],
+  "Riddle School 3": [
+    "",
+    ""
+  ],
+  "Riddle School 4": [
+    "",
+    ""
+  ],
+  "Riddle School 5": [
+    "",
+    ""
+  ],
+  "Riddle Transfer 1": [
+    "",
+    ""
+  ],
+  "Riddle Transfer 2": [
+    "",
+    ""
+  ],
+  "Ridge Racer": [
+    "",
+    ""
+  ],
+  "Rig BMX": [
+    "",
+    ""
+  ],
+  "Rio Rex": [
+    "",
+    ""
+  ],
+  "Road of Fury": [
+    "",
+    ""
+  ],
+  "Road of the Dead": [
+    "",
+    ""
+  ],
+  "Robot Invasion": [
+    "",
+    ""
+  ],
+  "Rocket Goal.io": [
+    "",
+    ""
+  ],
+  "Rocket Jump": [
+    "",
+    ""
+  ],
+  "Rocket Knight Adventures": [
+    "",
+    ""
+  ],
+  "Rocket League": [
+    "",
+    ""
+  ],
+  "Rocket Soccer Derby": [
+    "",
+    ""
+  ],
+  "Rocketpult": [
+    "",
+    ""
+  ],
+  "Rogue Sergeant - The Final Operation": [
+    "",
+    ""
+  ],
+  "Roguesoul 1": [
+    "",
+    ""
+  ],
+  "Roguesoul 2": [
+    "",
+    ""
+  ],
+  "Rollerballer": [
+    "",
+    ""
+  ],
+  "Rolling Sky": [
+    "",
+    ""
+  ],
+  "Rolly Vortex": [
+    "",
+    ""
+  ],
+  "Rolypoly Monster": [
+    "",
+    ""
+  ],
+  "Rooftop Snipers": [
+    "",
+    ""
+  ],
+  "Room Clicker": [
+    "",
+    ""
+  ],
+  "Room Sort": [
+    "",
+    ""
+  ],
+  "Rotate": [
+    "",
+    ""
+  ],
+  "Roulette Hero": [
+    "",
+    ""
+  ],
+  "Royal Towers Medieval TD": [
+    "",
+    ""
+  ],
+  "Run 1": [
+    "",
+    ""
+  ],
+  "Run 2": [
+    "",
+    ""
+  ],
+  "Run 3": [
+    "",
+    ""
+  ],
+  "Russian Car Driver": [
+    "",
+    ""
+  ],
+  "SCREAM INTO THE VOID": [
+    "",
+    ""
+  ],
+  "Sam Max Hit the Road": [
+    "",
+    ""
+  ],
+  "Sands of the Coliseum": [
+    "",
+    ""
+  ],
+  "Sandspiel": [
+    "",
+    ""
+  ],
+  "Sandstone": [
+    "",
+    ""
+  ],
+  "Sandtris": [
+    "",
+    ""
+  ],
+  "Santarun": [
+    "",
+    ""
+  ],
+  "Scampton The Great": [
+    "",
+    ""
+  ],
+  "Scarletshift": [
+    "",
+    ""
+  ],
+  "Scary Maze Game": [
+    "",
+    ""
+  ],
+  "Scary Shawarma Kiosk - the ANOMALY": [
+    "",
+    ""
+  ],
+  "Scrap Metal 3": [
+    "",
+    ""
+  ],
+  "Scrapyard Dog": [
+    "",
+    ""
+  ],
+  "Scratch Inc.": [
+    "",
+    ""
+  ],
+  "Scribblenauts": [
+    "",
+    ""
+  ],
+  "Scubabear": [
+    "",
+    ""
+  ],
+  "Seamongrel": [
+    "",
+    ""
+  ],
+  "Seat Jam 3d": [
+    "",
+    ""
+  ],
+  "Secret of Mana": [
+    "",
+    ""
+  ],
+  "Sentry Fortress": [
+    "",
+    ""
+  ],
+  "Serenitrove": [
+    "",
+    ""
+  ],
+  "Serial Experiments Lain": [
+    "",
+    ""
+  ],
+  "Serving Up Madness": [
+    "",
+    ""
+  ],
+  "Shaggy": [
+    "",
+    ""
+  ],
+  "Shapez.io": [
+    "",
+    ""
+  ],
+  "Shipo.io": [
+    "",
+    ""
+  ],
+  "Shooter 2D Online": [
+    "",
+    ""
+  ],
+  "Shooting Master": [
+    "",
+    ""
+  ],
+  "Short Life": [
+    "",
+    ""
+  ],
+  "Shovel 3d": [
+    "",
+    ""
+  ],
+  "Shredmill": [
+    "",
+    ""
+  ],
+  "Shrek 2": [
+    "",
+    ""
+  ],
+  "Shrubnaut": [
+    "",
+    ""
+  ],
+  "Sidepocket": [
+    "",
+    ""
+  ],
+  "Sierra 7": [
+    "",
+    ""
+  ],
+  "Sift Heads Cartels 1": [
+    "",
+    ""
+  ],
+  "Sift Heads Cartels 2": [
+    "",
+    ""
+  ],
+  "Sift Heads Cartels 3": [
+    "",
+    ""
+  ],
+  "Sift Heads World - The Ultimatum": [
+    "",
+    ""
+  ],
+  "Silent Hill": [
+    "",
+    ""
+  ],
+  "Silk": [
+    "",
+    ""
+  ],
+  "Skate It!": [
+    "",
+    ""
+  ],
+  "Skong": [
+    "",
+    ""
+  ],
+  "Sky Riders": [
+    "",
+    ""
+  ],
+  "Skyrace 3d": [
+    "",
+    ""
+  ],
+  "Slender - The 8 Pages": [
+    "",
+    ""
+  ],
+  "Slendytubbies 1": [
+    "",
+    ""
+  ],
+  "Slendytubbies 2": [
+    "",
+    ""
+  ],
+  "Slendytubbies 2D": [
+    "",
+    ""
+  ],
+  "Slime.io": [
+    "",
+    ""
+  ],
+  "Slipways": [
+    "",
+    ""
+  ],
+  "Slither.io": [
+    "",
+    ""
+  ],
+  "Slope 2": [
+    "",
+    ""
+  ],
+  "Slope 3": [
+    "",
+    ""
+  ],
+  "Slope+": [
+    "",
+    ""
+  ],
+  "Smash Karts": [
+    "",
+    ""
+  ],
+  "Smash Remix": [
+    "",
+    ""
+  ],
+  "Snailbob 1": [
+    "",
+    ""
+  ],
+  "Snailbob 2": [
+    "",
+    ""
+  ],
+  "Snailbob 3": [
+    "",
+    ""
+  ],
+  "Snailbob 4": [
+    "",
+    ""
+  ],
+  "Snailbob 5": [
+    "",
+    ""
+  ],
+  "Snakelike": [
+    "",
+    ""
+  ],
+  "Sniper v2": [
+    "",
+    ""
+  ],
+  "Snipershot": [
+    "",
+    ""
+  ],
+  "Snow Rider 3d": [
+    "",
+    ""
+  ],
+  "Snowbattle.io": [
+    "",
+    ""
+  ],
+  "Snowride": [
+    "",
+    ""
+  ],
+  "Snowroad": [
+    "",
+    ""
+  ],
+  "Solar Sandbox": [
+    "",
+    ""
+  ],
+  "Solar Smash": [
+    "",
+    ""
+  ],
+  "Solitaire": [
+    "",
+    ""
+  ],
+  "Sonic 1 Contemporary": [
+    "",
+    ""
+  ],
+  "Sonic 1 Score Rush": [
+    "",
+    ""
+  ],
+  "Sonic 2 Score Rush": [
+    "",
+    ""
+  ],
+  "Sonic 3 Complete": [
+    "",
+    ""
+  ],
+  "Sonic 3d Blast DX": [
+    "",
+    ""
+  ],
+  "Sonic Advance": [
+    "",
+    ""
+  ],
+  "Sonic Battle": [
+    "",
+    ""
+  ],
+  "Sonic CD": [
+    "",
+    ""
+  ],
+  "Sonic Colors": [
+    "",
+    ""
+  ],
+  "Sonic Delta Origins": [
+    "",
+    ""
+  ],
+  "Sonic Erazor": [
+    "",
+    ""
+  ],
+  "Sonic Hellfire Saga": [
+    "",
+    ""
+  ],
+  "Sonic Jam": [
+    "",
+    ""
+  ],
+  "Sonic Megamix": [
+    "",
+    ""
+  ],
+  "Sonic Revert": [
+    "",
+    ""
+  ],
+  "Sonic Rush": [
+    "",
+    ""
+  ],
+  "Sonic Rush Adventure": [
+    "",
+    ""
+  ],
+  "Sonic Spinball": [
+    "",
+    ""
+  ],
+  "Sonic and Ashuro": [
+    "",
+    ""
+  ],
+  "Sonic and Knuckles": [
+    "",
+    ""
+  ],
+  "Sonic the Hedgehog": [
+    "",
+    ""
+  ],
+  "Sonic the Hedgehog 2 - Community's Cut": [
+    "",
+    ""
+  ],
+  "Sonic the Hedgehog 3 - Angel Island Remastered": [
+    "",
+    ""
+  ],
+  "Sort the Court": [
+    "",
+    ""
+  ],
+  "Souljumper": [
+    "",
+    ""
+  ],
+  "Space Company": [
+    "",
+    ""
+  ],
+  "Space Funeral": [
+    "",
+    ""
+  ],
+  "Space Invaders": [
+    "",
+    ""
+  ],
+  "Space Wars Battleground": [
+    "",
+    ""
+  ],
+  "Space is Key": [
+    "",
+    ""
+  ],
+  "Space is Key XMAS": [
+    "",
+    ""
+  ],
+  "Spacebar Clicker": [
+    "",
+    ""
+  ],
+  "Spaceflight Simulator": [
+    "",
+    ""
+  ],
+  "Spacewaves": [
+    "",
+    ""
+  ],
+  "Speed Stars": [
+    "",
+    ""
+  ],
+  "Speed per click": [
+    "",
+    ""
+  ],
+  "Speedstars": [
+    "",
+    ""
+  ],
+  "Spelunky Classic HD": [
+    "",
+    ""
+  ],
+  "Spewer": [
+    "",
+    ""
+  ],
+  "Spider Doll": [
+    "",
+    ""
+  ],
+  "Spiral Roll": [
+    "",
+    ""
+  ],
+  "Spirograph": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants Krabby Katch": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants Land Ho": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants Sandys Sponge Stacker": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants SpongeBob Run": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants Squidwards Sizzlin Scare": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants Tasty Pastry Party": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants The Kah-Ray-Tay Squid": [
+    "",
+    ""
+  ],
+  "SpongeBob SquarePants WereSquirrel": [
+    "",
+    ""
+  ],
+  "Sprunked": [
+    "",
+    ""
+  ],
+  "Sprunki": [
+    "",
+    ""
+  ],
+  "Stackball.io": [
+    "",
+    ""
+  ],
+  "Stacky Dash": [
+    "",
+    ""
+  ],
+  "Star Raiders": [
+    "",
+    ""
+  ],
+  "Stardew Valley": [
+    "",
+    ""
+  ],
+  "Starfox 64": [
+    "",
+    ""
+  ],
+  "Station Saturn": [
+    "",
+    ""
+  ],
+  "Stealth Assassin": [
+    "",
+    ""
+  ],
+  "Stealth Master": [
+    "",
+    ""
+  ],
+  "Steel Empire": [
+    "",
+    ""
+  ],
+  "Steel Surge": [
+    "",
+    ""
+  ],
+  "Stick Slasher": [
+    "",
+    ""
+  ],
+  "Stick War Legacy": [
+    "",
+    ""
+  ],
+  "Stick With It": [
+    "",
+    ""
+  ],
+  "Stickman Boost": [
+    "",
+    ""
+  ],
+  "Stickman Climb": [
+    "",
+    ""
+  ],
+  "Stickman Destruction": [
+    "",
+    ""
+  ],
+  "Stickman Duel": [
+    "",
+    ""
+  ],
+  "Stickman Fight Ragdoll": [
+    "",
+    ""
+  ],
+  "Stickman Game IDK": [
+    "",
+    ""
+  ],
+  "Stickman Kingdomclash": [
+    "",
+    ""
+  ],
+  "Stickman Kombat 2D": [
+    "",
+    ""
+  ],
+  "Stickman and Guns": [
+    "",
+    ""
+  ],
+  "Storm the House": [
+    "",
+    ""
+  ],
+  "Storm the House 3": [
+    "",
+    ""
+  ],
+  "Strange Journet": [
+    "",
+    ""
+  ],
+  "Streangeropepolice": [
+    "",
+    ""
+  ],
+  "Streetfighter 2": [
+    "",
+    ""
+  ],
+  "Streetfighter 2 Turbo": [
+    "",
+    ""
+  ],
+  "Streetfighteralpha 3": [
+    "",
+    ""
+  ],
+  "Streetfighterumuhsomething": [
+    "",
+    ""
+  ],
+  "Streetofrage": [
+    "",
+    ""
+  ],
+  "Streetofrage 2": [
+    "",
+    ""
+  ],
+  "Streetofrage 3": [
+    "",
+    ""
+  ],
+  "Strike Force Kitty - Last Stand": [
+    "",
+    ""
+  ],
+  "Strike Force Kitty - League": [
+    "",
+    ""
+  ],
+  "Strike Force Kitty 1": [
+    "",
+    ""
+  ],
+  "Strike Force Kitty 2": [
+    "",
+    ""
+  ],
+  "Strikeforceheroes": [
+    "",
+    ""
+  ],
+  "Strikeforceheroes 2": [
+    "",
+    ""
+  ],
+  "Strikeforceheroes 3": [
+    "",
+    ""
+  ],
+  "Strikerdummies": [
+    "",
+    ""
+  ],
+  "Stylesavvy": [
+    "",
+    ""
+  ],
+  "Subwaysurfersbarcelona": [
+    "",
+    ""
+  ],
+  "Subwaysurfersbeijing": [
+    "",
+    ""
+  ],
+  "Subwaysurfersberlin": [
+    "",
+    ""
+  ],
+  "Subwaysurfersbuenosaires": [
+    "",
+    ""
+  ],
+  "Subwaysurfershavana": [
+    "",
+    ""
+  ],
+  "Subwaysurfershouston": [
+    "",
+    ""
+  ],
+  "Subwaysurfersiceland": [
+    "",
+    ""
+  ],
+  "Subwaysurferslondon": [
+    "",
+    ""
+  ],
+  "Subwaysurfersmexico": [
+    "",
+    ""
+  ],
+  "Subwaysurfersmiami": [
+    "",
+    ""
+  ],
+  "Subwaysurfersmonaco": [
+    "",
+    ""
+  ],
+  "Subwaysurfersneworeleans": [
+    "",
+    ""
+  ],
+  "Subwaysurfersneworleans": [
+    "",
+    ""
+  ],
+  "Subwaysurferssanfrancisco": [
+    "",
+    ""
+  ],
+  "Subwaysurfersstpetersburg": [
+    "",
+    ""
+  ],
+  "Subwaysurferswinterholiday": [
+    "",
+    ""
+  ],
+  "Subwaysurferszurich": [
+    "",
+    ""
+  ],
+  "Sugarsugar": [
+    "",
+    ""
+  ],
+  "Suika Game": [
+    "",
+    ""
+  ],
+  "Suikapico": [
+    "",
+    ""
+  ],
+  "Sunandmoon": [
+    "",
+    ""
+  ],
+  "Sup it Dept": [
+    "",
+    ""
+  ],
+  "Super Mario 63": [
+    "",
+    ""
+  ],
+  "Super Mario 63 Redux": [
+    "",
+    ""
+  ],
+  "Super Mario 64": [
+    "",
+    ""
+  ],
+  "Super Mario Advance 2": [
+    "",
+    ""
+  ],
+  "Super Mario Advance 3": [
+    "",
+    ""
+  ],
+  "Super Mario Bros": [
+    "",
+    ""
+  ],
+  "Super Mario Bros. Remastered": [
+    "",
+    ""
+  ],
+  "Super Mario Kart": [
+    "",
+    ""
+  ],
+  "Super Mario Land": [
+    "",
+    ""
+  ],
+  "Super Mario RPG": [
+    "",
+    ""
+  ],
+  "Super Mario World": [
+    "",
+    ""
+  ],
+  "Super Mario World The  Secret Of The 7 Golden Statues": [
+    "",
+    ""
+  ],
+  "Super Monkey Ball 12": [
+    "",
+    ""
+  ],
+  "Super Monkey Ball Jr": [
+    "",
+    ""
+  ],
+  "Super Noah Shark 3d": [
+    "",
+    ""
+  ],
+  "Super Oliver World": [
+    "",
+    ""
+  ],
+  "Super Pickleball Adventure": [
+    "",
+    ""
+  ],
+  "Super Punchout": [
+    "",
+    ""
+  ],
+  "Super Puzzle Fighter 2 Turbo": [
+    "",
+    ""
+  ],
+  "Super Puzzle Fighter 2 Turboalt": [
+    "",
+    ""
+  ],
+  "Super Scribblenauts": [
+    "",
+    ""
+  ],
+  "Super Smash ": [
+    "",
+    ""
+  ],
+  "Super Smash Bros": [
+    "",
+    ""
+  ],
+  "Super Smash Flash": [
+    "",
+    ""
+  ],
+  "Super Star Car": [
+    "",
+    ""
+  ],
+  "Super Tilt Bros": [
+    "",
+    ""
+  ],
+  "Superbomberman": [
+    "",
+    ""
+  ],
+  "Superbomberman 2": [
+    "",
+    ""
+  ],
+  "Superbomberman 3": [
+    "",
+    ""
+  ],
+  "Superbomberman 4": [
+    "",
+    ""
+  ],
+  "Superbomberman 5": [
+    "",
+    ""
+  ],
+  "Supercarrush": [
+    "",
+    ""
+  ],
+  "Supercastlevania V I": [
+    "",
+    ""
+  ],
+  "Superchibiknight": [
+    "",
+    ""
+  ],
+  "Supercold": [
+    "",
+    ""
+  ],
+  "Superdarkdeception": [
+    "",
+    ""
+  ],
+  "Superdiagonalmario 2": [
+    "",
+    ""
+  ],
+  "Superfighters": [
+    "",
+    ""
+  ],
+  "Superhot": [
+    "",
+    ""
+  ],
+  "Superhotlinemiami": [
+    "",
+    ""
+  ],
+  "Superhouseofdeadninjas": [
+    "",
+    ""
+  ],
+  "Superislandadventure": [
+    "",
+    ""
+  ],
+  "Superliquidsoccer": [
+    "",
+    ""
+  ],
+  "Supermario": [
+    "",
+    ""
+  ],
+  "Supermario 63": [
+    "",
+    ""
+  ],
+  "Supermario 64": [
+    "",
+    ""
+  ],
+  "Supermario 64 Ds": [
+    "",
+    ""
+  ],
+  "Supermarioallstars": [
+    "",
+    ""
+  ],
+  "Supermariobros": [
+    "",
+    ""
+  ],
+  "Supermariobros 2": [
+    "",
+    ""
+  ],
+  "Supermariobros 2 Us": [
+    "",
+    ""
+  ],
+  "Supermariobros 3": [
+    "",
+    ""
+  ],
+  "Supermariobros 3 Real": [
+    "",
+    ""
+  ],
+  "Supermarket 3d": [
+    "",
+    ""
+  ],
+  "Supermetroid": [
+    "",
+    ""
+  ],
+  "Supreme Duelist": [
+    "",
+    ""
+  ],
+  "Survival Race": [
+    "",
+    ""
+  ],
+  "Survive to Victory": [
+    "",
+    ""
+  ],
+  "Sushi Cat": [
+    "",
+    ""
+  ],
+  "Sushi Cat 2": [
+    "",
+    ""
+  ],
+  "Sushi Roll": [
+    "",
+    ""
+  ],
+  "Sushi Unroll": [
+    "",
+    ""
+  ],
+  "Swerve": [
+    "",
+    ""
+  ],
+  "Switchblade": [
+    "",
+    ""
+  ],
+  "Sword Fight": [
+    "",
+    ""
+  ],
+  "Sword and Shield Ultimate Plus": [
+    "",
+    ""
+  ],
+  "Swordplay": [
+    "",
+    ""
+  ],
+  "Swords and Sandals": [
+    "",
+    ""
+  ],
+  "Swords and Souls": [
+    "",
+    ""
+  ],
+  "TAGC 3": [
+    "",
+    ""
+  ],
+  "THWACK": [
+    "",
+    ""
+  ],
+  "TMNT": [
+    "",
+    ""
+  ],
+  "Table Tanks": [
+    "",
+    ""
+  ],
+  "Table Tennis World Tour": [
+    "",
+    ""
+  ],
+  "Tag": [
+    "",
+    ""
+  ],
+  "Tall.io": [
+    "",
+    ""
+  ],
+  "Tank Mayhem": [
+    "",
+    ""
+  ],
+  "Tank Pixel": [
+    "",
+    ""
+  ],
+  "Tanuki Sunset": [
+    "",
+    ""
+  ],
+  "Tapper": [
+    "",
+    ""
+  ],
+  "Taproad": [
+    "",
+    ""
+  ],
+  "Tasty Planet": [
+    "",
+    ""
+  ],
+  "Tattletail": [
+    "",
+    ""
+  ],
+  "Tecmobowl": [
+    "",
+    ""
+  ],
+  "Teen Titans GO Jump Jousts": [
+    "",
+    ""
+  ],
+  "Telekinesis": [
+    "",
+    ""
+  ],
+  "Telekinesis Attack": [
+    "",
+    ""
+  ],
+  "Telekinesis Car": [
+    "",
+    ""
+  ],
+  "Telekinesis Drive": [
+    "",
+    ""
+  ],
+  "Telocation": [
+    "",
+    ""
+  ],
+  "Temp Overdose": [
+    "",
+    ""
+  ],
+  "Tempest 2000": [
+    "",
+    ""
+  ],
+  "Temple of Boom": [
+    "",
+    ""
+  ],
+  "Terra": [
+    "",
+    ""
+  ],
+  "Terraria": [
+    "",
+    ""
+  ],
+  "Territorial.io": [
+    "",
+    ""
+  ],
+  "Territory War": [
+    "",
+    ""
+  ],
+  "Tetris": [
+    "",
+    ""
+  ],
+  "Tetris Attack": [
+    "",
+    ""
+  ],
+  "Tetris GBA": [
+    "",
+    ""
+  ],
+  "Thanksforremindingmeihadtofixthis": [
+    "",
+    ""
+  ],
+  "The Classroom": [
+    "",
+    ""
+  ],
+  "The Classroom 2": [
+    "",
+    ""
+  ],
+  "The Classroom 3": [
+    "",
+    ""
+  ],
+  "The Dead Seat": [
+    "",
+    ""
+  ],
+  "The Deadseat": [
+    "",
+    ""
+  ],
+  "The Deepest Sleep": [
+    "",
+    ""
+  ],
+  "The Enchanted Cave 2": [
+    "",
+    ""
+  ],
+  "The Impossible Game": [
+    "",
+    ""
+  ],
+  "The Impossible Quiz": [
+    "",
+    ""
+  ],
+  "The Incredible Machine": [
+    "",
+    ""
+  ],
+  "The Last Stand": [
+    "",
+    ""
+  ],
+  "The Last Stand Union City": [
+    "",
+    ""
+  ],
+  "The Legend of Zelda Majoras Mask": [
+    "",
+    ""
+  ],
+  "The Legend of Zelda Ocarina of Time": [
+    "",
+    ""
+  ],
+  "The Man In The Window": [
+    "",
+    ""
+  ],
+  "The Oregon Trail": [
+    "",
+    ""
+  ],
+  "The Pit": [
+    "",
+    ""
+  ],
+  "The Worlds Hardest Game": [
+    "",
+    ""
+  ],
+  "The Worlds Hardest Game 3": [
+    "",
+    ""
+  ],
+  "The Worlds Hardest Game 4": [
+    "",
+    ""
+  ],
+  "Theme Park": [
+    "",
+    ""
+  ],
+  "There is No File": [
+    "",
+    ""
+  ],
+  "Thermomorph": [
+    "",
+    ""
+  ],
+  "Thing Arena 3": [
+    "",
+    ""
+  ],
+  "This Is The Only Level": [
+    "",
+    ""
+  ],
+  "This is Not a Jumpscare": [
+    "",
+    ""
+  ],
+  "TileTopia": [
+    "",
+    ""
+  ],
+  "Time Shooter 1": [
+    "",
+    ""
+  ],
+  "Time Shooter 2": [
+    "",
+    ""
+  ],
+  "Time Shooter 3 SWAT": [
+    "",
+    ""
+  ],
+  "Time Warriors": [
+    "",
+    ""
+  ],
+  "Toastarling": [
+    "",
+    ""
+  ],
+  "Toasterball": [
+    "",
+    ""
+  ],
+  "Tomb of the Mask": [
+    "",
+    ""
+  ],
+  "Tommorow and Yesterday": [
+    "",
+    ""
+  ],
+  "Tomodachi Collection": [
+    "",
+    ""
+  ],
+  "Tony Hawk Skater 2": [
+    "",
+    ""
+  ],
+  "Tony Hawk Skater 4": [
+    "",
+    ""
+  ],
+  "Tony Hawk's Underground": [
+    "",
+    ""
+  ],
+  "Too Many Types": [
+    "",
+    ""
+  ],
+  "Top Speed Racing 3d": [
+    "",
+    ""
+  ],
+  "Touhou Luminous Strike": [
+    "",
+    ""
+  ],
+  "Tower Crash 3d": [
+    "",
+    ""
+  ],
+  "Towerblocks": [
+    "",
+    ""
+  ],
+  "Towercrash 3d": [
+    "",
+    ""
+  ],
+  "Toy Rider": [
+    "",
+    ""
+  ],
+  "Trace": [
+    "",
+    ""
+  ],
+  "Traffic Jam 3d": [
+    "",
+    ""
+  ],
+  "Traffic Rider": [
+    "",
+    ""
+  ],
+  "Trap the Cat": [
+    "",
+    ""
+  ],
+  "Triachnid": [
+    "",
+    ""
+  ],
+  "Truck Sim": [
+    "",
+    ""
+  ],
+  "Tube Jumpers": [
+    "",
+    ""
+  ],
+  "Tug of War with Cars": [
+    "",
+    ""
+  ],
+  "Tunnel Rush": [
+    "",
+    ""
+  ],
+  "Turok Dinosaur Hunter": [
+    "",
+    ""
+  ],
+  "Twinshot": [
+    "",
+    ""
+  ],
+  "Twisted Rope 3d": [
+    "",
+    ""
+  ],
+  "Twistedmetal": [
+    "",
+    ""
+  ],
+  "Twoball 3d": [
+    "",
+    ""
+  ],
+  "UCDS": [
+    "",
+    ""
+  ],
+  "UFO Swamp Oddysey": [
+    "",
+    ""
+  ],
+  "ULTRAKILL": [
+    "",
+    ""
+  ],
+  "UNDERWHEELS": [
+    "",
+    ""
+  ],
+  "UZG": [
+    "",
+    ""
+  ],
+  "Ultimate Assassian 2": [
+    "",
+    ""
+  ],
+  "Ultimate Assassian 3": [
+    "",
+    ""
+  ],
+  "Ultimate Mortal Kombat": [
+    "",
+    ""
+  ],
+  "Ultimate Mortal Kombat 3": [
+    "",
+    ""
+  ],
+  "Ultrapool": [
+    "",
+    ""
+  ],
+  "Um Jammer Lammy": [
+    "",
+    ""
+  ],
+  "Undertale Last Breath": [
+    "",
+    ""
+  ],
+  "Undertale Last Breath PHASE THREE": [
+    "",
+    ""
+  ],
+  "Undertale Yellow": [
+    "",
+    ""
+  ],
+  "Unfair Mario": [
+    "",
+    ""
+  ],
+  "Unfair Undyne": [
+    "",
+    ""
+  ],
+  "Unicycle Hero": [
+    "",
+    ""
+  ],
+  "Uno": [
+    "",
+    ""
+  ],
+  "Untime": [
+    "",
+    ""
+  ],
+  "Upslash": [
+    "",
+    ""
+  ],
+  "UvuvwevwevweOnyetenvewveUgwemubwemOssas": [
+    "",
+    ""
+  ],
+  "Vampire Survivors": [
+    "",
+    ""
+  ],
+  "Vanguard": [
+    "",
+    ""
+  ],
+  "Vaportrails": [
+    "",
+    ""
+  ],
+  "Vex 1": [
+    "",
+    ""
+  ],
+  "Vex 2": [
+    "",
+    ""
+  ],
+  "Vex 3": [
+    "",
+    ""
+  ],
+  "Vex 3 Christmas": [
+    "",
+    ""
+  ],
+  "Vex 4": [
+    "",
+    ""
+  ],
+  "Vex 5": [
+    "",
+    ""
+  ],
+  "Vex 6": [
+    "",
+    ""
+  ],
+  "Vex 7": [
+    "",
+    ""
+  ],
+  "Vex 8": [
+    "",
+    ""
+  ],
+  "Vex Challenges": [
+    "",
+    ""
+  ],
+  "Vex X3M": [
+    "",
+    ""
+  ],
+  "Vib Ribbon": [
+    "",
+    ""
+  ],
+  "Villager": [
+    "",
+    ""
+  ],
+  "Vincent Mansion of the Dead": [
+    "",
+    ""
+  ],
+  "Visitor": [
+    "",
+    ""
+  ],
+  "Volley Random": [
+    "",
+    ""
+  ],
+  "Vollyball Challenge": [
+    "",
+    ""
+  ],
+  "Vvvvvv": [
+    "",
+    ""
+  ],
+  "Wall Crawler": [
+    "",
+    ""
+  ],
+  "Waluigi Taco Stand": [
+    "",
+    ""
+  ],
+  "War Regions": [
+    "",
+    ""
+  ],
+  "War the Knights": [
+    "",
+    ""
+  ],
+  "Warfare 1944": [
+    "",
+    ""
+  ],
+  "Warioland 4": [
+    "",
+    ""
+  ],
+  "Warioware DIY": [
+    "",
+    ""
+  ],
+  "Warioware Inc": [
+    "",
+    ""
+  ],
+  "Waterpool.io": [
+    "",
+    ""
+  ],
+  "Waterworks": [
+    "",
+    ""
+  ],
+  "Wavedash": [
+    "",
+    ""
+  ],
+  "Waverace 64": [
+    "",
+    ""
+  ],
+  "Waverun": [
+    "",
+    ""
+  ],
+  "Weapon Craft Run": [
+    "",
+    ""
+  ],
+  "Weapon Scale": [
+    "",
+    ""
+  ],
+  "Weapon Upgrade Rush": [
+    "",
+    ""
+  ],
+  "Web Fishing": [
+    "",
+    ""
+  ],
+  "Wermhole": [
+    "",
+    ""
+  ],
+  "Whack Your Computer": [
+    "",
+    ""
+  ],
+  "Whack the Theif": [
+    "",
+    ""
+  ],
+  "Wheelie Bike": [
+    "",
+    ""
+  ],
+  "Wheely": [
+    "",
+    ""
+  ],
+  "Wheely 2": [
+    "",
+    ""
+  ],
+  "Wheely 3": [
+    "",
+    ""
+  ],
+  "Wheely 4": [
+    "",
+    ""
+  ],
+  "Wheely 5": [
+    "",
+    ""
+  ],
+  "Wheely 6": [
+    "",
+    ""
+  ],
+  "Wheely 7": [
+    "",
+    ""
+  ],
+  "Wheely 8": [
+    "",
+    ""
+  ],
+  "Whos Your Daddy": [
+    "",
+    ""
+  ],
+  "Windows Doors": [
+    "",
+    ""
+  ],
+  "Winter Falling": [
+    "",
+    ""
+  ],
+  "Wipeout 2097": [
+    "",
+    ""
+  ],
+  "Witchcraft": [
+    "",
+    ""
+  ],
+  "Witchs Heart": [
+    "",
+    ""
+  ],
+  "Wolfenstein 3d": [
+    "",
+    ""
+  ],
+  "Woodworm": [
+    "",
+    ""
+  ],
+  "Wordle": [
+    "",
+    ""
+  ],
+  "World Box": [
+    "",
+    ""
+  ],
+  "World Cup 98": [
+    "",
+    ""
+  ],
+  "Worlds Hardest Game": [
+    "",
+    ""
+  ],
+  "Worlds Hardest Game 2": [
+    "",
+    ""
+  ],
+  "Worlds Hardest Game 3": [
+    "",
+    ""
+  ],
+  "Worlds Hardest Game 4": [
+    "",
+    ""
+  ],
+  "Worst Time Simulator": [
+    "",
+    ""
+  ],
+  "Wrassling": [
+    "",
+    ""
+  ],
+  "Wrestle Bros": [
+    "",
+    ""
+  ],
+  "Xevious": [
+    "",
+    ""
+  ],
+  "Yandere Simulator": [
+    "",
+    ""
+  ],
+  "Yanderesimulator": [
+    "",
+    ""
+  ],
+  "Yarsrevenge": [
+    "",
+    ""
+  ],
+  "Yellow": [
+    "",
+    ""
+  ],
+  "Yoshis Strange Quest": [
+    "",
+    ""
+  ],
+  "Youarelucky": [
+    "",
+    ""
+  ],
+  "Your Only Move Is HUSTLE": [
+    "",
+    ""
+  ],
+  "Youvs 100 Skibidi": [
+    "",
+    ""
+  ],
+  "Yume Nikki": [
+    "",
+    ""
+  ],
+  "Zelda 2 Thelegendoflink": [
+    "",
+    ""
+  ],
+  "Zeldaminishcap": [
+    "",
+    ""
+  ],
+  "Zenword": [
+    "",
+    ""
+  ],
+  "Zombieexploder": [
+    "",
+    ""
+  ],
+  "Zombieroad": [
+    "",
+    ""
+  ],
+  "Zombierush": [
+    "",
+    ""
+  ],
+  "Zombiesatemyneighboors": [
+    "",
+    ""
+  ],
+  "Zombopaclypse 2": [
+    "",
+    ""
+  ],
+  "Zombotron": [
+    "",
+    ""
+  ],
+  "Zombotronreboot": [
+    "",
+    ""
+  ],
+  "Zrist": [
+    "",
+    ""
+  ],
+  "Zuma": [
+    "",
+    ""
+  ],
+  "n-gon": [
+    "",
+    ""
+  ],
+  "t┬│": [
+    "",
+    ""
+  ]
+}

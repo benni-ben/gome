@@ -64,9 +64,7 @@ function getTimeAssociatedColors() {
     });
     const colors = occasionColors[dateRangeKey];
     if (colors) {
-        setGradientColors(colors[0], colors[1], colors[2]);
         try {
-            const notificationsEnabled = (typeof settings !== "undefined") ? settings.notifications !== false : true;
             const storageKey = 'lastOccasionNotification';
             const currentYear = now.getFullYear();
             let prev = null;
@@ -76,7 +74,7 @@ function getTimeAssociatedColors() {
                 prev = null;
             }
             const alreadyNotifiedThisYear = prev && prev.key === dateRangeKey && prev.year === currentYear;
-            if (notificationsEnabled && window.notify && dateRangeKey && !alreadyNotifiedThisYear) {
+            if (window.notify && dateRangeKey && !alreadyNotifiedThisYear) {
                 const name = occasionNames[dateRangeKey] || 'a special day';
                 const header = `It's ${name}!`;
                 const text = `Happy ${name}!`;

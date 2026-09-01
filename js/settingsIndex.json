@@ -5,12 +5,6 @@
         "inputType": "switch",
         "associatedFunction": "pageAnimations()"
     },
-    "Notifications": {
-        "description": "Enables notification showing. If this is off, you will get <b>no</b> notifications.",
-        "category": "Interface",
-        "inputType": "switch",
-        "associatedFunction": "notifications()"
-    },
     "Webpage Title": {
         "description": "Changes the webpage's title.",
         "category": "Interface",
