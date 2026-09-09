@@ -32,6 +32,11 @@ function changeWebpageTitle(title) {
     saveSettings();
 };
 
+function randomPagePosition() {
+    const maxScrollY = document.documentElement.scrollHeight - window.innerHeight;
+    window.scrollTo(0, randomNumber(0, maxScrollY));
+}
+
 function saveSettings() {
     if (typeof localStorageSave === "function") {
         try {

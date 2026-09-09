@@ -1,13 +1,15 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --borderColor: rgb(98, 98, 98);
-        --borderColorHover: rgb(145, 145, 145);
+        --borderColorHover: rgb(128, 128, 128);
         --searchBackground: rgb(78, 79, 82);
         --colorPulse: rgb(92, 186, 236);
         --background: rgb(44, 44, 44);
         --shadowColor: rgba(96, 180, 255, 0.8);
         --highContrast: rgb(216, 216, 216);
         --textColor: rgb(255, 255, 255);
+        --gameItem: rgb(75, 75, 75);
+        --gameItemHover: rgb(100, 100, 100);
     }
 
     body {
@@ -17,6 +19,10 @@
 
     .icon {
         fill: white;
+    }
+
+    .staticIcon {
+        fill: black;
     }
 
     .icon:hover {
@@ -57,6 +63,8 @@
         --shadowColor: rgba(67, 129, 255, 0.7);
         --searchBackground: rgb(190, 190, 190);
         --highContrast: rgb(66, 66, 66);
+        --gameItem: rgb(25, 25, 25);
+        --gameItemHover: rgb(50, 50, 50);
     }
 
     body {
@@ -66,6 +74,10 @@
 
     .icon {
         fill: rgb(0, 0, 0);
+    }
+
+    .staticIcon {
+        fill: black;
     }
 
     .icon:hover {
@@ -123,7 +135,6 @@ input[type="text"] {
 }
 
 @keyframes caretPulse {
-
     0%,
     20%,
     40%,
@@ -269,8 +280,8 @@ h4 {
     min-width: 40px;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--borderColor);
-    background-color: var(--searchBackground);
+    border: 3px solid var(--borderColorHover);
+    background-color: var(--borderColor);
 }
 
 .setting-left {
@@ -345,7 +356,7 @@ h4 {
     -webkit-background-clip: text;
     will-change: auto;
     animation: passiveAnim 8s ease-in-out infinite;
-    transition: all 0.8s cubic-bezier(.56,-0.67,.24,1.47);
+    transition: all 0.8s cubic-bezier(.56, -0.67, .24, 1.47);
 }
 
 @keyframes passiveAnim {
@@ -362,16 +373,17 @@ h4 {
 
 #header:hover {
     transform: scale(1.75);
-text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;}
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+}
 
 
-.tagsContainer {
+.tags-container {
     line-height: 26px;
     overflow-wrap: anywhere;
     overflow: visible;
 }
 
-#tag {
+.game-tag {
     border: 3px dashed var(--borderColor);
     border-radius: 100px;
     font-family: "Roboto";
@@ -385,7 +397,7 @@ text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, 
     background-color: var(--background);
 }
 
-#tag:hover {
+.game-tag:hover {
     background-color: var(--shadowColor);
     box-shadow: 0px 0px 10px 2px var(--shadowColor);
 }
@@ -404,34 +416,35 @@ a {
     box-sizing: border-box;
 }
 
-#gameItem {
+.game-item {
     cursor: pointer;
-    height: min-content;
     max-height: 25rem;
     padding: 1rem;
     width: -webkit-fill-available;
+    max-width: 340px;
     overflow-y: scroll;
     overflow-wrap: anywhere;
     border: 0px solid transparent;
     margin-top: 10px;
     display: flex;
+    background-color: var(--gameItem);
     flex-direction: column;
     align-items: center;
     transition: all 0.6s ease;
 }
 
-#gameItem:hover {
-    background-color: var(--searchBackground);
-    border: 4px solid var(--borderColor);
+.game-item:hover {
+    background-color: var(--gameItemHover);
+    border: 4px solid var(--borderColorHover);
 }
 
-#gameThumbnail {
+.game-thumbnail {
     height: auto;
     width: 75%;
     margin: auto;
 }
 
-#gameTitle {
+.game-title {
     font-family: "Fira Sans";
     font-size: 1.1rem;
     margin-left: auto;
@@ -442,7 +455,7 @@ a {
     flex-wrap: nowrap;
 }
 
-#gameDescription {
+.game-description {
     font-family: "Fira Mono";
     font-size: 0.76rem;
     font-style: italic;
@@ -583,6 +596,14 @@ a {
     text-decoration: none;
 }
 
+.staticIcon {
+    flex: 0 0 auto;
+    height: 36px;
+    margin-top: 2px;
+    padding: 2px;
+    width: 36px;
+}
+
 .settingControl input[type="range"] {
     vertical-align: middle;
 }
@@ -673,7 +694,6 @@ mark {
     background-color: var(--background);
     align-items: flex-start;
     border: 1px solid var(--borderColor);
-    color: white;
     display: flex;
     font-family: "Fira Mono";
     gap: 12px;
@@ -698,14 +718,6 @@ mark {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
-}
-
-#notification .notif-icon {
-    flex: 0 0 auto;
-    height: 36px;
-    margin-top: 2px;
-    padding: 2px;
-    width: 36px;
 }
 
 #notification .notif-body {

@@ -48,7 +48,7 @@
             container.setAttribute('aria-live', 'polite');
             container.setAttribute('aria-atomic', 'true');
             container.tabIndex = -1;
-            container.innerHTML = `\n<img class="notif-icon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n<div class="notif-body">\n<div class="notif-header">${escapeHtml(header)}</div>\n<div class="notif-text">${escapeHtml(text)}</div>\n</div>\n<button class="notif-close" aria-label="Close notification">&times;</button>\n`;
+            container.innerHTML = `\n<img class="staticIcon" src="${escapeHtml(iconPath)}" alt="${escapeHtml(header || 'notification')} icon">\n<div class="notif-body">\n<div class="notif-header">${escapeHtml(header)}</div>\n<div class="notif-text">${escapeHtml(text)}</div>\n</div>\n<button class="notif-close" aria-label="Close notification">&times;</button>\n`;
 
             const closeBtn = container.querySelector('.notif-close');
             if (closeBtn) closeBtn.addEventListener("click", hideNotification, { once: true });

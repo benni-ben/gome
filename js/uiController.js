@@ -62,24 +62,23 @@ async function createSettings() {
             if (meta.inputType === "switch") {
                 control = document.createElement("input");
                 control.type = "checkbox";
-                control.id = name.replace(/\s+/g, "");
                 control.checked = savedValue !== undefined ? Boolean(savedValue) : Boolean(meta.default);
             } else if (meta.inputType === "text") {
                 control = document.createElement("input");
                 control.type = "text";
-                control.id = name.replace(/\s+/g, "");
                 control.value = (meta.default !== undefined && meta.default !== null) ? meta.default : "";
                 control.style.minWidth = "160px";
-            } else {
-                control = document.createElement("input");
-                control.type = "text";
-                control.id = name.replace(/\s+/g, "");
-                control.value = meta.default || "";
+            } else if (meta.inputType === "button") {
+                control = document.createElement("button");
+                control.type = "button";
+                control.style.minWidth = "32px";
+                control.textContent = "Teleport";
+                control.style.minHeight = "32px";
             }
             control.className = "control"
             if (meta.associatedFunction && typeof meta.associatedFunction === "string") {
                 const fnName = meta.associatedFunction.replace(/\(\)\s*$/, "").trim();
-                control.addEventListener("change", (e) => {
+                control.addEventListener("click", (e) => {
                     const val = (control.type === "checkbox") ? control.checked : control.value;
                     const fn = window[fnName];
                     if (typeof fn === "function") {

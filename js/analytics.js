@@ -38,33 +38,27 @@ const Analytics = {
     },
     trackGameVisit(gameName) {
         if (!gameName) return;
-
         if (!this.data.gamesVisited[gameName]) {
             this.data.gamesVisited[gameName] = 0;
         }
         this.data.gamesVisited[gameName]++;
         this.updateMostVisitedGame();
         this.saveData();
-
         console.log(`Game visited: ${gameName} (${this.data.gamesVisited[gameName]} times)`);
     },
     updateMostVisitedGame() {
         let maxVisits = 0;
         let mostVisited = null;
-
         for (const [gameName, visits] of Object.entries(this.data.gamesVisited)) {
             if (visits > maxVisits) {
                 maxVisits = visits;
                 mostVisited = gameName;
             }
         }
-
         this.data.mostVisitedGame = mostVisited;
     },
-
     updateDailyStats(statType, value) {
         const today = new Date().toISOString().split('T')[0];
-
         if (!this.data.dailyStats[today]) {
             this.data.dailyStats[today] = {
                 clicks: 0,
@@ -73,7 +67,6 @@ const Analytics = {
                 gamesVisited: {}
             };
         }
-
         if (statType === 'clicks') {
             this.data.dailyStats[today].clicks += value;
         } else if (statType === 'keys') {
@@ -194,6 +187,7 @@ const Analytics = {
         };
     }
 };
+
 function exportAnalyticsData() {
     try {
         const jsonString = Analytics.exportData();

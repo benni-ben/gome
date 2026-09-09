@@ -16,5 +16,11 @@
         "category": "Statistics",
         "inputType": "switch",
         "associatedFunction": "changeAnalyticsStatus()"
+    },
+    "Random Page Position": {
+        "description": "Teleports you to a random position on the page.",
+        "category": "Interface",
+        "inputType": "button",
+        "associatedFunction": "randomPagePosition()"
     }
 }

@@ -2,14 +2,25 @@
 
 This contains stuff to do. Contriubte if you can! 
 
+ - Make the website more interactive (gravity affected elements)
 
- - Seperate the image color averager into a different function(so it is easier to reuse)
+ - Barebones mode (removes all animations and colors and applies basic styling)
+
+ - Add a bar showing the time left on the notification
+
+ - Add a voting system
 
  - Lint the code
 
  - Actually do some of the suggestions from the lighthouse report in Chrome
 
  - Make overrides for game displaying system(set to a specific path instead of a consistant path)
+
+ - Make the game loader system more efficient and less resource intensive (the code is bad and unorganized right now)
+
+ - ~~Seperate the image color averager into a different function(so it is easier to reuse)~~
+
+ - ~~Add category system for games~~
 
  - ~~Rework the random color generator to make it generate RGB values instead of hex values(so it is easier to work with)~~
 

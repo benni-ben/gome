@@ -1,271 +1,285 @@
-const _gamePath = "/asset/game/";
-const _missingThumb = "/asset/ui/missing.svg";
-const _missingTag = "";
+const GameLoader = (function () {
+  "use strict";
 
-function getGameCount(visibleCount) {
-  const gameCountElement = document.getElementById("gameCount");
-  if (gameCountElement) {
-    if (typeof visibleCount === "number") {
-      gameCountElement.textContent = visibleCount + " games available.";
-    } else {
-      const gameContainer = document.getElementById("gameContainer");
-      if (!gameContainer) return;
-      let n = 0;
-      const children = gameContainer.children;
-      for (let i = 0; i < children.length; i++) {
-        if (children[i].style.display !== "none") n++;
-      }
-      gameCountElement.textContent = n + " games available.";
-    }
-  }
-}
-
-function gameLoader() {
-  const gamesPath = "games.json";
-  const gameContainer = document.getElementById("gameContainer");
-  const searchBar = document.getElementById("searchBar");
-  if (!gameContainer) return;
-
-  fetch(gamesPath)
-    .then((res) => res.json())
-    .then((gamesData) => {
-      const gameNames = Object.keys(gamesData);
-      const lowerNames = new Array(gameNames.length);
-      for (let i = 0; i < gameNames.length; i++) {
-        lowerNames[i] = gameNames[i].toLowerCase();
-      }
-      const order = new Array(gameNames.length);
-      for (let i = 0; i < order.length; i++) order[i] = i;
-      order.sort((a, b) =>
-        lowerNames[a] < lowerNames[b]
-          ? -1
-          : lowerNames[a] > lowerNames[b]
-          ? 1
-          : 0
-      );
-
-      const fragment = document.createDocumentFragment();
-      const tagClickHandler = (e) => {
-        const tagSpan = e.target.closest("#tag");
-        if (!tagSpan) return;
-        e.stopPropagation();
-        if (!searchBar) return;
-        const tagText = tagSpan.textContent;
-        const currentVal = searchBar.value;
-        const tagString = "[" + tagText + "]";
-        if (currentVal.indexOf(tagString) !== -1) return;
-        const separator = currentVal.length > 0 ? " " : "";
-        searchBar.value = currentVal + separator + tagString;
-        searchBar.dispatchEvent(new Event("input"));
-      };
-
-      for (let i = 0; i < order.length; i++) {
-        const idx = order[i];
-        const gameName = gameNames[idx];
-        const gameInfo = gamesData[gameName];
-        if (!gameInfo) continue;
-        const gameDescription = gameInfo[0] || "";
-        const gameTags = gameInfo[1] || "";
-
-        const gameElement = document.createElement("div");
-        gameElement.id = "gameItem";
-        gameElement.dataset.name = lowerNames[idx];
-        gameElement.dataset.tags = gameTags.toLowerCase();
-        gameElement.dataset.desc = gameDescription.toLowerCase();
-        gameElement.title = gameDescription;
-
-        const thumbnail = document.createElement("img");
-        thumbnail.src = _gamePath + gameName + "/cover.png";
-        thumbnail.alt = gameName;
-        thumbnail.loading = "lazy";
-        thumbnail.decoding = "async";
-        thumbnail.id = "gameThumbnail";
-        thumbnail.onerror = () => {
-          thumbnail.onerror = null;
-          thumbnail.src = _missingThumb;
-        };
-
-        const title = document.createElement("h3");
-        title.textContent = gameName;
-        title.dataset.original = gameName;
-        title.id = "gameTitle";
-
-        const description = document.createElement("p");
-        description.textContent = gameDescription;
-        description.dataset.original = gameDescription;
-        description.id = "gameDescription";
-
-        const tagsContainer = document.createElement("div");
-        tagsContainer.className = "tagsContainer";
-        if (gameTags) {
-          const tagList = gameTags.split(",");
-          for (let t = 0; t < tagList.length; t++) {
-            const tagText = tagList[t].trim();
-            if (!tagText) continue;
-            const tagElement = document.createElement("span");
-            tagElement.id = "tag";
-            tagElement.textContent = tagText;
-            tagsContainer.appendChild(tagElement);
-          }
-        }
-        gameElement.appendChild(thumbnail);
-        gameElement.appendChild(title);
-        gameElement.appendChild(description);
-        gameElement.appendChild(tagsContainer);
-        fragment.appendChild(gameElement);
-      }
-      gameContainer.appendChild(fragment);
-      tagsContainerAddListenerOnce(gameContainer, tagClickHandler);
-      gameItemClickHandlerOnce(gameContainer);
-      getGameCount(gameNames.length);
-      setupSearch();
-    })
-    .catch((error) => {
-      console.error("Oops! There was an error loading games: ", error);
-      if (typeof notify !== "undefined") {
-        window.notify(
-          "An error occured loading the games! Check the developer console for more info.",
-          "Oh noes!",
-          "sad.svg",
-          "6000"
-        );
-      }
-    });
-}
-
-let _tagClickListenerInstalled = false;
-function tagsContainerAddListenerOnce(container, handler) {
-  if (_tagClickListenerInstalled) return;
-  container.addEventListener("click", handler);
-  _tagClickListenerInstalled = true;
-}
-
-let _gameItemListenerInstalled = false;
-function gameItemClickHandlerOnce(container) {
-  if (_gameItemListenerInstalled) return;
-  container.addEventListener("click", (e) => {
-    const item = e.target.closest("#gameItem");
-    if (!item || !container.contains(item)) return;
-    const titleEl = item.querySelector("#gameTitle");
-    const gameName = titleEl ? titleEl.dataset.original : null;
-    if (gameName && typeof Analytics !== "undefined") {
-      Analytics.trackGameVisit(gameName);
-    }
-    if (gameName) {
-      window.location.href = _gamePath + gameName + "/";
-    }
+  const CONFIG = Object.freeze({
+    gamesJsonPath: "games.json",
+    gameBasePath: "/asset/game/",
+    missingThumbnail: "/asset/ui/missing.svg",
+    containerId: "gameContainer",
+    searchBarId: "searchBar",
+    gameCountId: "gameCount",
   });
-  _gameItemListenerInstalled = true;
-}
 
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
+  const CLASSES = Object.freeze({
+    gameItem: "game-item",
+    gameThumbnail: "game-thumbnail",
+    gameTitle: "game-title",
+    gameDescription: "game-description",
+    tag: "game-tag",
+    tagsContainer: "tags-container",
+  });
 
-const _highlightCache = new Map();
-function getHighlightRe(query) {
-  let re = _highlightCache.get(query);
-  if (re) return re;
-  re = new RegExp(escapeRegExp(query), "gi");
-  if (_highlightCache.size > 64) _highlightCache.clear();
-  _highlightCache.set(query, re);
-  return re;
-}
+  const REGEX_SPECIALS = /[.*+?^${}()|[\]\\]/g;
+  const TAG_PATTERN = /\[(.*?)\]/g;
 
-function highlightText(element, query) {
-  if (!element) return;
-  const original = element.dataset.original;
-  if (!original) return;
-  if (!query) {
-    if (element._highlighted) {
-      element.textContent = original;
-      element._highlighted = false;
+  const highlightedElements = new WeakSet();
+  const highlightCache = new Map();
+  let tagListenerInstalled = false;
+  let itemListenerInstalled = false;
+  let searchItemsCache = null;
+  let searchItemsVersion = -1;
+
+  function escapeRegExp(string) {
+    return string.replace(REGEX_SPECIALS, "\\$&");
+  }
+
+  function getHighlightRegex(query) {
+    let regex = highlightCache.get(query);
+    if (!regex) {
+      regex = new RegExp(escapeRegExp(query), "gi");
+      if (highlightCache.size >= 64) highlightCache.clear();
+      highlightCache.set(query, regex);
     }
-    return;
+    return regex;
   }
-  const re = getHighlightRe(query);
-  re.lastIndex = 0;
-  if (!re.test(original)) {
-    if (element._highlighted) {
-      element.textContent = original;
-      element._highlighted = false;
-    }
-    return;
-  }
-  re.lastIndex = 0;
-  const lower = original.toLowerCase();
-  let result = "";
-  let last = 0;
-  let m;
-  while ((m = re.exec(original)) !== null) {
-    result +=
-      original.slice(last, m.index) +
-      "<mark>" +
-      original.slice(m.index, m.index + m[0].length) +
-      "</mark>";
-    last = m.index + m[0].length;
-    if (m[0].length === 0) re.lastIndex++;
-  }
-  result += original.slice(last);
-  element.innerHTML = result;
-  element._highlighted = true;
-  void lower;
-}
 
-let _searchItemsCache = null;
-let _searchItemsVersion = -1;
-function getSearchItems(container) {
-  if (_searchItemsCache && _searchItemsVersion === container.children.length) {
-    return _searchItemsCache;
-  }
-  const items = new Array(container.children.length);
-  const children = container.children;
-  for (let i = 0; i < children.length; i++) {
-    const el = children[i];
-    const title = el.querySelector("#gameTitle");
-    const desc = el.querySelector("#gameDescription");
-    items[i] = {
-      el,
-      name: el.dataset.name || "",
-      tags: el.dataset.tags || "",
-      desc: el.dataset.desc || "",
-      title,
-      descEl: desc,
-    };
-  }
-  _searchItemsCache = items;
-  _searchItemsVersion = container.children.length;
-  return items;
-}
-
-function setupSearch() {
-  const searchBar = document.getElementById("searchBar");
-  const gameContainer = document.getElementById("gameContainer");
-  if (!searchBar || !gameContainer) return;
-
-  let scheduled = false;
-  const runSearch = (rawValue) => {
-    scheduled = false;
-    const query = rawValue.trim();
-    const tagMatches = query.match(/\[(.*?)\]/g);
+  function parseQuery(query) {
+    const tagMatches = query.match(TAG_PATTERN);
     const activeTags = tagMatches
-      ? tagMatches.map((t) => t.slice(1, -1).toLowerCase().trim())
+      ? tagMatches.map((tag) => tag.slice(1, -1).toLowerCase().trim())
       : [];
     const textQuery = query.replace(/\[(.*?)\]/g, "").trim().toLowerCase();
+    return { activeTags, textQuery };
+  }
 
-    const items = getSearchItems(gameContainer);
-    let visibleCount = 0;
+  function parseGameEntry(name, entry) {
+    if (!Array.isArray(entry)) return null;
+    const [description = "", tags = ""] = entry;
+    return { name, description, tags };
+  }
+
+  function parseGames(gamesData) {
+    const games = [];
+    for (const name of Object.keys(gamesData)) {
+      const parsed = parseGameEntry(name, gamesData[name]);
+      if (parsed) games.push(parsed);
+    }
+    games.sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, {
+        sensitivity: "base",
+        numeric: true,
+      })
+    );
+    return games;
+  }
+
+  function createThumbnail(gameName) {
+    const thumbnail = document.createElement("img");
+    thumbnail.className = CLASSES.gameThumbnail;
+    thumbnail.src = CONFIG.gameBasePath + gameName + "/cover.png";
+    thumbnail.alt = gameName + " cover";
+    thumbnail.loading = "lazy";
+    thumbnail.decoding = "async";
+    thumbnail.onerror = () => {
+      thumbnail.onerror = null;
+      thumbnail.src = CONFIG.missingThumbnail;
+    };
+    return thumbnail;
+  }
+
+  function createTagElement(tagText) {
+    const tag = document.createElement("span");
+    tag.className = CLASSES.tag;
+    tag.textContent = tagText;
+    tag.title = 'Search for "' + tagText + '"';
+    return tag;
+  }
+
+  function createTagsContainer(tags) {
+    const tagsContainer = document.createElement("div");
+    tagsContainer.className = CLASSES.tagsContainer;
+    if (tags) {
+      const tagList = tags.split(",");
+      for (const rawTag of tagList) {
+        const tagText = rawTag.trim();
+        if (!tagText) continue;
+        tagsContainer.appendChild(createTagElement(tagText));
+      }
+    }
+    return tagsContainer;
+  }
+
+  function createGameElement(game) {
+    const gameElement = document.createElement("div");
+    gameElement.className = CLASSES.gameItem;
+    gameElement.dataset.name = game.name.toLowerCase();
+    gameElement.dataset.tags = game.tags.toLowerCase();
+    gameElement.dataset.desc = game.description.toLowerCase();
+    gameElement.title = game.description;
+
+    const thumbnail = createThumbnail(game.name);
+
+    const titleElement = document.createElement("h3");
+    titleElement.className = CLASSES.gameTitle;
+    titleElement.textContent = game.name;
+    titleElement.dataset.original = game.name;
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.className = CLASSES.gameDescription;
+    descriptionElement.textContent = game.description;
+    descriptionElement.dataset.original = game.description;
+
+    const tagsContainer = createTagsContainer(game.tags);
+
+    gameElement.append(thumbnail, titleElement, descriptionElement, tagsContainer);
+    return gameElement;
+  }
+
+  function renderGames(games) {
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+
+    const fragment = document.createDocumentFragment();
+    for (const game of games) {
+      fragment.appendChild(createGameElement(game));
+    }
+    container.appendChild(fragment);
+
+    installTagClickListener();
+    installGameClickListener();
+    setGameCount(games.length);
+    setupSearch();
+  }
+
+  function onTagClick(event) {
+    const tag = event.target.closest("." + CLASSES.tag);
+    if (!tag) return;
+    event.stopPropagation();
+    const searchBar = document.getElementById(CONFIG.searchBarId);
+    if (!searchBar) return;
+    const tagQuery = "[" + tag.textContent + "]";
+    searchBar.value = tagQuery;
+    searchBar.dispatchEvent(new Event("input"));
+  }
+
+  function installTagClickListener() {
+    if (tagListenerInstalled) return;
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+    container.addEventListener("click", onTagClick);
+    tagListenerInstalled = true;
+  }
+
+  function onGameItemClick(event) {
+    if (event.target.closest("." + CLASSES.tag)) return;
+    const item = event.target.closest("." + CLASSES.gameItem);
+    if (!item) return;
+    const titleElement = item.querySelector("." + CLASSES.gameTitle);
+    const gameName = titleElement ? titleElement.dataset.original : null;
+    if (!gameName) return;
+    if (typeof Analytics !== "undefined") {
+      Analytics.trackGameVisit(gameName);
+    }
+    window.location.href = CONFIG.gameBasePath + gameName + "/";
+  }
+
+  function installGameClickListener() {
+    if (itemListenerInstalled) return;
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+    container.addEventListener("click", onGameItemClick);
+    itemListenerInstalled = true;
+  }
+
+  function isHighlighted(element) {
+    return element && highlightedElements.has(element);
+  }
+
+  function resetHighlight(element) {
+    if (!element || !element.dataset.original) return;
+    element.textContent = element.dataset.original;
+    highlightedElements.delete(element);
+  }
+
+  function highlightText(element, query) {
+    if (!element || !element.dataset.original) return;
+    const original = element.dataset.original;
+
+    if (!query) {
+      if (isHighlighted(element)) resetHighlight(element);
+      return;
+    }
+
+    const regex = getHighlightRegex(query);
+    regex.lastIndex = 0;
+    let result = "";
+    let last = 0;
+    let match;
+    let matched = false;
+    while ((match = regex.exec(original)) !== null) {
+      matched = true;
+      result +=
+        original.slice(last, match.index) +
+        "<mark>" +
+        original.slice(match.index, match.index + match[0].length) +
+        "</mark>";
+      last = match.index + match[0].length;
+      if (match[0].length === 0) regex.lastIndex++;
+    }
+
+    if (matched) {
+      result += original.slice(last);
+      element.innerHTML = result;
+      highlightedElements.add(element);
+    } else if (isHighlighted(element)) {
+      resetHighlight(element);
+    }
+  }
+
+  function getSearchItems(container) {
+    if (
+      searchItemsCache &&
+      searchItemsVersion === container.children.length
+    ) {
+      return searchItemsCache;
+    }
+    const children = container.children;
+    const items = new Array(children.length);
+    for (let i = 0; i < children.length; i++) {
+      const gameElement = children[i];
+      items[i] = {
+        element: gameElement,
+        name: gameElement.dataset.name || "",
+        tags: gameElement.dataset.tags || "",
+        desc: gameElement.dataset.desc || "",
+        titleElement: gameElement.querySelector("." + CLASSES.gameTitle),
+        descElement: gameElement.querySelector("." + CLASSES.gameDescription),
+      };
+    }
+    searchItemsCache = items;
+    searchItemsVersion = children.length;
+    return items;
+  }
+
+  function runSearch(rawValue) {
+    const query = rawValue.trim();
+    const { activeTags, textQuery } = parseQuery(query);
+
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+    const items = getSearchItems(container);
+
     const hasText = textQuery.length > 0;
     const hasTags = activeTags.length > 0;
+    let visibleCount = 0;
 
     for (let i = 0; i < items.length; i++) {
-      const it = items[i];
+      const item = items[i];
       let isVisible = true;
 
       if (hasTags) {
-        const itemTags = it.tags;
         for (let t = 0; t < activeTags.length; t++) {
-          if (itemTags.indexOf(activeTags[t]) === -1) {
+          if (item.tags.indexOf(activeTags[t]) === -1) {
             isVisible = false;
             break;
           }
@@ -273,44 +287,111 @@ function setupSearch() {
       }
 
       if (isVisible && hasText) {
-        if (it.name.indexOf(textQuery) === -1 && it.desc.indexOf(textQuery) === -1) {
+        if (
+          item.name.indexOf(textQuery) === -1 &&
+          item.desc.indexOf(textQuery) === -1
+        ) {
           isVisible = false;
         }
       }
 
       if (isVisible) {
-        if (it.el.style.display === "none") it.el.style.display = "";
+        if (item.element.style.display === "none") item.element.style.display = "";
         visibleCount++;
         if (hasText) {
-          highlightText(it.title, textQuery);
-          highlightText(it.descEl, textQuery);
-        } else if (it.title._highlighted || it.descEl._highlighted) {
-          highlightText(it.title, "");
-          highlightText(it.descEl, "");
+          highlightText(item.titleElement, textQuery);
+          highlightText(item.descElement, textQuery);
+        } else if (
+          isHighlighted(item.titleElement) ||
+          isHighlighted(item.descElement)
+        ) {
+          resetHighlight(item.titleElement);
+          resetHighlight(item.descElement);
         }
       } else {
-        if (it.el.style.display !== "none") it.el.style.display = "none";
-        if (it.title._highlighted || it.descEl._highlighted) {
-          highlightText(it.title, "");
-          highlightText(it.descEl, "");
+        if (item.element.style.display !== "none") item.element.style.display = "none";
+        if (
+          isHighlighted(item.titleElement) ||
+          isHighlighted(item.descElement)
+        ) {
+          resetHighlight(item.titleElement);
+          resetHighlight(item.descElement);
         }
       }
     }
 
-    const gameCountElement = document.getElementById("gameCount");
-    if (gameCountElement) {
-      gameCountElement.textContent = visibleCount + " games available.";
-    }
-  };
+    setGameCount(visibleCount);
+  }
 
-  searchBar.addEventListener("input", (e) => {
-    if (scheduled) return;
-    const value = e.target.value;
-    scheduled = true;
-    if (typeof requestAnimationFrame === "function") {
-      requestAnimationFrame(() => runSearch(value));
-    } else {
-      setTimeout(() => runSearch(value), 0);
+  function setupSearch() {
+    const searchBar = document.getElementById(CONFIG.searchBarId);
+    if (!searchBar) return;
+
+    let scheduled = false;
+    const flush = (value) => {
+      scheduled = false;
+      runSearch(value);
+    };
+
+    searchBar.addEventListener("input", (event) => {
+      if (scheduled) return;
+      scheduled = true;
+      const value = event.target.value;
+      if (typeof requestAnimationFrame === "function") {
+        requestAnimationFrame(() => flush(value));
+      } else {
+        setTimeout(() => flush(value), 0);
+      }
+    });
+  }
+
+  function setGameCount(count) {
+    const countElement = document.getElementById(CONFIG.gameCountId);
+    if (countElement) countElement.textContent = count + " games available.";
+  }
+
+  function getGameCount(visibleCount) {
+    if (typeof visibleCount === "number") {
+      setGameCount(visibleCount);
+      return;
     }
-  });
-}
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+    let visible = 0;
+    for (let i = 0; i < container.children.length; i++) {
+      if (container.children[i].style.display !== "none") visible++;
+    }
+    setGameCount(visible);
+  }
+
+  function init() {
+    const container = document.getElementById(CONFIG.containerId);
+    if (!container) return;
+
+    fetch(CONFIG.gamesJsonPath)
+      .then((response) => response.json())
+      .then((gamesData) => {
+        const games = parseGames(gamesData);
+        renderGames(games);
+      })
+      .catch((error) => {
+        console.error("Oops! There was an error loading games: ", error);
+        if (typeof notify !== "undefined") {
+          window.notify(
+            "An error occured loading the games! Check the developer console for more info.",
+            "Oh noes!",
+            "sad.svg",
+            "6000"
+          );
+        }
+      });
+  }
+
+  return {
+    init: init,
+    getGameCount: getGameCount,
+  };
+})();
+
+window.gameLoader = GameLoader.init;
+window.getGameCount = GameLoader.getGameCount;
